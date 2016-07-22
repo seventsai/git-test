@@ -1,0 +1,1906 @@
+
+Image Header --> Data Size = 2883520
+ Image Name = MIPS LTQCPE Linux-3.10.12
+Image contains header with name [MIPS LTQCPE Linux-3.10.12]
+Volume ID 0, size 23 LEBs (2920448 bytes, 2.8 MiB), LEB size 126976 bytes (124.0 KiB), dynamic, name "kernelA", alignment 1
+parameter f_kernel_sizeA is not existed
+Erasing 128 Kibyte @ 20000 -- 100 % complete
+parameter active_bank value changed from rootfs_id=4 to A
+Erasing 128 Kibyte @ 20000 -- 100 % complete
+parameter update_chk value changed from =A to 3
+
+Image Header --> Data Size = 446464
+ Image Name = XRX500 Firmware
+Image contains header with name [XRX500 Firmware]
+Volume ID 2, size 4 LEBs (507904 bytes, 496.0 KiB), LEB size 126976 bytes (124.0 KiB), dynamic, name "firmwareA", alignment 1
+Upgrade : successfully upgraded fullimage
+[ 1343.790000] i2c-lantiq 16a00000.i2c: setup clocks (in 200000000 kHz, bus 100000 kHz,rmc =20 dec=50 10000000)
+[ 1343.980000] Kernel Event Logging Support: Cleanup
+2016-06-29 12:22:47: (server.c.1527) server stopp
+[ 1344.000000] MEI_DRV: Cntrl Thr Leave - VrxCtrl
+ed by UID = 0 PIJun 29 12:22:47 stunnel: LOG5[252[ 1344.020000] device wlan1 left promiscuous mode
+[ 1344.020000] br-lan: port 7(wlan1) entered disabled state
+9:0]: Terminated
+[ 1344.040000] [0000104404] mtlk0(mtlk_core_set_net_state:783): wlan1: Going from NET_STATE_CONNECTED to NET_STATE_DEACTIVATING
+[ 1344.050000] [0000104405] mtlk0(mtlk_core_set_net_state:783): wlan1: Going from NET_STATE_DEACTIVATING to NET_STATE_READY
+[ 1344.180000] [0000104418] mtlk0(_mtlk_df_user_iface_stop:1014): hostapd_wlan1, wlan1: stop the interface
+[ 1344.290000] device wlan0 left promiscuous mode
+[ 1344.290000] br-lan: port 6(wlan0) entered disabled state
+[ 1344.300000] [0000104430] mtlk0(mtlk_core_set_net_state:783): wlan0: Going from NET_STATE_CONNECTED to NET_STATE_DEACTIVATING
+[ 1344.310000] [0000104431] mtlk0(mtlk_core_set_net_state:783): wlan0: Going from NET_STATE_DEACTIVATING to NET_STATE_READY
+[ 1344.430000] [0000104443] mtlk0(_mtlk_df_user_iface_stop:1014): hostapd_wlan0, wlan0: stop the interface
+
+ROM VER: 2.1.0
+CFG 0a
+B
+.
+.
+.
+
+
+U-Boot 2010.06-LANTIQ-v-2.3.128 (Jun 23 2016 - 11:43:17)
+
+interAptiv
+cps cpu/ddr run in 800/666 Mhz
+DRAM:  224 MiB
+NAND:  ONFI flash detected
+ONFI param page 0 valid
+NAND device: Manufacturer ID: 0x01, Chip ID: 0xda (AMD S34ML02G1)
+256 MiB
+Bad block table found at page 131008, version 0x01
+Bad block table found at page 130944, version 0x01
+In:    serial
+Out:   serial
+Err:   serial
+Net:   multi type
+Internal phy firmware version: 0x853c
+GRX500 Switch
+
+Type "run flash_nfs" to mount root filesystem over NFS
+
+Hit any key to stop autoboot:  0
+Saving Environment to NAND...
+Erasing redundant Nand...
+Erasing at 0x160000 -- 100% complete.
+Writing to redundant Nand... done
+Creating 1 MTD partitions on "nand0":
+0x0000012c0000-0x000007ec0000 : "mtd=6"
+UBI: attaching mtd1 to ubi0
+UBI: physical eraseblock size:   131072 bytes (128 KiB)
+UBI: logical eraseblock size:    126976 bytes
+UBI: smallest flash I/O unit:    2048
+UBI: VID header offset:          2048 (aligned 2048)
+UBI: data offset:                4096
+UBI: attached mtd1 to ubi0
+UBI: MTD device name:            "mtd=6"
+UBI: MTD device size:            108 MiB
+UBI: number of good PEBs:        864
+UBI: number of bad PEBs:         0
+UBI: max. allowed volumes:       128
+UBI: wear-leveling threshold:    4096
+UBI: number of internal volumes: 1
+UBI: number of user volumes:     9
+UBI: available PEBs:             424
+UBI: total number of reserved PEBs: 440
+UBI: number of PEBs reserved for bad PEB handling: 8
+UBI: max/mean erase counter: 76/42
+Volume bootcoreA found at volume id 6
+read 0 bytes from volume 6 to a0400000(buf address)
+Read [2031616] bytes
+Volume kernelA found at volume id 0
+read 0 bytes from volume 0 to 80800000(buf address)
+Read [2920448] bytes
+## Booting kernel from Legacy Image at 80800000 ...
+   Image Name:   MIPS LTQCPE Linux-3.10.12
+   Created:      2016-06-29   6:51:18 UTC
+   Image Type:   MIPS Linux Kernel Image (lzma compressed)
+   Data Size:    2883520 Bytes = 2.7 MiB
+   Load Address: a0020000
+   Entry Point:  a002df00
+   Verifying Checksum ... OK
+   Uncompressing Kernel Image ... OK
+
+Starting kernel ...
+
+[    0.000000] Initializing cgroup subsys cpu
+[    0.000000] Linux version 3.10.12 (seven_tsai@sw6-builder2.arcadyan.com.tw) (gcc version 4.8.3 (OpenWrt/Linaro GCC 4.8-2014.04 15.05_ltq) ) #22 SMP Wed Jun 29 14:51:02 CST 2016
+[    0.000000] TLBINV/F supported, config4=0xc0000000
+[    0.000000] TLBINV/F supported, config4=0xc0000000
+[    0.000000] SoC: GRX500 rev 1.2
+[    0.000000] GCMP present
+[    0.000000] L2-only SYNC available
+[    0.000000] bootconsole [early0] enabled
+[    0.000000] CPU0 revision is: 0001a120 (MIPS interAptiv)
+[    0.000000] Enhanced Virtual Addressing (EVA 1GB) activated
+[    0.000000] IO: BASE = 0xa0000000, SHIFT = 0x10000000, SIZE = 0x10000000
+[    0.000000] GCMP base addr = 0xb2300000, CLB: ResetExcBase = 0xbfc00000, ResetExcExtBase = 0x4ff00001
+[    0.000000] BEV Overlay segment = 0xb0000000, size = 0x10000000
+[    0.000000] segctr0 2d0a0a segctr1 40d020a segctr2 38004d
+[    0.000000] MIPS: machine is EASY350 ANYWAN (GRX350) Incremental model
+[    0.000000] CMP IOCU detected
+[    0.000000] Hardware DMA cache coherency disabled
+[    0.000000] Determined physical RAM map:
+[    0.000000]  memory: 0e000000 @ 20000000 (usable)
+[    0.000000] User-defined physical RAM map:
+[    0.000000]  memory: 1e000000 @ 20000000 (usable)
+[    0.000000] Initrd not found or empty - disabling initrd
+[    0.000000] reserving 18874368 bytes @ 6800ab00 for CBM
+[    0.000000] reserving 8388608 bytes @ 6920ab00 for CBM
+[    0.000000] Zone ranges:
+[    0.000000]   DMA      [mem 0x20000000-0x27ffffff]
+[    0.000000]   Normal   [mem 0x28000000-0x3dffffff]
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x20000000-0x3dffffff]
+[    0.000000] Detected 3 available secondary CPU(s)
+[    0.000000] Primary instruction cache 32kB, 4-way, VIPT, linesize 32 bytes.
+[    0.000000] Primary data cache 32kB, 4-way, PIPT, no aliases, linesize 32 bytes
+[    0.000000] MIPS secondary cache 256kB, 8-way, linesize 32 bytes.
+[    0.000000] PERCPU: Embedded 8 pages/cpu @69dcf000 s8576 r8192 d16000 u32768
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 121920
+[    0.000000] Kernel command line: ubi.mtd=system_sw rootfsname=rootfsA ro rootfstype=squashfs do_overlay console=ttyLTQ0,115200 ethaddr=00:E0:92:00:01:40 panic=1 mtdparts=17c00000.nand-parts:1m(uboot),256k(ubootconfigA),256k(ubootconfigB),256k(gphyfirmware),1m(calibration),16m(bootcore),108m(system_sw),-(res) init=/etc/preinit active_bank=A update_chk=2 maxcpus=4 pci=pcie_bus_perf ethwan= ubootver=U-Boot-2010.06-LANTIQ-v-2.3.128 mem=480M@512M
+[    0.000000] eth0 mac address 00-E0-92-00-01-40
+[    0.000000] PID hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.000000] Dentry cache hash table entries: 65536 (order: 6, 262144 bytes)
+[    0.000000] Inode-cache hash table entries: 32768 (order: 5, 131072 bytes)
+[    0.000000] Writing ErrCtl register=00000000
+[    0.000000] Readback ErrCtl register=00000000
+[    0.000000] allocated 983040 bytes of page_cgroup
+[    0.000000] please try 'cgroup_disable=memory' option if you don't want memory cgroups
+[    0.000000] Memory: 449240k/491520k available (6330k kernel code, 42280k reserved, 1791k data, 324k init, 0k highmem)
+[    0.000000] Hierarchical RCU implementation.
+[    0.000000] NR_IRQS:527
+[    0.000000] GIC: present
+[    0.000000] EIC: off
+[    0.000000] GIC map size 263
+[    0.000000] gic: revision 3.0
+[    0.000000] CPU0: c0 status register 1100fc00
+[    0.000000] of_gic_init init done
+[    0.000000] CPU Clock: 800000000Hz  mips_hpt_frequency 400000000Hz
+[    0.000000] CBM Clock: 600000000Hz DDR Clock: 666666666Hz NGI Clock: 300000000Hz
+[    0.000000] clock event init done !
+[    0.000000] gptu_setup_clocksource: done !
+[    0.000000] Calibrating delay loop... 513.63 BogoMIPS (lpj=2568192)
+[    0.070000] pid_max: default: 32768 minimum: 301
+[    0.070000] Mount-cache hash table entries: 512
+[    0.080000] Initializing cgroup subsys memory
+[    0.090000] size of core = 336, MAXCORE = 2 , MAXCPU = 4, MAXTCS = 6 MAX_VPE = 2
+[    0.090000] [update_DB_from_DT]:[363], cpuid = 0 name = LINUX
+[    0.100000] [update_DB_from_DT]:[363], cpuid = 1 name = VOICEFW
+[    0.100000] [update_DB_from_DT]:[363], cpuid = 2 name = LINUX
+[    0.110000] [update_DB_from_DT]:[363], cpuid = 3 name = MPEFW
+[    0.110000] [vmb_check_IBL_fw_msg]:[331] vpet[j].bl_status = 2 , cpu = 1
+[    0.120000] [vmb_check_IBL_fw_msg]:[331] vpet[j].bl_status = 2 , cpu = 2
+[    0.120000] [vmb_check_IBL_fw_msg]:[331] vpet[j].bl_status = 2 , cpu = 3
+[    0.130000]
+[    0.130000] Initial ITC_Address_Map0 00000000
+[    0.130000]
+def ITC_Address_Map1 01200000
+new ITC_Address_Map1 0120fc00
+def ITC_Address_Map0 00000000
+new ITC_Address_Map0 1c300001
+ ITC Init done on Core 0 on CPU 0 !!!
+[    0.150000] [smp_init]:[553] CPU1 shouldn't run LINUX as per DT (model) config
+[    0.150000] [vmb_cpu_alloc]:[624] CPU vpet.cpu_status = 11
+[    0.160000] [vmb_cpu_start]:[842]  vmb_fw_msg_t = a0000168 cpu = 2 vmb_msg_size = b0 sizeof(VMB_fw_msg_t) = 168 sizeof(FW_vmb_msg_t) = 8 !!!!
+ [gic_trigger]:[555] VMB_CPU_IPI2 - 21 CPU = 2
+
+Outside WAIT got IPI interrupt to launch from cpu 02
+
+ MSG_ID = 01[    0.170000] [vmb_cpu_start]:[881] WAITING FOR RESPONSE vpet->v_wq.wakeup_vpe = 0 !!!!
+ [    0.170000] TLBINV/F supported, config4=0xc0000000
+[    0.170000] TLBINV/F supported, config4=0xc0000000
+[    0.170000] CPU2 revision is: 0001a120 (MIPS interAptiv)
+[    0.170000] Primary instruction cache 32kB, 4-way, VIPT, linesize 32 bytes.
+[    0.170000] Primary data cache 32kB, 4-way, PIPT, no aliases, linesize 32 bytes
+[    0.170000] MIPS secondary cache 256kB, 8-way, linesize 32 bytes.
+[    0.170000] IO: BASE = 0xa0000000, SHIFT = 0x10000000, SIZE = 0x10000000
+[    0.170000] GCMP base addr = 0xb2300000, CLB: ResetExcBase = 0xbfc00000, ResetExcExtBase = 0x4ff00001
+[    0.170000] BEV Overlay segment = 0xb0000000, size = 0x10000000
+[    0.170000]
+[    0.170000] Initial ITC_Address_Map0 00000000
+[    0.170000]
+[    0.170000] def ITC_Address_Map1 01200000
+[    0.170000] new ITC_Address_Map1 0120fc00
+[    0.170000] def ITC_Address_Map0 00000000
+[    0.170000] new ITC_Address_Map0 1c300001
+[    0.170000]  ITC Init done on Core 1 on CPU 2 !!!
+
+[    0.230000] [vmb_cpu_active]:[268] action = 10 , cpu = 2
+[    0.230000] [vmb_cpu_start]:[898] OUTSIDE WAIT wakeup_vpe = 1 vpet->fw_vmb.status = 1 ACK = 1 cpu = 2 ret1 = 9995 vpet = 60863b08, smp_processor_id() = 0 , vpet->fw_vmb =60863b34 !!!!
+[    0.230000]  [vmb_cpu_start]:[905]  ret = 1
+
+[    0.240000] Synchronize counters for CPU 2: done.
+[    0.240000] GPTC clock event init on cpu: 2
+[    0.240000] clock event init done !
+[    0.250000] [smp_init]:[553] CPU3 shouldn't run LINUX as per DT (model) config
+[    0.250000] Brought up 2 CPUs
+[    0.270000] pinctrl core: initialized pinctrl subsystem
+[    0.270000] regulator-dummy: no parameters
+[    0.280000] NET: Registered protocol family 16
+[    0.280000] [gpio_xrx500] { xrx500_gpio_init : 399 }XRX500 GPIO Driver, (C) 2014 Lantiq Deutschland Gmbh
+[    0.290000] dma-grx500 1e300000.dma: DMA3 base address be300000 chained_irq 77 irq_base 447
+[    0.300000] dma-grx500 1e300000.dma: Init done - hw rev: A, ports: 1, channels: 64
+[    0.310000] dma-grx500 1c100000.dma: DMA2TX base address bc100000 chained_irq 75 irq_base 399
+[    0.320000] dma-grx500 1c100000.dma: Init done - hw rev: A, ports: 1, channels: 16
+[    0.320000] dma-grx500 1c200000.dma: DMA2RX base address bc200000 chained_irq 76 irq_base 415
+[    0.330000] dma-grx500 1c200000.dma: Init done - hw rev: A, ports: 1, channels: 32
+[    0.340000] dma-grx500 1a100000.dma: DMA1TX base address ba100000 chained_irq 73 irq_base 351
+[    0.350000] dma-grx500 1a100000.dma: Init done - hw rev: A, ports: 1, channels: 16
+[    0.350000] dma-grx500 1a200000.dma: DMA1RX base address ba200000 chained_irq 74 irq_base 367
+[    0.360000] dma-grx500 1a200000.dma: Init done - hw rev: A, ports: 1, channels: 12
+[    0.370000] [gptu] { gptu_probe : 297 }dev id 16b00000.gptu
+[    0.370000] [gptu] { clkdev_add_gptu : 239 }Memory Allocation suceeded
+[    0.380000] [gptu] { clkdev_add_gptu : 239 }Memory Allocation suceeded
+[    0.380000] gptu-xrx500 16b00000.gptu: gptu: 2 timers loaded
+[    0.390000] gptu driver init successfully
+[    0.390000] [gptu] { gptu_probe : 297 }dev id 16300000.gptu
+[    0.400000] [gptu] { clkdev_add_gptu : 239 }Memory Allocation suceeded
+[    0.400000] [gptu] { clkdev_add_gptu : 239 }Memory Allocation suceeded
+[    0.410000] gptu-xrx500 16300000.gptu: gptu: 2 timers loaded
+[    0.410000] gptu driver init successfully
+[    0.420000] dma0-grx500 16e00000.dma: base address b6e00000 chained_irq 72 irq_base 335
+[    0.420000] dma0-grx500 16e00000.dma: Init done - hw rev: A, ports: 4, channels: 16
+[    0.430000] [pinctrl_xrx500] { pinctrl_xrx500_probe : 1234 }disabling the BBSPI at top-mux
+[    0.430000] pinctrl-xrx500 pinctrl.4: Init done
+[    0.440000] !!!!!!! WAVE400 system registeration on AHB
+[    0.450000] MTLK_MEM_BAR1_START is 14000000
+[    0.450000] MTLK_MEM_BAR1_END is 147fffff
+[    0.450000] MTLK_WIRELESS_IRQ_IN_INDEX is 26
+[    0.460000] [cbm] { cbm_xrx500_probe : 4482 }2
+[    0.460000] Initializing TMU with Base Address=be700000: ...
+[    0.470000] TMU Initialization Done
+[    0.470000] [cbm] { init_fsqm_buf_standard : 531 }init fsqm std successfully
+[    0.480000] [cbm] { init_fsqm_buf_jumbo : 574 }init fsqm jbo successfully
+[    0.480000] [cbm] { init_fsqm : 461 }fsqm init successfully
+[    0.490000] [cbm] { init_cbm_basic : 639 }init basic CBM successfully
+[    0.490000] [cbm] { cbm_hw_init : 1783 }CBM HW init
+[    0.500000] [cbm] { setup_DMA_p2p : 3817 }setup_DMA_p2p executed
+[    0.500000] [cbm] { configure_ports : 4326 }configure_ports 7 1 0 0 8 2
+[    0.510000] [cbm] { configure_ports : 4293 }configure_ports 7 1 16 1 8 2
+[    0.510000] [cbm] { configure_ports : 4326 }configure_ports 8 1 15 0 8 2
+[    0.520000] [cbm] { configure_ports : 4293 }configure_ports 8 1 31 1 8 2
+[    0.520000] [cbm] { init_cbm_ls : 992 }Load spreader init successfully
+[    0.530000] [cbm] { cbm_xrx500_probe : 4541 }CBM Clock: 600000000Hz
+[    0.530000] [cbm] { cbm_xrx500_probe : 4543 }EQM delay Enabled
+[    0.540000] [cbm] { cbm_xrx500_probe : 4609 }CBM: Init Done !!
+[    0.540000] PCI host bridge /ssx3@18000000/pcie@900000 ranges:
+[    0.550000]  MEM 0x00000000b8000000..0x00000000baffffff
+[    0.550000]   IO 0x00000000bb800000..0x00000000bb8fffff
+[    0.660000] PCIe LCPLL SSC Mode Enabled
+[    0.880000] Lantiq PCIe Root Complex Port 0 Init Done
+[    0.880000] PCI host bridge /ssx3@18000000/pcie@400000 ranges:
+[    0.890000]  MEM 0x00000000b4000000..0x00000000b6ffffff
+[    0.890000]   IO 0x00000000b7800000..0x00000000b78fffff
+[    1.210000] Lantiq PCIe Root Complex Port 1 Init Done
+[    1.220000] PCI host bridge /ssx3@18000000/pcie@E00000 ranges:
+[    1.220000]  MEM 0x00000000bc000000..0x00000000beffffff
+[    1.230000]   IO 0x00000000bf800000..0x00000000bf8fffff
+[    1.540000] Lantiq PCIe Root Complex Port 2 Init Done
+[    1.560000] bio: create slab <bio-0> at 0
+[    1.570000] vgaarb: loaded
+[    1.570000] SCSI subsystem initialized
+[    1.570000] Register xway nand done!
+[    1.580000] usbcore: registered new interface driver usbfs
+[    1.580000] usbcore: registered new interface driver hub
+[    1.590000] usbcore: registered new device driver usb
+[    1.590000] PCI host bridge to bus 0000:00
+[    1.600000] pci_bus 0000:00: root bus resource [mem 0xb8000000-0xbaffffff]
+[    1.600000] pci_bus 0000:00: root bus resource [io  0xbb800000-0xbb8fffff]
+[    1.610000] pci_bus 0000:00: No busn resource found for root bus, will use [bus 00-ff]
+[    1.610000] ltq-pcie 18900000.pcie: pcie_rc_class_fixup port 0: fixed pci host bridge to pci-pci bridge
+[    1.620000] pci 0000:00:00.0: BAR 8: assigned [mem 0xb8000000-0xb87fffff]
+[    1.620000] pci 0000:01:00.0: BAR 0: assigned [mem 0xb8000000-0xb87fffff]
+[    1.630000] pci 0000:00:00.0: PCI bridge to [bus 01]
+[    1.630000] pci 0000:00:00.0:   bridge window [mem 0xb8000000-0xb87fffff]
+[    1.640000] PCI: Enabling device 0000:00:00.0 (0000 -> 0002)
+[    1.640000] pci 0000:00:00.0: PCI-E Max Payload Size set to  256/ 256 (was  128), Max Read Rq  256
+[    1.650000] pci 0000:01:00.0: PCI-E Max Payload Size set to  128/ 128 (was  128), Max Read Rq  128
+[    1.650000] PCI host bridge to bus 0000:02
+[    1.660000] pci_bus 0000:02: root bus resource [mem 0xb4000000-0xb6ffffff]
+[    1.660000] pci_bus 0000:02: root bus resource [io  0xb7800000-0xb78fffff]
+[    1.670000] pci_bus 0000:02: No busn resource found for root bus, will use [bus 02-ff]
+[    1.670000] ltq-pcie 18400000.pcie: pcie_rc_class_fixup port 1: fixed pci host bridge to pci-pci bridge
+[    1.680000] pci 0000:02:00.0: bridge configuration invalid ([bus 03-01]), reconfiguring
+[    1.680000] pci 0000:02:00.0: BAR 8: assigned [mem 0xb4000000-0xb47fffff]
+[    1.690000] pci 0000:03:00.0: BAR 0: assigned [mem 0xb4000000-0xb47fffff]
+[    1.690000] pci 0000:02:00.0: PCI bridge to [bus 03]
+[    1.700000] pci 0000:02:00.0:   bridge window [mem 0xb4000000-0xb47fffff]
+[    1.700000] PCI: Enabling device 0000:02:00.0 (0000 -> 0002)
+[    1.710000] pci 0000:02:00.0: PCI-E Max Payload Size set to  256/ 256 (was  128), Max Read Rq  256
+[    1.710000] pci 0000:03:00.0: PCI-E Max Payload Size set to  128/ 128 (was  128), Max Read Rq  128
+[    1.720000] PCI host bridge to bus 0000:04
+[    1.720000] pci_bus 0000:04: root bus resource [mem 0xbc000000-0xbeffffff]
+[    1.730000] pci_bus 0000:04: root bus resource [io  0xbf800000-0xbf8fffff]
+[    1.730000] pci_bus 0000:04: No busn resource found for root bus, will use [bus 04-ff]
+[    1.740000] ltq-pcie 18e00000.pcie: pcie_rc_class_fixup port 2: fixed pci host bridge to pci-pci bridge
+[    1.750000] pci 0000:04:00.0: bridge configuration invalid ([bus 05-03]), reconfiguring
+[    1.750000] pci 0000:04:00.0: BAR 9: assigned [mem 0xbc000000-0xbc7fffff pref]
+[    1.760000] pci 0000:05:00.0: BAR 0: assigned [mem 0xbc000000-0xbc7fffff pref]
+[    1.760000] pci 0000:04:00.0: PCI bridge to [bus 05]
+[    1.770000] pci 0000:04:00.0:   bridge window [mem 0xbc000000-0xbc7fffff pref]
+[    1.770000] PCI: Enabling device 0000:04:00.0 (0000 -> 0002)
+[    1.780000] pci 0000:04:00.0: PCI-E Max Payload Size set to  256/ 256 (was  128), Max Read Rq  256
+[    1.780000] pci 0000:05:00.0: PCI-E Max Payload Size set to  128/ 128 (was  128), Max Read Rq  128
+[    1.790000] NET: Registered protocol family 8
+[    1.790000] NET: Registered protocol family 20
+[    1.800000] Switching to clocksource gptc-timer
+[    1.800000] cfg80211: Calling CRDA to update world regulatory domain
+[    1.810000] NET: Registered protocol family 2
+[    1.820000] TCP established hash table entries: 4096 (order: 3, 32768 bytes)
+[    1.830000] TCP bind hash table entries: 4096 (order: 3, 32768 bytes)
+[    1.830000] TCP: Hash tables configured (established 4096 bind 4096)
+[    1.840000] TCP: reno registered
+[    1.840000] UDP hash table entries: 256 (order: 1, 8192 bytes)
+[    1.850000] UDP-Lite hash table entries: 256 (order: 1, 8192 bytes)
+[    1.850000] NET: Registered protocol family 1
+[    1.860000] RPC: Registered named UNIX socket transport module.
+[    1.870000] RPC: Registered udp transport module.
+[    1.870000] RPC: Registered tcp transport module.
+[    1.870000] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    1.880000] ltq-pcie 18900000.pcie: pcie_fixup_bridge port 0 : fixup host controller 0000:00:00.0 (1bef:0030)
+[    1.890000] ltq-pcie 18400000.pcie: pcie_fixup_bridge port 1 : fixup host controller 0000:02:00.0 (1bef:0030)
+[    1.900000] ltq-pcie 18e00000.pcie: pcie_fixup_bridge port 2 : fixup host controller 0000:04:00.0 (1bef:0030)
+[    1.910000] phy-xrx500 phy-xrx500.10: requesting lantiq/phy11g_ip_BE.bin
+[    1.920000] phy-xrx500 phy-xrx500.10: booting GPHY0 firmware at 27C20000 for GRX500
+[    2.020000] phy-xrx500 phy-xrx500.10: booting GPHY1 firmware at 27C20000 for GRX500
+[    2.130000] phy-xrx500 phy-xrx500.10: booting GPHY2 firmware at 27C20000 for GRX500
+[    2.230000] phy-xrx500 phy-xrx500.10: booting GPHY3 firmware at 27C20000 for GRX500
+[    2.340000] phy-xrx500 phy-xrx500.10: booting GPHY4 firmware at 27C20000 for GRX500
+[    2.440000] audit: initializing netlink socket (disabled)
+[    2.450000] type=2000 audit(2.440:1): initialized
+[    2.450000] VFS: Disk quotas dquot_6.5.2
+[    2.460000] Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+[    2.460000] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    2.470000] SGI XFS with ACLs, security attributes, large block/inode numbers, no debug enabled
+[    2.480000] msgmni has been set to 877
+[    2.490000] io scheduler noop registered
+[    2.490000] io scheduler deadline registered (default)
+[    2.500000] io scheduler cfq registered
+[    2.500000] [vmb_yr_get]:[1362] CPU = 0, yri[i].yr_status = 1, yield_bits = 1 n_yr = 1 yri[i].cpu_id = 0
+[    2.510000] [vmb_yr_get]:[1362] CPU = 2, yri[i].yr_status = 1, yield_bits = 1 n_yr = 1 yri[i].cpu_id = 2
+[    2.520000] UMT initialize success!
+[    2.520000] HW MCPY driver: Version: 1.1.0, Init Done !!
+[    2.530000] Serial: 8250/16550 driver, 4 ports, IRQ sharing disabled
+[    2.540000] lantiq,asc 16600000.serial: pins are not configured from the driver
+[    2.550000] 16600000.serial: ttyLTQ0 at MMIO 0x16600000 (irq = 111) is a lantiq,asc
+[    2.560000] console [ttyLTQ0] enabled, bootconsole disabled
+[    2.560000] console [ttyLTQ0] enabled, bootconsole disabled
+[    2.570000] Lantiq MIPSInterAptiv MPS driver, version 1.0.0.0, (c) 2006-2013 Lantiq Deutschland GmbH
+[    2.580000] MPS: major Id 252
+[    2.580000] Major Id is 251
+[    2.590000] ICC driver registered
+[    2.590000] sysrst_init: Trying to register System Reset Driver ...
+[    2.590000] sysrst_pre_init: Detect InterAptiv CPU ...
+[    2.600000] sysrst_init: Lantiq CPE GRX500 System            driver version 1.0.0
+[    2.610000] sysrst_init: GRX500 System Reset initialized successfully!
+[    2.610000] brd: module loaded
+[    2.620000] loop: module loaded
+[    2.620000] Uniform Multi-Platform E-IDE driver
+[    2.620000] ide-gd driver 1.18
+[    2.630000] ONFI param page 0 valid
+[    2.630000] ONFI flash detected
+[    2.630000] NAND device: Manufacturer ID: 0x01, Chip ID: 0xda (AMD/Spansion S34ML02G1), 256MiB, page size: 2048, OOB size: 64
+[    2.650000] Scanning device for bad blocks
+[    2.890000] 8 cmdlinepart partitions found on MTD device 17c00000.nand-parts
+[    2.900000] Creating 8 MTD partitions on "17c00000.nand-parts":
+[    2.900000] 0x000000000000-0x000000100000 : "uboot"
+[    2.910000] 0x000000100000-0x000000140000 : "ubootconfigA"
+[    2.920000] 0x000000140000-0x000000180000 : "ubootconfigB"
+[    2.920000] 0x000000180000-0x0000001c0000 : "gphyfirmware"
+[    2.930000] 0x0000001c0000-0x0000002c0000 : "calibration"
+[    2.930000] 0x0000002c0000-0x0000012c0000 : "bootcore"
+[    2.940000] 0x0000012c0000-0x000007ec0000 : "system_sw"
+[    2.940000] 0x000007ec0000-0x000010000000 : "res"
+[    2.950000] Gluebi: Found kernel commandline option 'rootfsname=rootfsA'
+[    2.950000] spi-lantiq-ssc 16800000.spi: master is unqueued, this is deprecated
+[    2.960000] Lantiq SoC SPI controller rev 9 (TXFS 32, RXFS 32, DMA 1)
+[    2.970000] [ltq_ssc] { ifx_ssc_init : 3751 }[ifx_ssc_init] force ifx_ssc_cs_low to PORT 1
+[    2.980000] [ltq_ssc] { ifx_ssc_init : 3752 }[ifx_ssc_init] force ifx_ssc_cs_high to PORT 1
+[    2.980000] [ltq_ssc] { ifx_ssc_init : 3756 }ifx_ssc_init ifx_ssc_init_count 1
+[    2.990000] [ltq_ssc] { ifx_ssc_init : 3879 }port name ltq_ssc1
+[    3.000000] [ltq_ssc] { ifx_ssc_init : 3975 }Lantiq SoC SSC controller rev 9 (TXFS 32, RXFS 32, DMA 1)
+[    3.010000] [ltq_ssc] { ifx_sscAllocConnection : 3472 }ifx_sscAllocConnection ssc driver must be loaded first!
+[    3.020000] ifx_spi_flash_init: failed to register sflash
+[    3.030000] IMQ driver loaded successfully. (numdevs = 3, numqueues = 1)
+[    3.030000]  Hooking IMQ after NAT on PREROUTING.
+[    3.040000]  Hooking IMQ after NAT on POSTROUTING.
+[    3.040000] pcnet32: pcnet32.c:v1.35 21.Apr.2008 tsbogend@alpha.franken.de
+[    3.050000] PCI: Enabling device 0000:05:00.0 (0000 -> 0002)
+[    3.050000] Lantiq VRX318 Version 3.0.0
+[    3.060000] LTQ ETH SWITCH API, Version 3.0.2.
+[    3.060000] SWAPI: Registered char device [switch_api] with major no [81]
+[    3.070000] drivers/net/ethernet/lantiq/switch-api/gsw_flow_core.c:get_gsw_hw_cap:1717 (pnum:7)
+[    3.080000] drivers/net/ethernet/lantiq/switch-api/gsw_flow_core.c:get_gsw_hw_cap:1784 (gswdev->gipver:48)
+[    3.090000] LTQ ETH SWITCH API, Version 3.0.2.
+[    3.090000] drivers/net/ethernet/lantiq/switch-api/gsw_flow_core.c:get_gsw_hw_cap:1717 (pnum:2)
+[    3.100000] drivers/net/ethernet/lantiq/switch-api/gsw_flow_core.c:get_gsw_hw_cap:1784 (gswdev->gipver:48)
+[    3.110000] gphy_driver_init: fw_mode:11G-FW, no of phys:5, mode:0
+[    3.120000] [datapath_loopeth_dev] { dp_loop_eth_dev_init : 1692 }Loading loop_net_dev driver ......
+[    3.130000] [datapath_loopeth_dev] { dp_loop_eth_dev_init : 1698 }dp_loop_eth_dev_init Succeeded!
+[    3.140000] [datapath_coc] { dp_coc_new_stat_req : 748 }COC is not initialized yet in DP
+[    3.150000] dp init done
+[    3.150000] PMAC_EG_CFG_SET for GSW-L
+[    3.150000] PMAC_IG_CFG_SET for GSW-L
+[    3.160000] PMAC_EG_CFG_SET for GSW-R
+[    3.160000] PMAC_IG_CFG_SET for GSW-R
+[    3.170000]
+[    3.170000]   GSW PMAC Init Done!!!
+[    3.170000] registering one of MII bus
+[    3.180000] libphy: lantiq,xrx500-mdio: probed
+[    3.190000] registering PAE MII bus
+[    3.190000] libphy: lantiq,xrx500-mdio-pae: probed
+[    3.200000] xrx500_of_iface: rx csum offload is enabled !
+[    3.210000] trying to connect: eth0_1 to device: 0:02 with irq: 120
+[    3.250000] eth0_1: attached PHY [Lantiq XWAY VR9 GPHY 11G v1.4] (phy_addr=0:02, irq=120)
+[    3.280000] xrx500_of_iface: rx csum offload is enabled !
+[    3.280000] trying to connect: eth0_2 to device: 0:03 with irq: 121
+[    3.330000] eth0_2: attached PHY [Lantiq XWAY VR9 GPHY 11G v1.4] (phy_addr=0:03, irq=121)
+[    3.340000] xrx500_of_iface: rx csum offload is enabled !
+[    3.350000] trying to connect: eth0_3 to device: 0:04 with irq: 134
+[    3.400000] eth0_3: attached PHY [Lantiq XWAY VR9 GPHY 11G v1.4] (phy_addr=0:04, irq=134)
+[    3.420000] xrx500_of_iface: rx csum offload is enabled !
+[    3.420000] trying to connect: eth0_4 to device: 0:05 with irq: 135
+[    3.470000] eth0_4: attached PHY [Lantiq XWAY VR9 GPHY 11G v1.4] (phy_addr=0:05, irq=135)
+[    3.490000] xrx500_of_iface: rx csum offload is enabled !
+[    3.490000] trying to connect: eth1 to device: 1:01 with irq: 119
+[    3.540000] eth1: attached PHY [Lantiq XWAY VR9 GPHY 11G v1.4] (phy_addr=1:01, irq=119)
+[    3.560000] register mc group pass: 0, grp name: eth_mcgrp, grp id:6
+[    3.570000] Lantiq ethernet driver for XRX500 !
+[    3.570000] lro_sram_membase_res0 from DT: a2013000
+[    3.580000] ltq_toe_membase: e2000000 and lro_sram_membase_res0: e2013000
+[    3.580000] TOE Init Done !!
+[    3.580000] PPP generic driver version 2.4.2
+[    3.590000] PPP BSD Compression module registered
+[    3.590000] PPP Deflate Compression module registered
+[    3.600000] PPP MPPE Compression module registered
+[    3.600000] NET: Registered protocol family 24
+[    3.610000] res = 7dab4580
+[    3.610000] ltq-dwc3-core 1a300000.usb: no usb3 phy configured
+[    3.620000] platform 1a300000.usb: Driver ltq-dwc3-core requests probe deferral
+[    3.620000] ltq-dwc3-core 1a500000.usb: no usb3 phy configured
+[    3.630000] platform 1a500000.usb: Driver ltq-dwc3-core requests probe deferral
+[    3.640000] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    3.640000] ehci-pci: EHCI PCI platform driver
+[    3.650000] uhci_hcd: USB Universal Host Controller Interface driver
+[    3.650000] usbcore: registered new interface driver usb-storage
+[    3.660000] usbcore: registered new interface driver ums-alauda
+[    3.670000] usbcore: registered new interface driver ums-datafab
+[    3.670000] usbcore: registered new interface driver ums-freecom
+[    3.680000] usbcore: registered new interface driver ums-jumpshot
+[    3.680000] usbcore: registered new interface driver ums-sddr09
+[    3.690000] usbcore: registered new interface driver ums-sddr55
+[    3.700000] usbcore: registered new interface driver ums-usbat
+[    3.700000] mousedev: PS/2 mouse device common for all mice
+[    3.710000] [gptu] { setrate : 154 }cpu_clk 200000000
+[    3.710000] [gptu] { setrate : 158 }reload_counter_value 1
+[    3.720000] gpio-sso-xrx500 16d00000.sso: pins are not configured from the driver
+[    3.730000] gpio-sso-xrx500 16d00000.sso: Init done
+[    3.730000] Device IRQ: 97 line: 100
+[    3.740000] GlobalControl97_Capabilities_Get
+[    3.740000] EIP202: PEs=1 rings=4 64-bit=No, fill level extension=No
+[    3.740000] CF size=4 RF size=3 DMA len = 10 Align=0 HDW=0 HostIfc=3
+[    3.750000] EIP96 options:
+[    3.750000] AES: Yes with CFB/OFB: Yes Fast: Yes
+[    3.750000] DES: Yes with CFB/OFB: Yes Fast: No
+[    3.750000] ARCFOUR level: 3
+[    3.750000] MD5: Yes SHA1: Yes Fast: Yes SHA256: Yes SHA512: Yes
+[    3.750000] (X)CBC-MAC: Yes Fast: Yes All key sizes: No GHASH Yes
+[    3.780000] EIP97 options: PEs=1, In Dbuf size=6 In Tbuf size=5, Out Dbuf size=6, Out Tbuf size=4,
+[    3.780000] Token Generator: No, Transform Record Cache: No
+[    3.790000] EIP206 options: PE type=0 InClassifier=0 OutClassifier=0 MAC chans=0
+[    3.790000] InDBuf=0kB InTBuf=0kB OutDBuf=0kB OutTBuf=0kB
+[    3.810000] Global EIP-97 capabilities: EIP-97 v1.2p1  with EIP-202 v1.3p0 and EIP-96 v2.2p3, #PE=01 #rings=04
+[    3.820000] Global Status of the EIP-97
+[    3.820000] Packet Engine 0 Status
+[    3.820000] DFE Status: CD FIFO Words: 0, CDR ID: 15, DMA size: 0
+[    3.820000] AtDMA busy: false, DataDMA busy: false, DMA err: false
+[    3.840000] DSE Status: RD FIFO Words: 0, RDR ID: 15, DMA size: 0
+[    3.840000] Data flush  busy: false, DataDMA busy: false, DMA err: false
+[    3.850000] Token Status: Active: 0, loc available: true
+[    3.850000] res available: false, read active: false, ccache active: false
+[    3.850000] cntx fetch: false, res cntx: false
+[    3.850000] processing held: true, busy: false
+[    3.870000] Context Status: Err mask: 0000, Available: 0
+[    3.870000] Active cntx: false, next cntx: false, result cntx: false Err recov: false
+[    3.880000] Interrupt Status: input DMA err: false, output DMA err false
+[    3.880000] pkt proc err: false, pkt timeout: false, f a t a l err: false, PE int out: false
+[    3.880000] inp DMA enable: false, outp DMA enable false, pkt proc enable: false
+[    3.880000] pkt timeout enable: false, f a t a l enable: false,PE int out enable: false
+[    3.910000] Output Transfer Status: availabe: 71, min: 8, max: 64, size mask: 252
+[    3.920000] PRNG Status: busy: true, res ready: false
+[    3.930000] Adapter_Lock_Alloc: Lock = spinlock
+[    3.930000] Adapter_Lock_Alloc: Lock = spinlock
+[    3.930000] Adapter_PECDev_Init: CDR fetch size 0x8, thresh 0x6, HDW=0, CFsize=4
+[    3.940000] Adapter_PECDev_Init: RDR fetch size 0x8, thresh 0x2, RFsize=3
+[    3.950000] Status of CDR/RDR interface 0
+[    3.950000] CDR Status: DMA err: false, err: false: ovf/under err: false
+[    3.950000] Threshold int: false, timeout int: false, FIFO count: 16
+[    3.970000] RDR Status: DMA err: false, err: false: ovf/under err: false
+[    3.970000] Buf ovf: false, Descriptor ovf false
+[    3.970000] Threshold int: false, timeout int: false, FIFO count: 8
+[    3.980000] Adapter_Lock_Alloc: Lock = spinlock
+[    3.990000] Adapter_Lock_Alloc: Lock = spinlock
+[    3.990000] Adapter_PECDev_Init: CDR fetch size 0x8, thresh 0x6, HDW=0, CFsize=4
+[    4.000000] Adapter_PECDev_Init: RDR fetch size 0x8, thresh 0x2, RFsize=3
+[    4.010000] Status of CDR/RDR interface 1
+[    4.010000] CDR Status: DMA err: false, err: false: ovf/under err: false
+[    4.010000] Threshold int: false, timeout int: false, FIFO count: 16
+[    4.020000] RDR Status: DMA err: false, err: false: ovf/under err: false
+[    4.020000] Buf ovf: false, Descriptor ovf false
+[    4.020000] Threshold int: false, timeout int: false, FIFO count: 8
+[    4.040000] LTQ Crypto Hardware Initialized ..
+[    4.050000] LTQ crypto driver version: 1.2.6
+[    4.050000] usbcore: registered new interface driver usbhid
+[    4.060000] usbhid: USB HID core driver
+[    4.060000] u32 classifier
+[    4.060000]     input device check on
+[    4.070000]     Actions configured
+[    4.070000] nf_conntrack version 0.5.0 (7019 buckets, 28076 max)
+[    4.080000] nf_conntrack_rtsp v0.6.21 loading
+[    4.080000] xt_time: kernel timezone is -0000
+[    4.090000] ipip: IPv4 over IPv4 tunneling driver
+[    4.090000] nf_nat_rtsp v0.6.21 loading
+[    4.090000] ip_tables: (C) 2000-2006 Netfilter Core Team
+[    4.100000] TCP: cubic registered
+[    4.100000] Initializing XFRM netlink socket
+[    4.110000] NET: Registered protocol family 10
+[    4.110000] NET: Registered protocol family 17
+[    4.120000] NET: Registered protocol family 15
+[    4.120000] Bridge firewalling registered
+[    4.120000] Ebtables v2.0 registered
+[    4.130000] lec:lane_module_init: lec.c: initialized
+[    4.130000] mpoa:atm_mpoa_init: mpc.c: initialized
+[    4.140000] KOAM is loaded successfully.
+[    4.140000] l2tp_core: L2TP core driver, V2.0
+[    4.150000] l2tp_ppp: PPPoL2TP kernel driver, V2.0
+[    4.150000] l2tp_netlink: L2TP netlink interface
+[    4.160000] 8021q: 802.1Q VLAN Support v1.8
+[    5.330000] UBI: attaching mtd6 to ubi0
+[    7.300000] UBI: scanning is finished
+[    7.330000] UBI: attached mtd6 (name "system_sw", size 108 MiB) to ubi0
+[    7.340000] UBI: PEB size: 131072 bytes (128 KiB), LEB size: 126976 bytes
+[    7.340000] libphy: 1:01 - Link is Up - 100/Full
+[    7.350000] UBI: min./max. I/O unit sizes: 2048/2048, sub-page size 2048
+[    7.360000] UBI: VID header offset: 2048 (aligned 2048), data offset: 4096
+[    7.360000] UBI: good PEBs: 864, bad PEBs: 0, corrupted PEBs: 0
+[    7.370000] UBI: user volume: 9, internal volumes: 1, max. volumes count: 128
+[    7.380000] UBI: max/mean erase counter: 76/42, WL threshold: 4096, image sequence number: 0
+[    7.390000] UBI: available PEBs: 392, total reserved PEBs: 472, PEBs reserved for bad PEB handling: 40
+[    7.390000] UBI: background thread "ubi_bgt0d" started, PID 584
+[    7.400000] Gluebi: mtd 'rootfsA' set to be root filesystem
+[    7.410000] drivers/rtc/hctosys.c: unable to open rtc de[    7.430000] VFS: Mounted root (squashfs filesystem) readonly on device 31:9.
+[    7.440000] Freeing unused memory: 324k freed
+[    7.700000] libphy: 0:03 - Link is Up - 100/Full
+rootdir=/
+table='/etc/device_table.txt'
+makedevs: line 67: can't create node dev/ram: File exists
+makedevs: line 111: can't create node dev/vcc/: File exists
+makedevs: line 113: can't [    8.400000] init: Console is alive
+create node dev/vc/: File exists
+[   10.410000] init: - preinit -
+[   11.330000] UBIFS: background thread "ubifs_bgt0_8" started, PID 898
+[   11.470000] UBIFS: recovery needed
+[   11.760000] UBIFS: recovery completed
+[   11.760000] UBIFS: mounted UBI device 0, volume 8, name "data_vol"
+[   11.770000] UBIFS: LEB size: 126976 bytes (124 KiB), min./max. I/O unit sizes: 2048 bytes/2048 bytes
+[   11.780000] UBIFS: FS size: 4063232 bytes (3 MiB, 32 LEBs), journal size 1015809 bytes (0 MiB, 6 LEBs)
+[   11.790000] UBIFS: reserved for root: 191915 bytes (187 KiB)
+[   11.790000] UBIFS: media format: w4/r0 (latest is w4/r0), UUID A13FA772-87A2-41D5-9FCC-1CD22E2BC1F3, small LPT model
+[   11.930000] cgroup: mkdir (917) created nested cgroup for controller "memory" which has incomplete hierarchy support. Nested cgroups may change behavior in the future.
+[   11.940000] cgroup: "memory" requires setting use_hierarchy to 1 on the root.
+[   11.970000] procd: - early -
+[   13.580000] procd: - ubus -
+[   14.590000] procd: - init -
+[   14.770000] sysctl: The scan_unevictable_pages sysctl/node-interface has been disabled for lack of a legitimate use case.  If you have one, please send an email to linux-mm@kvack.org.
+
+(none) login: set mcast listen ok
+[   16.800000] try to register spd_mon driver
+[   16.810000] spdmon 16080110.speedm: base address: 0xb6080110
+[   16.810000] spdmon 16080110.speedm: PHY base address: 0x16080110
+[   16.820000] device number :249
+[   16.880000] spdmon 16080110.speedm: spd_mon driver : init done !!
+[   16.910000] spd_mon driver registered
+[   17.070000] i2c-lantiq 16a00000.i2c: pins are not configured from the driver
+[   17.100000] i2c-lantiq 16a00000.i2c: setup clocks (in 200000000 kHz, bus 100000 kHz,rmc =20 dec=50 10000000)
+[   17.110000] i2c-lantiq 16a00000.i2c: version 1.00
+[   17.210000] i2c-lantiq 16a00000.i2c: Register MYCOCDRV to CPUFREQ.
+[   17.340000] i2c /dev entries driver
+[   17.440000] ina2xx 0-0040: power monitor: ina219, railname:  PWR_12V, Rshunt: 10000 uOhm
+1970-01-01 05:30:17: (network.c.264) warning: server.set-v6only will be removed soon, update your config to have different sockets for ipv4 and ipv6
+1970-01-01 05:30:17: (log.c.166) server started
+[18:1483] NOTICE: Initial logging level 7
+[18:1484] NOTICE: Library version: 1.3 unknown-build-hash
+[18:1485] NOTICE: IPV6 compiled in and enabled
+[18:1485] NOTICE: libev support not compiled in
+[18:1487] NOTICE:  static allocation: 4472 + (12 x 1024 fds) = 16760 bytes
+[18:1490] NOTICE:  canonical_hostname = ugwcpe.intel.com
+[18:1490] NOTICE:  per-conn mem: 128 + 1594 headers + protocol rx buf
+[18:1491] NOTICE:  Compiled with OpenSSL support
+[18:1491] NOTICE:  Using non-SSL mode
+[18:1929] NOTICE:  Listening on port 5001
+Ubus connect Success !!!
+==[7777][servd.c][main]==
+==[7777][servd.c][main][servd_optionsInit]==
+==[7777][servd.c][main][servd_addLibraries]==
+==[7777][servd.c][servd_addLibraries][servd_addLibraries][19]==
+[   19.040000] IFXOS, Version 1.6.6 (c) Copyright 2009, Lantiq Deutschland GmbH
+[   19.560000] Lantiq kernel event logger, version 1.1.10, (c) 2007-2010 Lantiq Deutschland GmbH
+[   19.820000] libsrtp module, Copyright (c) 2001-2006 Cisco Systems, Inc
+[   19.830000] http://srtp.sourceforge.net/srtp.html
+==[7777][fapi_wlan.c][dll_init]==
+FAPI_WLAN_COMMON dll_init called
+[   19.950000] TAPI, Version 4.15.3.3, (c) 2001-2015 Lantiq Beteiligungs-GmbH & Co.KG
+FAPI_WLAN_COMMON: vendor 'Lantiq WAVE 3.5.x', opened lib '/opt/lantiq/lib/libfapiwave.so'
+Warning: Skipping vendor 'QCA', unable to find so file '/opt/lantiq/lib/libfapiwlanqca.so'
+Warning: Skipping vendor 'MediaTek', unable to find so file '/opt/lantiq/lib/libfapiwlanmtk.so'
+==[7777][servd.c][servd_addLibraries][servd_addLibraries][19]==
+==[7777][servd.c][servd_addLibraries][servd_addLibraries][Sid:[1] sl_sys]==
+==[7777][servd.c][servd_addLibraries][servd_addLibraries][Sid:[2] sl_eth]==
+==[7777][servd.c][servd_addLibraries][servd_addLibraries][Sid:[3] sl_network]==
+==[7777][servd.c][servd_addLibraries][servd_addLibraries][Sid:[4] sl_lanservices]==
+==[7777][servd.c][servd_addLibraries][servd_addLibraries][Sid:[5] sl_dsl]==
+==[7777][servd.c][servd_addLibraries][servd_addLibraries][Sid:[6] sl_wlan]==
+==[7777][servd.c][servd_addLibraries][servd_addLibraries][Sid:[7] sl_diagnostics]==
+==[7777][servd.c][servd_addLibraries][servd_addLibraries][Sid:[8] sl_DeviceInfo]==
+==[7777][servd.c][servd_addLibraries][servd_addLibraries][Sid:[9] sl_autowan]==
+==[7777][servd.c][servd_addLibraries][servd_addLibraries][Sid:[10] sl_FirewallNAT]==
+==[7777][servd.c][servd_addLibraries][servd_addLibraries][Sid:[11] sl_managementserver]==
+==[7777][servd.c][servd_addLibraries][servd_addLibraries][Sid:[12] sl_ipv6]==
+==[7777][servd.c][servd_addLibraries][servd_addLibraries][Sid:[13] sl_voip]==
+==[7777][servd.c][servd_addLibraries][servd_addLibraries][Sid:[14] sl_cw]==
+==[7777][servd.c][servd_addLibraries][servd_addLibraries][Sid:[15] sl_VendorCfg]==
+==[7777][servd.c][servd_addLibraries][servd_addLibraries][Sid:[16] sl_syslogng]==
+==[7777][servd.c][servd_addLibraries][servd_addLibraries][Sid:[17] sl_qos]==
+==[7777][servd.c][servd_addLibraries][servd_addLibraries][Sid:[18] sl_mcast]==
+==[7777][servd.c][servd_addLibrarie[   20.140000] lantiq-vmmc 1f107000.mps: failed to get clock
+[   20.140000] Lantiq MIPS34KEc MPS driver, version 3.2.4.0, (c) 2006-2015 Lantiq Deutschland GmbH
+[   20.150000] Lantiq SDD device driver, version 2.0.5.0, (c) 2013-2015 Lantiq Beteiligungs-GmbH & Co.KG
+s][servd_addLibraries][Sid:[19] sl_upgrade]==
+==[7777][servd.c][main][uloop_init]==
+==[7777][servd.c][main][servd_ubusRegister]==
+==[7777][servd.c][main][populate_globalNotificationList]==
+==[7777][servd.c][main][servd_startSlLibsInit]==
+==[7777][servd.c][servd_startSlLibsInit][start]==
+==[7777][servd.c][servd_startSlLibsInit][0]==
+==[7777][servd.c][servd_startSlLibsInit][sl_sys:1]==
+Calling init of SL Library 'sl_sys' SID: 1
+[   20.380000] Lantiq VMMC device driver, version 1.18.5.0, (c) 2006-2015 Lantiq Beteiligungs-GmbH & Co.KG
+[   20.470000] Lantiq SDD mailbox driver version 1.1.2.0 (c) 2014-2015 Lantiq Beteiligungs-GmbH & Co.KG
+[   20.550000] Lantiq KPI2UDP driver, version 3.0.5.1, (c) 2008-2013 Lantiq Deutschland GmbH
+[   21.540000] libphy: 1:01 - Link is Down
+[   21.870000]
+[   21.870000]  ltqdect_driver_probe : INT = 302, CS= 0, RESET=28
+[   21.900000]
+[   21.900000]  ltqdect_page driver_probe : PagePin = 29, pageBit= 1
+[   22.100000] Genconf offset correct
+[   22.110000] Min TC:1 Max TC:4
+[   22.110000] [vmb_cpu_alloc]:[594] CPU vpet[j].cpu_status = 11
+[   22.120000] [vmb_yr_get]:[1362] CPU = 3, yri[i].yr_status = 1, yield_bits = 2 n_yr = 1 yri[i].cpu_id = 3
+[   22.130000] [fw_vmb_get_irq]:[1465] CPU = 3  IRQ = 110 !!!
+[   22.130000] [vmb_tc_alloc]:[938] CPU tct[i].tc_status = 1
+[   22.140000] [vmb_yr_get]:[1362] CPU = 3, yri[i].yr_status = 1, yield_bits = 4 n_yr = 1 yri[i].cpu_id = 3
+[   22.150000] [fw_vmb_get_irq]:[1465] CPU = 3  IRQ = 110 !!!
+[   22.150000] mpe_hal_to_vmb_callback_hdlr not support status 0x0
+[   22.160000] [vmb_cpu_start]:[842]  vmb_fw_msg_t = a0000218 cpu = 3 vmb_msg_size = b0 sizeof(VMB_fw_msg_t) = 168 sizeof(FW_vmb_msg_t) = 8 !!!!
+ [gic_trigger]:[559] VMB_CPU_IPI3 - 85 CPU = 3
+
+ uts.1e000IT [otb_PI _ntertupt 8o  WuncI froO cpuS0ONSE  Met_Iv_= 0wakeup_vpe = 0 !!!!
+ [   22.190000] [fw_vmb_ipi3_hdlr]:[166] CPU = 0 irq = 110
+[   22.190000] [fw_vmb_ipi3_hdlr]:[173] cid = 1 , vid = 1
+[   22.190000] [fw_vmb_ipi3_hdlr]:[210]
+[   22.190000] [fw_vmb_ipi3_hdlr]:[212]
+[   22.190000]   vmb_wq = 60863b5c
+[vmb_cpu_start]:[898] OUTSIDE WAIT wakeup_vpe = 1 vpet->fw_vmb.status = 1 ACK = 1 cpu = 3 ret1 = 9997 vpet = 60863b40, smp_processor_id() = 0 , vpet->fw_vmb =60863b6c !!!!
+
+[   22.230000] [vmb_cpu_start]:[905]  ret = 1
+[   22.230000]  <mpe_hal_set_fw_connectivity> CPU TMU resources for MPE are Port:3 ,SB:20, Q:36
+[   22.240000] MPE HAL Run FW success .
+[   22.240000] MPE Proc Creation....!!!
+bind(): Address already in use
+bind(): Address already in use
+Error: No sockets bound, unable to continue
+[   22.850000] TMU HAL Init.
+[   22.850000] <hal_init> Number of CPU TMU Ports are:1
+[   22.860000] <hal_init> CPU TMU resources are Port:2 ,SB:19, Q:35
+[   22.860000] TMU HAL Init.
+[   22.870000] Done!!
+[   23.380000] Lantiq directpath datapath driver for XRX500, version lantiq_directpath_drv_xrx500.c:v1.1.1
+[   23.380000] ,(c)2009 Lantiq AG
+[   23.890000] libphy: 1:01 - Link is Up - 100/Full
+[   24.000000] xhci-hcd xhci-hcd.0.auto: xHCI Host Controller
+[   24.000000] xhci-hcd xhci-hcd.0.auto: new USB bus registered, assigned bus number 1
+[   24.010000] xhci_gen_setup() 4717  MSWAP=0
+[   24.010000] xhci_gen_setup() 4718  VERSION=0x0100
+[   24.020000] xhci_gen_setup() 4719  HC_LENGTH=0x20
+[   24.020000] xhci-hcd xhci-hcd.0.auto: irq 62, io mem 0x1a300000
+[   24.030000] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+[   24.040000] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[   24.040000] usb usb1: Product: xHCI Host Controller
+[   24.050000] usb usb1: Manufacturer: Linux 3.10.12 xhci-hcd
+[   24.050000] usb usb1: SerialNumber: xhci-hcd.0.auto
+[   24.070000] xHCI xhci_add_endpoint called for root hub
+[   24.070000] xHCI xhci_check_bandwidth called for root hub
+[   24.090000] hub 1-0:1.0: USB hub found
+[   24.090000] hub 1-0:1.0: 1 port detected
+[   24.090000] xhci-hcd xhci-hcd.0.auto: xHCI Host Controller
+[   24.100000] xhci-hcd xhci-hcd.0.auto: new USB bus registered, assigned bus number 2
+[   24.110000] usb usb2: New USB device found, idVendor=1d6b, idProduct=0003
+[   24.110000] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[   24.120000] usb usb2: Product: xHCI Host Controller
+[   24.130000] usb usb2: Manufacturer: Linux 3.10.12 xhci-hcd
+[   24.130000] usb usb2: SerialNumber: xhci-hcd.0.auto
+[   24.170000] xHCI xhci_add_endpoint called for root hub
+[   24.170000] xHCI xhci_check_bandwidth called for root hub
+[   24.190000] hub 2-0:1.0: USB hub found
+[   24.200000] hub 2-0:1.0: 1 port detected
+[   24.200000] xhci-hcd xhci-hcd.1.auto: xHCI Host Controller
+[   24.200000] xhci-hcd xhci-hcd.1.auto: new USB bus registered, assigned bus number 3
+[   24.210000] xhci_gen_setup() 4717  MSWAP=0
+[   24.220000] xhci_gen_setup() 4718  VERSION=0x0100
+[   24.220000] xhci_gen_setup() 4719  HC_LENGTH=0x20
+[   24.230000] xhci-hcd xhci-hcd.1.auto: irq 91, io mem 0x1a500000
+[   24.230000] usb usb3: New USB device found, idVendor=1d6b, idProduct=0002
+[   24.240000] usb usb3: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[   24.250000] usb usb3: Product: xHCI Host Controller
+[   24.250000] usb usb3: Manufacturer: Linux 3.10.12 xhci-hcd
+[   24.260000] usb usb3: SerialNumber: xhci-hcd.1.auto
+[   24.370000] xHCI xhci_add_endpoint called for root hub
+[   24.370000] xHCI xhci_check_bandwidth called for root hub
+[   24.390000] hub 3-0:1.0: USB hub found
+[   24.390000] hub 3-0:1.0: 1 port detected
+[   24.390000] xhci-hcd xhci-hcd.1.auto: xHCI Host Controller
+[   24.400000] xhci-hcd xhci-hcd.1.auto: new USB bus registered, assigned bus number 4
+[   24.410000] usb usb4: New USB device found, idVendor=1d6b, idProduct=0003
+[   24.410000] usb usb4: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[   24.420000] usb usb4: Product: xHCI Host Controller
+[   24.420000] usb usb4: Manufacturer: Linux 3.10.12 xhci-hcd
+[   24.430000] usb usb4: SerialNumber: xhci-hcd.1.auto
+[   24.480000] xHCI xhci_add_endpoint called for root hub
+[   24.490000] xHCI xhci_check_bandwidth called for root hub
+[   24.530000] hub 4-0:1.0: USB hub found
+[   24.540000] hub 4-0:1.0: 1 port detected
+[   24.710000] usb 3-1: new high-speed USB device number 2 using xhci-hcd
+[   24.710000] PPA API --- init successfully
+[   24.730000] usb 3-1: New USB device found, idVendor=0424, idProduct=2412
+[   24.730000] usb 3-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[   24.760000] hub 3-1:1.0: USB hub found
+[   24.760000] hub 3-1:1.0: 2 ports detected
+[   24.850000] ltq_temp: Lantiq Temperature Sensor Driver, Version 1.0.11 (c) Copyright 2014, Lantiq Deutschland GmbH
+[   24.960000] ltq_pmcu: PMCU Lantiq Power Management Control Unit, Version 1.3.2 (c) Copyright 2014, Lantiq Deutschland GmbH
+[   25.130000] 1V15VDD: 900 <--> 1200 mV at 1060 mV normal standby
+[   25.930000] swa_stack_al: module license 'unspecified' taints kernel.
+[   25.940000] Disabling lock debugging due to kernel taint
+[   27.170000] [ltqmips_dtlk] { dlrx_drv_init : 3631 }DirectLink's parameters
+[   27.180000] [ltqmips_dtlk] { dlrx_drv_init : 3632 }  Number of TX DESCRIPTOR: 1420
+[   27.180000] [ltqmips_dtlk] { wlan_detect_ath_card : 426 }Can not found any Atheros card
+[   27.190000] <mpe_hal_dl_alloc_resource> Allocating resources for DL
+[   27.220000] <mpe_hal_dl_alloc_resource>: dl_buf_info_addr: 0x67cdd48c dl_ep_2radio_addr: 0x67cde774
+[   27.230000] <mpe_hal_dl_alloc_resource> DlCommmIpi: 154
+[   27.240000] [ltqmips_dtlk] { dlrx_drv_init : 3662 }dlrx_drv_init: 0x67cdd48c 0x67cde774
+[   27.260000] [ltqmips_dtlk] { dlrx_drv_init : 3671 }DirectLink resource from MPE HAL
+[   27.270000] [ltqmips_dtlk] { dlrx_drv_init : 3673 }    COMM base[7ac70000]
+[   27.270000] [ltqmips_dtlk] { dlrx_drv_init : 3675 }    COMM size[65536]
+[   27.280000] [ltqmips_dtlk] { dlrx_drv_init : 3677 }    RX CFG context base[67800000]
+[   27.290000] [ltqmips_dtlk] { dlrx_drv_init : 3679 }    RX CFG context size[1048576]
+[   27.300000] [ltqmips_dtlk] { dlrx_drv_init : 3681 }    RX Message base[67a00000]
+[   27.300000] [ltqmips_dtlk] { dlrx_drv_init : 3683 }    RX Message size[2097152]
+[   27.310000] [ltqmips_dtlk] { dlrx_drv_init : 3685 }    TX CFG context base[67f00000]
+[   27.320000] [ltqmips_dtlk] { dlrx_drv_init : 3687 }    TX CFG context size[1048576]
+[   27.330000] [ltqmips_dtlk] { dlrx_drv_init : 3689 }    Uncached context base[67e94000]
+[   27.330000] [ltqmips_dtlk] { dlrx_drv_init : 3691 }    Uncached context size[4096]
+[   27.340000] [ltqmips_dtlk] { dlrx_drv_init : 3741 }    COMM base[7ac70000] KSEG0[0x60000000] KSEG1[0xa0000000] [0x3ac70000]
+[   27.350000] [ltqmips_dtlk] { dlrx_drv_init : 3747 }Test tao lao: 0x67800000
+[   27.360000] [ltqmips_dtlk] { dtlk_mem_base_get : 509 }DTLK RX base :0x67a00000
+[   27.380000] [ltqmips_dtlk] { ppa_dl_detect_11ac_card : 354 }ppa_dl_detect_11ac_card:g11ACWirelessCardID[0] subtype[0]
+[   27.390000] [ltqmips_dtlk] { dlrx_data_structure_init : 2232 }dlrx_data_structure_init: dlrx_cfg_ctxt_ce5des_ptr->cfg_num_ce5des[512]
+[   27.400000] [ltqmips_dtlk] { ppa_dl_detect_11ac_card : 354 }ppa_dl_detect_11ac_card:g11ACWirelessCardID[0] subtype[0]
+[   27.410000] [ltqmips_dtlk] { dlrx_drv_init : 3760 }dlrx_drv_init: before create proc
+[   27.420000] [ltqmips_dtlk] { dlrx_drv_init : 3763 }DLRX driver init successfully!
+[   27.430000] [ltqmips_dtlk] { dlrx_drv_init : 3765 }DLRX driver version: 0x20008
+[   27.430000] <mpe_hal_feature_start> Flags: 1 Mpe Feature: 0
+[   27.440000] <mpe_hal_feature_start> EXIT
+bind(): Address already in use
+bind(): Address already in use
+Error: No sockets bound, unable to continue
+[   28.040000] Hello, dlrx_fw
+[   28.040000] =============
+[   28.050000] DRE_Version is 0x210, DRE_Feature is 0x11ac0201
+[   28.050000] DLRX FW: Peregrine board detected
+[   29.100000] Init Success
+[   29.100000] ppa_hal_generic_hook not support cmd 0xd
+[   29.110000] ppa_hal_generic_hook not support cmd 0xd
+[   29.120000] directpath start id: 0, end id: 272
+[   29.120000] ppa_init - init succeeded
+Calling init of SID: 1 COMPLETED!!
+SL_INIT Success for sid: 1
+==[7777][servd.c][servd_startSlLibsInit][1]==
+==[7777][servd.c][servd_startSlLibsInit][sl_eth:2]==
+Calling init of SL Library 'sl_eth' SID: 2
+[   29.210000] p2p channel turned ON !
+[   29.210000] IPv6: ADDRCONF(NETDEV_UP): eth0_1: link is not ready
+[   29.280000] p2p channel already ON !
+[   29.290000] p2p channel already ON !
+[   29.290000] IPv6: ADDRCONF(NETDEV_UP): eth0_3: link is not ready
+[   29.300000] [datapath_api] { get_offset_clear_chksum : 1897 }Not UDP/TCP and cannot do checksum calculation !
+[   29.300000] [datapath_api] { dp_xmit : 2247 }packet cant do hw checksum
+[   29.310000] p2p channel already ON !
+[   29.310000] IPv6: ADDRCONF(NETDEV_UP): eth0_4: link is not ready
+[   29.320000] p2p channel already ON !
+[   31.040000] dp_fp_coc_confirm: CoC state changed from : 1 to : 3 enable irq !
+dd: writing 'standard output': Broken pipe
+854+0 records in
+853+0 records out
+[   31.490000] gphy-fw gphy-fw.11: proc_write_phy_fw:   Found:GRX500 V1.1 GPHY BE  FW
+[   31.500000] gphy-fw gphy-fw.11: booting GPHY0 firmware at 27EA0000 for GRX500
+[   31.500000] gphy-fw gphy-fw.11: booting GPHY1 firmware at 27EA0000 for GRX500
+[   31.510000] gphy-fw gphy-fw.11: booting GPHY2 firmware at 27EA0000 for GRX500
+[   31.520000] gphy-fw gphy-fw.11: booting GPHY3 firmware at 27EA0000 for GRX500
+[   31.520000] gphy-fw gphy-fw.11: booting GPHY4 firmware at 27EA0000 for GRX500
+[   31.530000] ltq_gphy_firmware_config: fw_mode:11G-FW, no of phys:5,data_ptr:27EA0000
+[   31.540000] libphy: 0:03 - Link is Down
+[   31.590000] libphy: 1:01 - Link is Down
+[   32.040000] dp_fp_coc_confirm: CoC state changed from : 3 to : 1 disable irq, do nothing !
+bind(): Address already in use
+bind(): Address already in use
+Error: No sockets bound, unable to continue
+Enabling GMII SSC[   33.900000] libphy: 0:03 - Link is Up - 100/Full
+ ...
+[   33.920000] libphy: 1:01 - Link is Up - 100/Full
+Enabling GPHY SSC and DDR SSC ...
+Calling init of SID: 2 COMPLETED!!
+SL_INIT Success for sid: 2
+Writing to Database using cal_setValue..
+Writing to Database using cal_setValue Complete with Return: 0
+==[7777][servd.c][servd_startSlLibsInit][2]==
+==[7777][servd.c][servd_startSlLibsInit][sl_network:3]==
+Calling init of SL Library 'sl_network' SID: 3
+bind(): Address already in use
+bind(): Address already in use
+Error: No sockets bound, unable to continue
+Calling init of SID: 3 COMPLETED!!
+SL_INIT Success for sid: 3
+==[7777][servd.c][servd_startSlLibsInit][3]==
+==[7777][servd.c][servd_startSlLibsInit][sl_lanservices:4]==
+Calling init of SL Library 'sl_lanservices' SID: 4
+Calling init of SID: 4 COMPLETED!!
+SL_INIT Success for sid: 4
+Writing to Database using cal_setValue..
+netifd_ubus_init(1154): connected as c88a6801
+proto_shell_add_handler(908): Add handler for script ./dhcp.sh: dhcp
+proto_shell_add_handler(908): Add handler for script ./dhcpv6.sh: dhcpv6
+proto_shell_add_handler(908): Add handler for script ./dslite.sh: dslite
+proto_shell_add_handler(908): Add handler for script ./map.sh: map
+proto_shell_add_handler(908): Add handler for script ./ppp.sh: ppp
+proto_shell_add_handler(908): Add handler for script ./ppp.sh: pppoe
+proto_shell_add_handler(908): Add handler for script ./ppp.sh: pppoa
+proto_shell_add_handler(908): Add handler for script ./wwan.sh: wwan
+config_init_wireless(357): No wireless configuration found
+[   39.440000] p2p channel already ON !
+[   39.440000] IPv6: ADDRCONF(NETDEV_UP): eth0_1: link is not ready
+[   39.480000] device eth0_1 entered promiscuous mode
+[   39.490000] IPv6: ADDRCONF(NETDEV_UP): br-lan: link is not ready
+[   39.550000] p2p channel already ON !
+[   39.550000] device eth0_2 entered promiscuous mode
+[   39.550000] br-lan: port 2(eth0_2) entered forwarding state
+[   39.560000] br-lan: port 2(eth0_2) entered forwarding state
+[   39.560000] IPv6: ADDRCONF(NETDEV_CHANGE): br-lan: link becomes ready
+[   39.590000] p2p channel already ON !
+[   39.590000] IPv6: ADDRCONF(NETDEV_UP): eth0_3: link is not ready
+[   39.600000] device eth0_3 entered promiscuous mode
+[   39.610000] p2p channel already ON !
+[   39.610000] IPv6: ADDRCONF(NETDEV_UP): eth0_4: link is not ready
+[   39.620000] device eth0_4 entered promiscuous mode
+[   39.630000] p2p channel already ON !
+Writing to Database using cal_setValue Complete with Return: 0
+==[7777][servd.c][servd_startSlLibsInit][4]==
+==[7777][servd.c][servd_startSlLibsInit][sl_dsl:5]==
+Calling init of SL Library 'sl_dsl' SID: 5
+[   39.690000] device eth1 entered promiscuous mode
+[   39.760000] [datapath_api] { dp_xmit : 2218 }dp_xmit:no header room to insert pmac:eth1 ?
+[   40.200000] Lantiq (VRX) DSL CPE MEI driver, version 1.5.17.5-pd1, (c) 2007-2015 Lantiq Beteiligungs-GmbH & Co. KGUsing major number 245
+MEI_DRV: create proc config entry
+[   40.470000]
+[   40.470000]
+[   40.470000] Lantiq CPE API Driver version: DSL CPE API V4.17.18.4
+[   40.470000]
+[   40.470000] Predefined debug level: 3
+
+[   40.480000] MEI_DRV[00]: INIT DEVICE - NO INTERUPTS --> ACTIVE POLL MODE
+MEI_DRV[00]: Start Driver Control Thread
+
+[   40.490000] MEI_DRV: Cntrl Thr Enter - VrxCtrl
+[   40.630000] [vrx318_tc] { pcie_ep_probe : 178 }Probe VRX318 total num: 1
+[   40.640000] [vrx318_tc] { vrx318_soc_cfg_get : 515 }cpu (phybase: 0x0, dnum: 0), fp (phybase: 0x1e7e7100, fp dnum: 32), ds (phybase: 0x1e79f100, dnum: 32), pmac_en: 0, us desown: 1, ds desown: 0
+[   40.650000] [vrx318_tc] { vrx318_drv_init : 565 }DP register VRX318 successfully, dp_id: 7
+[   40.660000] [vrx318_tc] { print_ver : 516 }VRX318_DRIVER version: 2.0.4
+[   40.670000] [vrx318_tc] { vrx318_drv_init : 568 }Total 1 device are detected
+[   40.730000] [vrx318_tc] { vrx318_ptm_tc_hw_fw_init : 2491 }vrx318 id  = 0
+[   40.730000] [vrx318_tc] { vrx318_ptm_tc_hw_fw_init : 2493 }irq        = 32
+[   40.740000] [vrx318_tc] { vrx318_ptm_tc_hw_fw_init : 2495 }membase    = 0xfc000000
+[   40.750000] [vrx318_tc] { vrx318_ptm_tc_hw_fw_init : 2497 }phy_membase = 0xbc000000
+[   40.750000] [vrx318_tc] { vrx318_ptm_tc_hw_fw_init : 2499 }peer_num    = 0
+[   40.760000] [vrx318_tc] { vrx318_ptm_tc_hw_fw_init : 2501 }tc_mode         = PTM Single Line
+[   40.780000] [vrx318_tc] { vrx318_pdma_init : 601 }vrx318_pdma_init: Configure PDMA for jumbo 0x02040640
+[   40.790000] [vrx318_tc] { pp32_load : 2323 }Download E1 FW
+[   40.790000] [vrx318_tc] { pp32_download_code : 90 }pp32: 0, code_src: 0x7aea4090, code dw len: 0x1267
+[   40.800000] [vrx318_tc] { pp32_download_code : 100 }addr(CDM_CFG) = 0x00000000
+[   40.810000] [vrx318_tc] { pp32_load : 2332 }Downdload B1 FW
+[   40.820000] [vrx318_tc] { pp32_download_code : 90 }pp32: 1, code_src: 0x7aea10b4, code dw len: 0xbf7
+[   40.830000] [vrx318_tc] { pp32_download_code : 100 }addr(CDM_CFG) = 0x000000c0
+[   40.830000] [vrx318_tc] { pp32_start : 44 }mask : 0x10000
+[   40.840000] [vrx318_tc] { pp32_start : 44 }mask : 0x0
+[   40.840000] [vrx318_tc] { print_fw_version : 218 }FW Family:  VRX318
+[   40.840000] FW Package:       B1 - (PTM_BONDING) Package
+[   40.840000] FW Version:       3.2.2
+[   40.860000] [vrx318_tc] { print_fw_version : 218 }FW Family:  VRX318
+[   40.860000] FW Package:       B1 - (PTM_BONDING) Package
+[   40.860000] FW Version:       3.2.2
+[   40.870000] [vrx318_tc] { vrx318_ptm_tc_hw_fw_init : 2546 }VRX318 PTM init HW successfully
+[   40.870000] [vrx318_tc] { ptm_set_mac_address : 203 }ptm mac address update!
+[   40.870000] [vrx318_tc] { ptm_open : 151 }ptm open
+[   40.890000] [vrx318_tc] { vrx_tc_msg_send : 572 }Failed to send out the multicast message
+[   40.900000] [vrx318_tc] { vrx318_ptm_tc_init : 2621 }VRX318 PTM TC is successfully loaded
+[   40.940000] device ptm0 entered promiscuous mode
+[   40.950000] DSL[00]: ERROR - No valid XTSE settings!
+[   40.960000] DSL[00]: ERROR - no data in the current line state!
+[   40.960000] DSL[00]: ERROR - Function is only available in the SHOWTIME!
+[   40.980000] DSL[00]: ERROR - Function is only available in the SHOWTIME!
+[   40.990000] DSL[00]: ERROR - Function is only available in the SHOWTIME!
+[   41.010000] DSL[00]: ERROR - Function is only available in the SHOWTIME!
+[   41.010000] DSL[00]: ERROR - Function is only available in the SHOWTIME!
+[   41.020000] DSL[00]: ERROR - Function is only available in the SHOWTIME!
+[   41.030000] MEI_DRV[00]: ERROR Wait for device - invalid drv state 1
+MEI_DRV[00-01]: ERROR - ioctl - Start device, no response
+MEI_DRV[00-01]: ERROR ioctl - inval state 1, not ready for send !!!
+
+[   41.050000] DSL[00]: Error -1021 during FIO_MEI_MBOX_MSG_SEND (MsgID=0x7F03), FctCode 0xFFFF!
+[   41.060000] DSL[00]: Config Error or line not available - block!
+ltq_cpe_control_init.sh: xDSL_MaxPipeIdx=0
+ltq_cpe_control_init.sh: DSL related system status:
+ltq_cpe_control_init.sh:   L2 vectoring = 1
+ltq_cpe_control_init.sh:   bonding      = 0
+sh: 2: unknown operand
+ltq_cpe_control_init.sh: TestCfg: XTM_MULTIMODE=-T1:0x1:0x1_2:0x1:0x1
+sh: 2: unknown operand
+ltq_cpe_control_init.sh: StandardCfg: xTSE=05_00_04_00_0C_01_00_07 (system level data base)
+[   41.560000] br-lan: port 2(eth0_2) entered forwarding state
+[   41.770000] DSL[00]: Error for send CMD MsgID=0x7F03 - BLOCK line!
+[   41.770000] DSL[00]: ERROR - T1.413 Revision Number get failed!
+[   41.780000] MEI_DRV[00]: ERROR Wait for device - invalid drv state 1
+MEI_DRV[00-01]: ERROR - ioctl - Start device, no response
+MEI_DRV[00-01]: ERROR ioctl - inval state 1, not ready for send !!!
+
+[   41.790000] DSL[00]: Error -1021 during FIO_MEI_MBOX_MSG_SEND (MsgID=0x8103), FctCode 0xFFFF!
+[   41.800000] DSL[00]: Config Error or line not available - block!
+[   42.510000] DSL[00]: Error for send CMD MsgID=0x8103 - BLOCK line!
+[   42.510000] DSL[00]: ERROR - T1.413 Vendor Revision Number get failed!
+[   42.520000] MEI_DRV[00]: ERROR message send - invalid drv state 5
+
+[   42.520000] DSL[00]: Error -1021 during FIO_MEI_MBOX_MSG_SEND (MsgID=0x7E03), FctCode 0xFFFF!
+[   42.530000] DSL[00]: Config Error or line not available - block!
+bind(): Address already in use
+bind(): Address already in use
+Error: No sockets bound, unable to continue
+[   43.240000] DSL[00]: Error for send CMD MsgID=0x7E03 - BLOCK line!
+[   43.240000] DSL[00]: ERROR - T1.413 Revision Number get failed!
+[   43.250000] MEI_DRV[00]: ERROR message send - invalid drv state 5
+
+[   43.250000] DSL[00]: Error -1021 during FIO_MEI_MBOX_MSG_SEND (MsgID=0x8003), FctCode 0xFFFF!
+[   43.260000] DSL[00]: Config Error or line not available - block!
+[   43.330000] MEI_DRV[00]: TcReset failed, no PP callback defined!
+MEI_DRV[00]: Could not perform reset of TC-Layer!
+[   43.970000] DSL[00]: Error for send CMD MsgID=0x8003 - BLOCK line!
+[   43.970000] DSL[00]: ERROR - T1.413 Vendor Revision Number get failed!
+[   43.980000] DSL[00]: ERROR - Function is only available in the SHOWTIME!
+[   43.980000] DSL[00]: ERROR - no data in the current line state!
+[   43.990000] DSL[00]: ERROR - Function is only available in the SHOWTIME!
+[   44.000000] DSL[00]: ERROR - Function is only available in the SHOWTIME!
+[   44.000000] DSL[00]: ERROR - Function is only available in the SHOWTIME!
+[   44.010000] DSL[00]: ERROR - Function is only available in the SHOWTIME!
+Calling init of SID: 5 COMPLETED!!
+SL_INIT Success for sid: 5
+Writing to Database using cal_setValue..
+ltq_cpe_control_init.sh: TestCfg: BS_US_ENA_CLI=1
+ltq_cpe_control_init.sh: TestCfg: BS_DS_ENA_CLI=1
+ltq_cpe_control_init.sh: TestCfg: VN_US_ENA_CLI=1
+ltq_cpe_control_init.sh: TestCfg: VN_DS_ENA_CLI=1
+ltq_cpe_control_init.sh: TestCfg: RETX_A_US_ENA_CLI=0
+ltq_cpe_control_init.sh: TestCfg: RETX_A_DS_ENA_CLI=0
+ltq_cpe_control_init.sh: TestCfg: RETX_V_US_ENA_CLI=1
+ltq_cpe_control_init.sh: TestCfg: RETX_V_DS_ENA_CLI=1
+ltq_cpe_control_init.sh: US-ReTx: Set BAR13 of line 0 to 0x1E234000 (VRX300)
+
+[   44.770000] BAR register set: BAR[13]=0x1E234000
+Please note that changes will be valid after link restart only!
+Writing to Database using cal_setValue Complete with Return: 0
+==[7777][servd.c][servd_startSlLibsInit][5]==
+==[7777][servd.c][servd_startSlLibsInit][sl_wlan:6]==
+==[7777][servd.c][servd_startSlLibsInit][6]==
+==[7777][servd.c][servd_startSlLibsInit][sl_diagnostics:7]==
+Calling init of SL Library 'sl_diagnostics' SID: 7
+Calling init of SL Library 'sl_wlan' SID: 6
+Calling init of SID: 7 COMPLETED!!
+SL_INIT Success for sid: 7
+==[7777][servd.c][servd_startSlLibsInit][7]==
+==[7777][sl_wlan.c][sl_wlan_handler]==
+==[7777][fapi_wlan.c][fapiWlanFailSafeLoad]==
+==[7777][sl_wlan.c][sl_wlan_init][start]==
+==[7777][sl_wlan.c][sl_wlan_init][wlan_get_object_from_db][db]==
+==[7777][servd.c][servd_startSlLibsInit][sl_DeviceInfo:8]==
+Calling init of SL Library 'sl_DeviceInfo' SID: 8
+
+ @@@ PRINT OBJLIST START @@@
+         "Device.Ethernet.Interface.1": {
+                 "Sid" :"2",
+                 "Oid" : "29",
+                 "ObjOper" : "0",
+                 "Flag" : "0x200000",
+                 "MACAddress": {
+                         "paramId" : "37",
+                         "paramValue" : "00:e0:92:00:01:40",
+                         "paramFlag" : "0x200000"
+                 },
+         },
+ }
+
+ @@@@@@ PRINT OBJLIST END @@@@@@
+Calling init of SID: 8 COMPLETED!!
+SL_INIT Success for sid: 8
+Writing to Database using cal_setValue..
+==[7777][sl_wlan.c][sl_wlan_init][wlan_get_object_from_db][wps]==
+ltq_cpe_control_init.sh: Firmware ready wait time 0 sec.
+nReturn=0
+
+ltq_cpe_control_init.sh: G.Vector (best fitting, automatic MEI Driver mode)
+nReturn=0
+
+Writing to Database using cal_setValue Complete with Return: 0
+==[7777][servd.c][servd_startSlLibsInit][8]==
+==[7777][sl_wlan.c][sl_wlan_init][HELP_MERGE_OBJLIST]==
+==[7777][sl_wlan.c][sl_wlan_init][wlan_init]==
+==[7777][wlan_init.c][wlan_init][start]==
+==[7777][wlan_init.c][wlan_init][wlan_get_vap_instances_from_object]==
+==[7777][wlan_init.c][wlan_init][wlan_get_param_from_list][RadioNumberOfEntries]==
+==[7777][wlan_init.c][wlan_init][wlan_get_param_from_list][SSIDNumberOfEntries]==
+==[7777][wlan_init.c][wlan_init][fapi_wlan_hw_init]==
+==[7777][fapi_wlan.c][fapi_wlan_hw_init]==
+FAPI_WLAN_VENDOR_WAVE: fapi_wave_main ,Handling: 'fapi_wlan_wave_hw_init'
+Writing to Database using cal_setValue..
+==[7777][fapi_wlan_wave.c][execute_config_in]==
+==[7777][fapi_wlan_wave.c][runWaveScript]==
+    ==[7777][fapi_wlan_wave.c][/opt/lantiq/wave/scripts/fapi_wlan_wave_hw_init ]==
+
+[   46.940000] MEI_DRV[00]: TcReset failed, no PP callback defined!
+MEI_DRV[00]: Could not perform reset of TC-Layer!
+fapi_wlan_wave_discover.sh: ALL  PCI DEVICES COUNT: 6
+fapi_wlan_wave_discover.sh: WLAN PCI DEVICES COUNT: 2
+fapi_wlan_wave_discover.sh: AHB_WLAN_COUNT: 0
+fapi_wlan_wave_discover.sh: TOTAL WLAN COUNT: 2
+bind(): Address already in use
+bind(): Address already in use
+Error: No sockets bound, unable to continue
+Writing to Database using cal_setValue Complete with Return: 0
+[   48.080000] ip6_tables: (C) 2000-2006 Netfilter Core Team
+[   48.400000] udevd[3197]: starting version 173
+[   48.630000] cfg80211: World regulatory domain updated:
+[   48.630000] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp)
+[   48.640000] cfg80211:   (2402000 KHz - 2472000 KHz @ 40000 KHz), (N/A, 2000 mBm)
+[   48.650000] cfg80211:   (2457000 KHz - 2482000 KHz @ 40000 KHz), (N/A, 2000 mBm)
+[   48.650000] cfg80211:   (2474000 KHz - 2494000 KHz @ 20000 KHz), (N/A, 2000 mBm)
+[   48.660000] cfg80211:   (5170000 KHz - 5250000 KHz @ 80000 KHz), (N/A, 2000 mBm)
+[   48.670000] cfg80211:   (5250000 KHz - 5330000 KHz @ 80000 KHz), (N/A, 2000 mBm)
+[   48.680000] cfg80211:   (5490000 KHz - 5730000 KHz @ 160000 KHz), (N/A, 2000 mBm)
+[   48.680000] cfg80211:   (5735000 KHz - 5835000 KHz @ 80000 KHz), (N/A, 2000 mBm)
+[   48.690000] cfg80211:   (57240000 KHz - 63720000 KHz @ 2160000 KHz), (N/A, 0 mBm)
+Warning: never matched protocol: ah. use extension match instead.
+Writing to Database using cal_setValue..
+[   48.750000] [MTLKD] rtlog_setup()
+[   48.790000] [MTLKD] Succeeded alloc: addr 7afd4800, name rtlog0
+[   48.790000] [4294942175] mtlk0(mtlk_cdev_init:355): Max nodes set to 1048575
+[   48.800000] [4294942176] mtlk0(mtlk_ddr_root_init:97): Allocated DDR buffer at address 0x67400000
+tar: wlanconfig.gz: not found in archive
+Writing to Database using cal_setValue Complete with Return: 0
+==[7777][servd.c][servd_startSlLibsInit][10]==
+==[7777][servd.c][servd_startSlLibsInit][sl_managementserver:11]==
+[   50.580000] Devm Timer Driver Open: Minor number [0]!
+tar: can't open '/tmp/eeprom.tar.gz': No such file or directory
+[   50.770000] [4294942373] mtlk0(__mtlk_print_endianess:7992): The system is Big endian (0xbeadfeed, 0xedfeadbe)
+[   50.780000] [4294942374] mtlk0(__mtlk_print_driver_version:7999): Driver version: 5.1.2.0.38.exported.57c337476655.REL_5.1.2.PcieG5.AhbG35.Release
+[   50.790000] [4294942375] mtlk0(mtlk_fast_mem_print_info:114): Using normal memory for hot context
+[   50.800000] PCI: Enabling device 0000:01:00.0 (0000 -> 0002)
+[   50.810000] [MTLKD] PCIE bus CHI_ID is:0x810 address is:0xf837c060
+[   50.810000] [MTLKD] ChipID is found: 0x0810
+[   50.820000] [4294942378] mtlkW(mtlk_hw_mmb_init_card:5893): card_idx 0, mmb_pas 0xf8000000, mmb_pas_phy 0xb8000000, fastpath supported:1 enabled:1 -> available:1
+[   50.830000] [4294942379] mtlkE(_mtlk_df_fw_request_firmware:42): Request Firmware ('cal_wlan0.bin') is starting
+[   50.920000] [4294942388] mtlkE(_mtlk_df_fw_request_firmware:53): Firmware ('cal_wlan0.bin') is missing
+[   50.950000] [4294942391] mtlk0(_eeprom_read_from_gpio:1185): EEPROM via GPIO available (size:1024)
+[   51.160000] [4294942412] mtlk0(_eeprom_parse:856): EEPROM info: ver 0x0500, device_id 0x0810, header size 40, data size 1024
+[   51.170000] [4294942413] mtlk0(mtlk_cis_data_parse:856): EEPROM Card ID: type 0x51, revision 0x42 (B)
+[   51.180000] [4294942414] mtlk0(mtlk_cis_data_parse:906): EEPROM supported bands: 2.4 - Yes, 5.2 - NO
+[   51.180000] [4294942414] mtlk0(mtlk_pcieg5_read_efuse_data:794): EFUSE_data address is 0xf82a0070
+[   51.200000] [4294942416] mtlk0(_efuse_read_raw_data:1330): EFUSE reading finished, 512 bytes read.
+[   51.200000] [4294942416] mtlk0(_efuse_v5_parse:916): EFUSE capability bits: 0x00
+[   51.210000] [4294942417] mtlkW(_efuse_v5_parse:918): EFUSE capability burn flag is not set!
+[   51.220000] [4294942418] mtlk0(_efuse_v5_parse:925): EFUSE version 0
+[   51.230000] [4294942419] mtlkE(_efuse_v5_parse:928): EFUSE version 5 only supported!
+[   51.230000] [4294942419] mtlkW(mtlk_cis_search_and_parse_rfic:758): RFIC CIS not found
+[   51.240000] [4294942420] mtlkE(_mtlk_df_fw_request_firmware:42): Request Firmware ('PSD.bin') is starting
+[   51.340000] [4294942430] mtlk0(mtlk_psdb_file_read_and_parse:1174): Loaded 'PSD.bin' of 29568 bytes
+[   51.350000] [4294942431] mtlk0(mtlk_psdb_file_read_and_parse:1200): PSDB Info: version 55 (0x00000037), revision 36167c8c56fb
+[   51.360000] [4294942432] mtlk0(mtlk_psdb_file_read_and_parse:1209): Look for chip_id 0x0810, hw_type 0x51, hw_rev 0x42
+[   51.370000] [4294942433] mtlk0(psdb_copy_table:494): Table: id 0xAAAA5555, offs 0x19E0
+[   51.380000] [4294942434] mtlk0(psdb_copy_table:494): Table: id 0x10000, offs 0x7054
+[   51.390000] [4294942435] mtlk0(psdb_copy_table:494): Table: id 0x20000, offs 0x3C8C
+[   51.400000] [4294942436] mtlk0(psdb_copy_table:494): Table: id 0x30000, offs 0x343C
+[   51.400000] [4294942436] mtlk0(psdb_copy_table:494): Table: id 0x40000, offs 0x33A8
+[   51.410000] [4294942437] mtlk0(psdb_copy_table:494): Table: id 0xF0000, offs 0x2C28
+[   51.420000] [4294942438] mtlk0(psdb_copy_table:494): Table: id 0x120000, offs 0x2A54
+[   51.430000] [4294942439] mtlk0(psdb_copy_table:494): Table: id 0x130000, offs 0x2A24
+[   51.430000] [4294942439] mtlk0(psdb_copy_table:494): Table: id 0x140000, offs 0x2A10
+[   51.440000] [4294942440] mtlk0(psdb_copy_table:494): Table: id 0x150000, offs 0x29C4
+[   51.450000] [4294942441] mtlk0(psdb_copy_table:494): Table: id 0x160000, offs 0x28B0
+[   51.460000] [4294942442] mtlk0(psdb_copy_table:494): Table: id 0x170000, offs 0x2764
+[   51.460000] [4294942442] mtlk0(psdb_copy_table:494): Table: id 0x180000, offs 0x2718
+[   51.470000] [4294942443] mtlk0(psdb_copy_table:494): Table: id 0x190000, offs 0x26CC
+[   51.480000] [4294942444] mtlk0(psdb_copy_table:494): Table: id 0x1A0000, offs 0x26B0
+[   51.490000] [4294942445] mtlk0(psdb_copy_table:494): Table: id 0x1B0000, offs 0x2698
+[   51.490000] [4294942445] mtlk0(psdb_copy_table:494): Table: id 0x1C0000, offs 0x2664
+[   51.500000] [4294942446] mtlk0(psdb_copy_table:494): Table: id 0x1D0000, offs 0x2638
+[   51.510000] [4294942447] mtlk0(psdb_copy_table:494): Table: id 0x1E0000, offs 0x261C
+[   51.520000] [4294942448] mtlk0(psdb_parse_fields_array:1048): PSDB: TX/RX antennas number 3/3, mask 0x07/0x07
+[   51.530000] [4294942449] mtlk0(psdb_parse_fields_array:1072): PSDB: 17 general tables found
+[   51.540000] [4294942450] mtlk0(_psdb_print_info:1142): PSDB Beamforming capabilities: 0x1E, bf_explicit=1
+[   51.550000] [4294942451] mtlk0(pci_irq_alloc:279): NOF IRQs: 1
+[   51.630000] [4294942459] mtlkW(_mtlk_mmb_cleanup_reset_mac:4317): FW CPU reset is done
+config_init_wireless(357): No wireless configuration found
+[   51.710000] [4294942467] mtlkE(_mtlk_df_fw_request_firmware:42): Request Firmware ('ap_upper_gen5b.bin') is starting
+[   51.960000] [4294942492] mtlk0(_mtlk_mmb_load_firmware:3193): Loading 'ap_upper_gen5b.bin' of 261376 bytes
+[   51.970000] [4294942493] mtlk0(_mtlk_mmb_load_fw2mem:3085): mem[0] start f8300000 len 360448 (0x58000) written 261376
+[   51.990000] [4294942495] mtlkE(_mtlk_df_fw_request_firmware:42): Request Firmware ('ap_lower_gen5b.bin') is starting
+[   52.170000] [4294942513] mtlk0(_mtlk_mmb_load_firmware:3193): Loading 'ap_lower_gen5b.bin' of 81024 bytes
+[   52.180000] [4294942514] mtlk0(_mtlk_mmb_load_fw2mem:3085): mem[0] start f8380000 len 163840 (0x28000) written 81024
+[   52.190000] [4294942515] mtlkE(_mtlk_df_fw_request_firmware:42): Request Firmware ('tx_sender_gen5b.bin') is starting
+[   52.380000] [4294942534] mtlk0(_mtlk_mmb_load_firmware:3193): Loading 'tx_sender_gen5b.bin' of 32992 bytes
+[   52.390000] [4294942535] mtlk0(_mtlk_mmb_load_fw2mem:3085): mem[0] start f82f0000 len 36864 (0x9000) written 32992
+[   52.400000] [4294942536] mtlkE(_mtlk_df_fw_request_firmware:42): Request Firmware ('host_interface_gen5b_fast_path.bin') is starting
+[   52.620000] [4294942558] mtlk0(_mtlk_mmb_load_firmware:3193): Loading 'host_interface_gen5b_fast_path.bin' of 4184 bytes
+[   52.630000] [4294942559] mtlk0(_mtlk_mmb_load_fw2mem:3085): mem[0] start f82ec000 len 6144 (0x1800) written 4184
+[   52.640000] [4294942560] mtlkE(_mtlk_df_fw_request_firmware:42): Request Firmware ('rx_handler_gen5b.bin') is starting
+[   52.720000] [4294942568] mtlk0(_mtlk_mmb_load_firmware:3193): Loading 'rx_handler_gen5b.bin' of 7064 bytes
+[   52.730000] [4294942569] mtlk0(_mtlk_mmb_load_fw2mem:3085): mem[0] start f82e8000 len 8192 (0x2000) written 7064
+[   52.780000] [4294942574] mtlkE(_mtlk_mmb_prepare_data_ind_bdr:4019): RX ring size 4096 defined bigger than RD pool size 1024, using RD pool size as ring size
+[   52.790000] [4294942575] mtlkE(_mtlk_mmb_prepare_ring_buffer:3919): Ring virtual addr:67600000 dma_addr:27600000 base_addr:a7600000
+[   52.800000] [4294942576] mtlkE(_mtlk_mmb_prepare_ring_buffer:3919): Ring virtual addr:67601000 dma_addr:27601000 base_addr:a7601000
+[   52.810000] [4294942577] mtlk0(_mtlk_mmb_set_calibration_buffers:4363): Calibration buffer: dma_addr 0x27720000, virt_addr 0x67720000, size 73098
+[   52.820000] [4294942578] mtlk0(_mtlk_mmb_init_fw_capabilities:4589): FW supports 128 STAs 16 VAPs
+[   52.830000] [4294942579] mtlk0(set_ldpc_cap:3143): LDPC support is 1 for 2.4 GHz band
+[   52.840000] [4294942580] mtlk0(set_ampdu_factor:3158): AMPDU factor 64k is supported for 2.4 GHz band
+[   52.850000] [4294942581] mtlk0(set_ampdu_density:3168): AMPDU density has no restriction for 2.4 GHz band
+[   52.860000] [4294942582] mtlk0(set_rx_stbc:3175): RX STBC is supported for 2.4 GHz band
+[   52.870000] [4294942583] mtlk0(wv_cfg80211_init:3267): 2.4 GHz band supported, up to 3 spatial streams
+[   52.880000] [4294942584] mtlk0(_mtlk_df_user_alloc_devname:7668): NDEV Name pattern: wlan%d
+[   52.890000] [4294942585] mtlk0(mtlk_core_pdb_fast_handles_open:42): Open Hot-path parameters
+[   52.900000] [4294942586] mtlk0(_mtlk_core_init:9875): wlan0: Inited: is_stopped=1, is_stopping=0, is_iface_stopping=0, net_state=NET_STATE_HALTED
+[   52.910000] [4294942587] mtlkW(mtlk_hw_mmb_start_card_finalize:6845):  mips_no:0, pas_offset:0x0001F998
+[   52.920000] [4294942588] mtlkW(mtlk_hw_mmb_start_card_finalize:6845):  mips_no:1, pas_offset:0x0001F99C
+[   52.930000] [4294942589] mtlk0(_mtlk_mmb_data_path_init:6498): max_nof_streams 1
+[   52.940000] [4294942590] mtlk0(_mtlk_mmb_data_path_init:6514): Registering FastPath
+[   52.950000] DC DP [dc_dp_alloc_port:406] owner=7aacc590, dev_port=0, dev=7a844000, port_id=0, flags=0x00000008
+[   52.960000] [cbm] { cbm_get_wlan_umt_pid : 2818 }0x8 0x0 0x0 0x0 8
+[   52.960000] DC DP [_dc_dp_gsw_pmac_init:25] PMAC_EG_CFG_SET for GSW-R.
+[   52.970000] DC DP [_dc_dp_gsw_pmac_init:50] PMAC_IG_CFG_SET for GSW-R.
+[   52.970000] DC DP [_dc_dp_gsw_pmac_init:91] GSW PMAC Init Done.
+[   52.980000] DC DP [dc_dp_alloc_port:519] Success, returned port_id=8.
+[   52.990000] DC DP [_dc_dp_register_dev_private:553] owner=7aacc590, port_id=8, dev=7a844000, datapathcb=7aacc290,                                    num_bufs_req=1024, umt_base=b82b70c8, umt_len=8, resources=7a8079e8, flags=0x00000000
+[   53.010000] DC DP [_dc_dp_alloc_buf:110] Allocating 1 DMA1-Tx buffer lists.
+[   53.010000] DC DP [_dc_dp_alloc_buf:123] buflist=0x7ade9f88.
+[   53.020000] DC DP [_dc_dp_alloc_buf:132] allocating pool 1 of size 2048 KB.
+[   53.020000] DC DP [_dc_dp_register_dev_private:672] Configuring DMA1-Tx channel 0x1000007.
+[   53.030000] DC DP [_dc_dp_register_dev_private:687] Configuring UMT HW with dest address 0xb82b70c8.
+[   53.040000] DC DP [_dc_dp_register_dev_private:757] Success, returned 0.
+[   53.050000] DC DP [wave500_dp_register_dev:90] Allocating 1 DMA1-Tx buffer lists.
+[   53.060000] DC DP [wave500_dp_register_dev:126] resources->buflist = 7b52c000
+[   53.060000] DC DP [wave500_dp_register_dev:129] Buffer 1 : 0x39c00000.
+[   53.070000] DC DP [wave500_dp_register_dev:129] Buffer 2 : 0x39c00800.
+[   53.080000] DC DP [wave500_dp_register_dev:129] Buffer 3 : 0x39c01000.
+[   53.080000] DC DP [wave500_dp_register_dev:129] Buffer 4 : 0x39c01800.
+[   53.090000] DC DP [wave500_dp_register_dev:129] Buffer 5 : 0x39c02000.
+[   53.100000] DC DP [wave500_dp_register_dev:129] Buffer 6 : 0x39c02800.
+[   53.100000] DC DP [wave500_dp_register_dev:136] resources->num_dma_desc = 1024
+[   53.110000] DC DP [wave500_dp_register_dev:137] resources->dmatx_ring_base = 0x2771c000
+[   53.120000] DC DP [wave500_dp_register_dev:138] resources->cbm_dequeue_base = 0x1e7d4100.
+[   53.130000] DC DP [wave500_dp_register_dev:139] resources->num_dequeue_bufs = 32.
+[   53.130000] DC DP [wave500_dp_register_dev:140] resources->cbm_buf_free_base = 0x1e7d4080.
+[   53.140000] DC DP [wave500_dp_register_dev:141] resources->num_free_bufs = 32.
+[   53.150000] [4294942611] mtlk0(_mtlk_mmb_rtlog_fw_add_stream:6199): wlan_if 0, FwAddStream 0 is not set
+[   53.160000] [4294942612] mtlk0(_mtlk_mmb_rtlog_fw_add_filter:6313): wlan_if 0, FilterType 0 is not set
+[   53.170000] [4294942613] mtlk0(_mtlk_mmb_rtlog_fw_add_filter:6313): wlan_if 0, FilterType 1 is not set
+[   53.180000] [4294942614] mtlkW(_mtlk_mmb_send_hw_dep_cfg:3624): XTAL value 0x5B, AFE values: 0x00000000, 0x00000000
+[   53.190000] [4294942615] mtlk0(_hw_init_mhi_statistic:5145): CID-00: MHI statistic buffer 0x67740000, dma_addr 0x27740000, size 16912, buff_copy 0x7a878000
+[   53.200000] [4294942616] mtlkW(_hw_init_phy_rx_status:5231): PhyRxStatus buffer 0x67717800, dma_addr 0x27717800, size 1036
+[   53.220000] [4294942618] mtlk0(mtlk_core_set_net_state:783): wlan0: Going from NET_STATE_HALTED to NET_STATE_IDLE
+[   53.230000] [4294942619] mtlk0(mtlk_eeprom_check_ee_data:1727): Options mask is 0x00
+[   53.230000] [4294942619] mtlkE(mtlk_df_ui_group_init:9009): device:wlan0 register groupid cb
+[   53.240000] [4294942620] mtlk0(_mtlk_dut_core_irbd_register:655): CID-0000: Register DUT IRBD...
+[   53.250000] [4294942621] mtlk0(mtlk_core_set_net_state:783): wlan0: Going from NET_STATE_IDLE to NET_STATE_READY
+[   53.290000] DC DP [dc_dp_register_subif:818] owner=7aacc590, dev=7a844000, subif_id=7a84464c, flags=0x00000000
+[   53.300000] DC DP [dc_dp_register_subif:922] Enabling UMT HW.
+[   53.300000] DC DP [dc_dp_register_subif:951] Success, returned 0.
+[   53.310000] [4294942627] mtlkE(mtlk_df_user_set_priority_to_wmm:807): dump of prio2wmm
+[   53.310000] [4294942627] mtlkE(mtlk_df_user_set_priority_to_wmm:807): cp= 0x7a807b68 l=8
+[   53.320000] [4294942628] mtlkE(mtlk_df_user_set_priority_to_wmm:807): 0000:  00 01 02 03 04 05 06 07
+[   53.330000] [4294942629] mtlk0(rtlog_fw_clb_register:2435): wlan_if 0: clb 7aa30cfc, ctx 7a81b684
+[   53.340000] [4294942630] mtlk0(mtlk_fast_mem_print_info:114): Using normal memory for hot context
+[   53.350000] PCI: Enabling device 0000:03:00.0 (0000 -> 0002)
+[   53.360000] [MTLKD] PCIE bus CHI_ID is:0x800 address is:0xf437c060
+[   53.360000] [MTLKD] ChipID is found: 0x0800
+[   53.370000] [4294942633] mtlkW(mtlk_hw_mmb_init_card:5893): card_idx 1, mmb_pas 0xf4000000, mmb_pas_phy 0xb4000000, fastpath supported:1 enabled:1 -> available:1
+[   53.380000] [4294942634] mtlkE(_mtlk_df_fw_request_firmware:42): Request Firmware ('cal_wlan1.bin') is starting
+[   53.440000] [4294942640] mtlkE(_mtlk_df_fw_request_firmware:53): Firmware ('cal_wlan1.bin') is missing
+[   53.490000] [4294942645] mtlk0(_eeprom_read_from_gpio:1185): EEPROM via GPIO available (size:1024)
+[   53.700000] [4294942666] mtlk0(_eeprom_parse:856): EEPROM info: ver 0x0500, device_id 0x0800, header size 40, data size 1024
+[   53.710000] [4294942667] mtlk0(mtlk_cis_data_parse:856): EEPROM Card ID: type 0x50, revision 0x41 (A)
+[   53.710000] usbcore: registered new interface driver cdc_ncm
+[   53.730000] [4294942669] mtlk0(mtlk_cis_data_parse:906): EEPROM supported bands: 2.4 - NO, 5.2 - Yes
+[   53.740000] [4294942670] mtlk0(mtlk_pcieg5_read_efuse_data:794): EFUSE_data address is 0xf42a0070
+[   53.750000] [4294942671] mtlk0(_efuse_read_raw_data:1330): EFUSE reading finished, 512 bytes read.
+[   53.760000] [4294942672] mtlk0(_efuse_v5_parse:916): EFUSE capability bits: 0x00
+[   53.760000] [4294942672] mtlkW(_efuse_v5_parse:918): EFUSE capability burn flag is not set!
+[   53.770000] [4294942673] mtlk0(_efuse_v5_parse:925): EFUSE version 0
+[   53.780000] [4294942674] mtlkE(_efuse_v5_parse:928): EFUSE version 5 only supported!
+[   53.790000] [4294942675] mtlkE(_mtlk_df_fw_request_firmware:42): Request Firmware ('PSD.bin') is starting
+[   53.820000] usbcore: registered new interface driver cdc_acm
+[   53.820000] cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+[   53.900000] usbcore: registered new interface driver cdc_wdm
+[   53.930000] [4294942689] mtlk0(mtlk_psdb_file_read_and_parse:1174): Loaded 'PSD.bin' of 29568 bytes
+[   53.930000] [4294942689] mtlk0(mtlk_psdb_file_read_and_parse:1200): PSDB Info: version 55 (0x00000037), revision 36167c8c56fb
+[   53.950000] [4294942691] mtlk0(mtlk_psdb_file_read_and_parse:1209): Look for chip_id 0x0800, hw_type 0x50, hw_rev 0x41
+[   53.960000] [4294942692] mtlk0(psdb_copy_table:494): Table: id 0xAAAA5555, offs 0x0168
+[   53.960000] [4294942692] mtlk0(psdb_copy_table:494): Table: id 0x10000, offs 0x6D14
+[   53.970000] [4294942693] mtlk0(psdb_copy_table:494): Table: id 0x70000, offs 0x64C4
+[   53.980000] [4294942694] mtlk0(psdb_copy_table:494): Table: id 0x80000, offs 0x3A78
+[   53.990000] [4294942695] mtlk0(psdb_copy_table:494): Table: id 0xF0000, offs 0x2CA0
+[   53.990000] [4294942695] mtlk0(psdb_copy_table:494): Table: id 0x120000, offs 0x2B20
+[   54.000000] [4294942696] mtlk0(psdb_copy_table:494): Table: id 0x130000, offs 0x2A34
+[   54.010000] [4294942697] mtlk0(psdb_copy_table:494): Table: id 0x140000, offs 0x2A10
+[   54.020000] [4294942698] mtlk0(psdb_copy_table:494): Table: id 0x150000, offs 0x29C4
+[   54.030000] [4294942699] mtlk0(psdb_copy_table:494): Table: id 0x160000, offs 0x28B0
+[   54.030000] [4294942699] mtlk0(psdb_copy_table:494): Table: id 0x170000, offs 0x2764
+[   54.040000] [4294942700] mtlk0(psdb_copy_table:494): Table: id 0x180000, offs 0x2718
+[   54.050000] [4294942701] mtlk0(psdb_copy_table:494): Table: id 0x190000, offs 0x26CC
+[   54.060000] [4294942702] mtlk0(psdb_copy_table:494): Table: id 0x1A0000, offs 0x26B0
+[   54.060000] [4294942702] mtlk0(psdb_copy_table:494): Table: id 0x1B0000, offs 0x2698
+[   54.070000] [4294942703] mtlk0(psdb_copy_table:494): Table: id 0x1C0000, offs 0x2664
+[   54.080000] [4294942704] mtlk0(psdb_copy_table:494): Table: id 0x1D0000, offs 0x2638
+[   54.090000] [4294942705] mtlk0(psdb_copy_table:494): Table: id 0x1E0000, offs 0x261C
+[   54.100000] [4294942706] mtlk0(psdb_parse_fields_array:1048): PSDB: TX/RX antennas number 4/4, mask 0x0F/0x0F
+[   54.110000] [4294942707] mtlk0(psdb_parse_fields_array:1072): PSDB: 16 general tables found
+[   54.110000] [4294942707] mtlk0(_psdb_print_info:1142): PSDB Beamforming capabilities: 0x1D, bf_explicit=1
+[   54.120000] [4294942708] mtlk0(pci_irq_alloc:279): NOF IRQs: 1
+[   54.160000] usbcore: registered new interface driver cdc_mbim
+
+[   54.270000] [4294942723] mtlkE(_mtlk_df_fw_request_firmware:42): Request Firmware ('ap_upper_gen5_wrx_500.bin') is starting
+[   54.540000] [4294942750] mtlk0(_mtlk_mmb_load_firmware:3193): Loading 'ap_upper_gen5_wrx_500.bin' of 250624 bytes
+[   54.560000] [4294942752] mtlk0(_mtlk_mmb_load_fw2mem:3085): mem[0] start f4300000 len 327680 (0x50000) written 250624
+[   54.570000] [4294942753] mtlkE(_mtlk_df_fw_request_firmware:42): Request Firmware ('ap_lower_gen5_wrx_500.bin') is starting
+[   54.710000] [4294942767] mtlk0(_mtlk_mmb_load_firmware:3193): Loading 'ap_lower_gen5_wrx_500.bin' of 77696 bytes
+[   54.720000] [4294942768] mtlk0(_mtlk_mmb_load_fw2mem:3085): mem[0] start f4380000 len 131072 (0x20000) written 77696
+[   54.730000] [4294942769] mtlkE(_mtlk_df_fw_request_firmware:42): Request Firmware ('tx_sender_gen5.bin') is starting
+[   54.830000] [4294942779] mtlk0(_mtlk_mmb_load_firmware:3193): Loading 'tx_sender_gen5.bin' of 24864 bytes
+[   54.840000] [4294942780] mtlk0(_mtlk_mmb_load_fw2mem:3085): mem[0] start f42f8000 len 28160 (0x6E00) written 24864
+[   54.850000] [4294942781] mtlkE(_mtlk_df_fw_request_firmware:42): Request Firmware ('host_interface_gen5_fast_path.bin') is starting
+[   54.970000] [4294942793] mtlk0(_mtlk_mmb_load_firmware:3193): Loading 'host_interface_gen5_fast_path.bin' of 4072 bytes
+[   54.980000] [4294942794] mtlk0(_mtlk_mmb_load_fw2mem:3085): mem[0] start f42ff000 len 4096 (0x1000) written 4072
+[   54.990000] [4294942795] mtlkE(_mtlk_df_fw_request_firmware:42): Request Firmware ('rx_handler_gen5.bin') is starting
+[   55.070000] [4294942803] mtlk0(_mtlk_mmb_load_firmware:3193): Loading 'rx_handler_gen5.bin' of 7192 bytes
+[   55.080000] [4294942804] mtlk0(_mtlk_mmb_load_fw2mem:3085): mem[0] start f42f6000 len 8192 (0x2000) written 7192
+[   55.130000] [4294942809] mtlkE(_mtlk_mmb_prepare_data_ind_bdr:4019): RX ring size 4096 defined bigger than RD pool size 1024, using RD pool size as ring size
+[   55.140000] [4294942810] mtlkE(_mtlk_mmb_prepare_ring_buffer:3919): Ring virtual addr:6771b000 dma_addr:2771b000 base_addr:a771b000
+[   55.150000] [4294942811] mtlkE(_mtlk_mmb_prepare_ring_buffer:3919): Ring virtual addr:6774a000 dma_addr:2774a000 base_addr:a774a000
+[   55.160000] [4294942812] mtlk0(_mtlk_mmb_set_calibration_buffers:4363): Calibration buffer: dma_addr 0x27060000, virt_addr 0x67060000, size 112530
+[   55.170000] [4294942813] mtlk0(_mtlk_mmb_init_fw_capabilities:4589): FW supports 128 STAs 16 VAPs
+[   55.180000] [4294942814] mtlk0(set_ldpc_cap:3143): LDPC support is 1 for 5 GHz band
+[   55.190000] [4294942815] mtlk0(set_ampdu_factor:3158): AMPDU factor 64k is supported for 5 GHz band
+[   55.200000] [4294942816] mtlk0(set_ampdu_density:3168): AMPDU density has no restriction for 5 GHz band
+[   55.210000] [4294942817] mtlk0(set_rx_stbc:3175): RX STBC is supported for 5 GHz band
+[   55.220000] [4294942818] mtlk0(wv_cfg80211_init:3308): 5.0 GHz band supported, up to 4 spatial streams
+[   55.230000] [4294942819] mtlk0(_mtlk_df_user_alloc_devname:7668): NDEV Name pattern: wlan%d
+[   55.240000] [4294942820] mtlk0(mtlk_core_pdb_fast_handles_open:42): Open Hot-path parameters
+[   55.240000] [4294942820] mtlk0(_mtlk_core_init:9875): wlan1: Inited: is_stopped=1, is_stopping=0, is_iface_stopping=0, net_state=NET_STATE_HALTED
+[   55.260000] [4294942822] mtlkW(mtlk_hw_mmb_start_card_finalize:6845):  mips_no:0, pas_offset:0x0001F998
+[   55.270000] [4294942823] mtlkW(mtlk_hw_mmb_start_card_finalize:6845):  mips_no:1, pas_offset:0x0001F99C
+[   55.280000] [4294942824] mtlk0(_mtlk_mmb_data_path_init:6498): max_nof_streams 1
+[   55.280000] [4294942824] mtlk0(_mtlk_mmb_data_path_init:6514): Registering FastPath
+[   55.290000] DC DP [dc_dp_alloc_port:406] owner=7aacc590, dev_port=1, dev=7a847000, port_id=0, flags=0x00000008
+[   55.300000] [cbm] { cbm_get_wlan_umt_pid : 2818 }0x8 0x9 0x0 0x0 9
+[   55.310000] DC DP [_dc_dp_gsw_pmac_init:25] PMAC_EG_CFG_SET for GSW-R.
+[   55.310000] DC DP [_dc_dp_gsw_pmac_init:50] PMAC_IG_CFG_SET for GSW-R.
+[   55.320000] DC DP [_dc_dp_gsw_pmac_init:91] GSW PMAC Init Done.
+[   55.330000] DC DP [dc_dp_alloc_port:519] Success, returned port_id=9.
+[   55.330000] DC DP [_dc_dp_register_dev_private:553] owner=7aacc590, port_id=9, dev=7a847000, datapathcb=7aacc290,                                    num_bufs_req=1024, umt_base=b42b70c8, umt_len=8, resources=7a8079e8, flags=0x00000000
+[   55.350000] DC DP [_dc_dp_alloc_buf:110] Allocating 1 DMA1-Tx buffer lists.
+[   55.360000] DC DP [_dc_dp_alloc_buf:123] buflist=0x7a830c08.
+[   55.360000] DC DP [_dc_dp_alloc_buf:132] allocating pool 1 of size 2048 KB.
+[   55.370000] DC DP [_dc_dp_register_dev_private:672] Configuring DMA1-Tx channel 0x1000008.
+[   55.380000] DC DP [_dc_dp_register_dev_private:687] Configuring UMT HW with dest address 0xb42b70c8.
+[   55.390000] DC DP [_dc_dp_register_dev_private:757] Success, returned 0.
+[   55.390000] DC DP [wave500_dp_register_dev:90] Allocating 1 DMA1-Tx buffer lists.
+[   55.400000] DC DP [wave500_dp_register_dev:126] resources->buflist = 7b5fc000
+[   55.410000] DC DP [wave500_dp_register_dev:129] Buffer 1 : 0x39e00000.
+[   55.420000] DC DP [wave500_dp_register_dev:129] Buffer 2 : 0x39e00800.
+[   55.420000] DC DP [wave500_dp_register_dev:129] Buffer 3 : 0x39e01000.
+[   55.430000] DC DP [wave500_dp_register_dev:129] Buffer 4 : 0x39e01800.
+[   55.440000] DC DP [wave500_dp_register_dev:129] Buffer 5 : 0x39e02000.
+[   55.440000] DC DP [wave500_dp_register_dev:129] Buffer 6 : 0x39e02800.
+[   55.450000] DC DP [wave500_dp_register_dev:136] resources->num_dma_desc = 1024
+[   55.460000] DC DP [wave500_dp_register_dev:137] resources->dmatx_ring_base = 0x27088000
+[   55.460000] DC DP [wave500_dp_register_dev:138] resources->cbm_dequeue_base = 0x1e7e8100.
+[   55.470000] DC DP [wave500_dp_register_dev:139] resources->num_dequeue_bufs = 32.
+[   55.480000] DC DP [wave500_dp_register_dev:140] resources->cbm_buf_free_base = 0x1e7e8080.
+[   55.490000] DC DP [wave500_dp_register_dev:141] resources->num_free_bufs = 32.
+[   55.500000] [4294942846] mtlk0(_mtlk_mmb_rtlog_fw_add_stream:6199): wlan_if 1, FwAddStream 0 is not set
+[   55.510000] [4294942847] mtlk0(_mtlk_mmb_rtlog_fw_add_filter:6313): wlan_if 1, FilterType 0 is not set
+[   55.510000] [4294942847] mtlk0(_mtlk_mmb_rtlog_fw_add_filter:6313): wlan_if 1, FilterType 1 is not set
+[   55.520000] [4294942848] mtlkW(_mtlk_mmb_send_hw_dep_cfg:3624): XTAL value 0x6F, AFE values: 0x00000000, 0x00000000
+[   55.540000] [4294942850] mtlk0(_hw_init_mhi_statistic:5145): CID-01: MHI statistic buffer 0x6708c000, dma_addr 0x2708c000, size 15888, buff_copy 0x7a81c000
+[   55.550000] [4294942851] mtlkW(_hw_init_phy_rx_status:5231): PhyRxStatus buffer 0x67086800, dma_addr 0x27086800, size 1036
+[   55.560000] [4294942852] mtlk0(mtlk_core_set_net_state:783): wlan1: Going from NET_STATE_HALTED to NET_STATE_IDLE
+[   55.570000] [4294942853] mtlk0(mtlk_eeprom_check_ee_data:1727): Options mask is 0x00
+[   55.580000] [4294942854] mtlkE(mtlk_df_ui_group_init:9009): device:wlan1 register groupid cb
+[   55.590000] [4294942855] mtlk0(_mtlk_dut_core_irbd_register:655): CID-0100: Register DUT IRBD...
+[   55.600000] [4294942856] mtlk0(mtlk_core_set_net_state:783): wlan1: Going from NET_STATE_IDLE to NET_STATE_READY
+[   55.640000] DC DP [dc_dp_register_subif:818] owner=7aacc590, dev=7a847000, subif_id=7a84764c, flags=0x00000000
+[   55.650000] DC DP [dc_dp_register_subif:922] Enabling UMT HW.
+[   55.650000] DC DP [dc_dp_register_subif:951] Success, returned 0.
+[   55.660000] [4294942862] mtlkE(mtlk_df_user_set_priority_to_wmm:807): dump of prio2wmm
+[   55.660000] [4294942862] mtlkE(mtlk_df_user_set_priority_to_wmm:807): cp= 0x7a807b68 l=8
+[   55.670000] [4294942863] mtlkE(mtlk_df_user_set_priority_to_wmm:807): 0000:  00 01 02 03 04 05 06 07
+[   55.680000] [4294942864] mtlk0(rtlog_fw_clb_register:2435): wlan_if 1: clb 7aa30cfc, ctx 7adf1304
+[   59.950000] [4294943291] mtlkE(_mtlk_df_fw_request_firmware:42): Request Firmware ('cal_wlan0.bin') is starting
+[   60.020000] [4294943298] mtlkE(_mtlk_df_fw_request_firmware:53): Firmware ('cal_wlan0.bin') is missing
+[   60.060000] [4294943302] mtlk0(_eeprom_read_from_gpio:1185): EEPROM via GPIO available (size:1024)
+FAPI_WLAN_VENDOR_WAVE: running dispatcher script SUCCEED with STATUS '0'
+==[7777][fapi_wlan_wave.c][parse_config_out]==
+FAPI_WLAN_VENDOR_WAVE: parse_config_out, End of configuration output file
+==[7777][fapi_wlan.c][addMapObj]==
+FAPI_WLAN_COMMON, addMapObj DB_NAME 'wlan_fapi_db' VENDOR '1' vapName 'wlan0'
+FAPI_WLAN_COMMON, addMapObj DB_NAME 'wlan_fapi_db' VENDOR '1' vapName 'wlan1'
+FAPI_WLAN_COMMON INIT DONE 'Lantiq WAVE 3.5.x' VENDOR '1' radioNumOfEntries '2'
+==[7777][wlan_init.c][wlan_init][1111][Device.WiFi.Radio.1]==
+==[7777][wlan_init.c][wlan_init][1111][Device.WiFi.Radio.2]==
+==[7777][wlan_init.c][wlan_init][2222][Device.WiFi.Radio]==
+==[7777][wlan_init.c][wlan_init][3333][Device.WiFi.Radio.1]==
+==[7777][wlan_init.c][wlan_init][2222][Device.WiFi.Radio]==
+==[7777][wlan_init.c][wlan_init][3333][Device.WiFi.Radio.2]==
+==[7777][wlan_init.c][wlan_init][fapi_wlan_radio_set]==
+==[7777][fapi_wlan.c][fapi_wlan_radio_set]==
+==[7777][fapi_wlan.c][fapi_wlan_get_vendor]==
+FAPI_WLAN_GET_VENDOR '1' INTERFACE 'wlan0'
+FAPI_WLAN_VENDOR_WAVE: fapi_wave_main ,Handling: 'fapi_wlan_wave_radio_set'
+==[7777][fapi_wlan_wave.c][execute_config_in]==
+==[7777][fapi_wlan_wave.c][runWaveScript]==
+    ==[7777][fapi_wlan_wave.c][/opt/lantiq/wave/scripts/fapi_wlan_wave_radio_set wlan0]==
+Calling init of SID: 17 COMPLETED!!
+SL_INIT Success for sid: 17
+==[7777][servd.c][servd_startSlLibsInit][17]==
+==[7777][servd.c][servd_startSlLibsInit][sl_mcast:18]==
+Calling init of SL Library 'sl_mcast' SID: 18
+[   60.770000] Registeration is a success The major device number is 240.
+
+[   60.770000] proc initializedCalling init of SID: 18 COMPLETED!!
+SL_INIT Success for sid: 18
+==[7777][servd.c][servd_startSlLibsInit][18]==
+==[7777][servd.c][servd_startSlLibsInit][sl_upgrade:19]==
+Calling init of SL Library 'sl_upgrade' SID: 19
+Calling init of SID: 19 COMPLETED!!
+SL_INIT Success for sid: 19
+FAPI_WLAN_VENDOR_WAVE: running dispatcher script SUCCEED with STATUS '0'
+==[7777][fapi_wlan_wave.c][parse_config_out]==
+FAPI_WLAN_VENDOR_WAVE: parse_config_out, End of configuration output file
+==[7777][wlan_init.c][wlan_init][fapi_wlan_radio_set]==
+==[7777][fapi_wlan.c][fapi_wlan_radio_set]==
+==[7777][fapi_wlan.c][fapi_wlan_get_vendor]==
+FAPI_WLAN_GET_VENDOR '1' INTERFACE 'wlan1'
+FAPI_WLAN_VENDOR_WAVE: fapi_wave_main ,Handling: 'fapi_wlan_wave_radio_set'
+==[7777][fapi_wlan_wave.c][execute_config_in]==
+==[7777][fapi_wlan_wave.c][runWaveScript]==
+    ==[7777][fapi_wlan_wave.c][/opt/lantiq/wave/scripts/fapi_wlan_wave_radio_set wlan1]==
+netlink recv: No buffer space available
+Command failed: Request timed out
+Command failed: Request timed out
+netlink recv: No buffer space available
+FAPI_WLAN_VENDOR_WAVE: running dispatcher script SUCCEED with STATUS '0'
+==[7777][fapi_wlan_wave.c][parse_config_out]==
+FAPI_WLAN_VENDOR_WAVE: parse_config_out, End of configuration output file
+==[7777][wlan_init.c][wlan_init][radioIfName: wlan0, radioInstance: 1]==
+==[7777][wlan_init.c][wlan_init][wlan_add_vap][wlan0]==
+==[7777][fapi_wlan.c][fapi_wlan_ssid_add]==
+==[7777][fapi_wlan.c][fapi_wlan_get_vendor]==
+FAPI_WLAN_GET_VENDOR '1' INTERFACE 'wlan0'
+FAPI_WLAN_VENDOR_WAVE: fapi_wave_main ,Handling: 'fapi_wlan_wave_ssid_add'
+==[7777][fapi_wlan_wave.c][execute_config_in]==
+==[7777][fapi_wlan_wave.c][runWaveScript]==
+    ==[7777][fapi_wlan_wave.c][/opt/lantiq/wave/scripts/fapi_wlan_wave_ssid_add wlan0]==
+FAPI_WLAN_VENDOR_WAVE: running dispatcher script SUCCEED with STATUS '0'
+==[7777][fapi_wlan_wave.c][parse_config_out]==
+FAPI_WLAN_VENDOR_WAVE: parse_config_out, End of configuration output file
+==[7777][fapi_wlan.c][addMapObj]==
+FAPI_WLAN_COMMON, addMapObj DB_NAME 'wlan_fapi_db' VENDOR '1' vapName 'wlan0'
+==[7777][fapi_wlan.c][fapi_wlan_ssid_set]==
+==[7777][fapi_wlan.c][fapi_wlan_get_vendor]==
+FAPI_WLAN_GET_VENDOR '1' INTERFACE 'wlan0'
+FAPI_WLAN_VENDOR_WAVE: fapi_wave_main ,Handling: 'fapi_wlan_wave_ssid_set'
+==[7777][fapi_wlan_wave.c][execute_config_in]==
+==[7777][fapi_wlan_wave.c][runWaveScript]==
+    ==[7777][fapi_wlan_wave.c][/opt/lantiq/wave/scripts/fapi_wlan_wave_ssid_set wlan0]==
+FAPI_WLAN_VENDOR_WAVE: running dispatcher script SUCCEED with STATUS '0'
+==[7777][fapi_wlan_wave.c][parse_config_out]==
+FAPI_WLAN_VENDOR_WAVE: parse_config_out, End of configuration output file
+==[7777][fapi_wlan.c][fapi_wlan_ap_set]==
+==[7777][fapi_wlan.c][fapi_wlan_get_vendor]==
+FAPI_WLAN_GET_VENDOR '1' INTERFACE 'wlan0'
+FAPI_WLAN_VENDOR_WAVE: fapi_wave_main ,Handling: 'fapi_wlan_wave_ap_set'
+==[7777][fapi_wlan_wave.c][execute_config_in]==
+==[7777][fapi_wlan_wave.c][runWaveScript]==
+    ==[7777][fapi_wlan_wave.c][/opt/lantiq/wave/scripts/fapi_wlan_wave_ap_set wlan0]==
+FAPI_WLAN_VENDOR_WAVE: running dispatcher script SUCCEED with STATUS '0'
+==[7777][fapi_wlan_wave.c][parse_config_out]==
+FAPI_WLAN_VENDOR_WAVE: parse_config_out, End of configuration output file
+==[7777][fapi_wlan.c][updateMapObj]==
+Device.WiFi.AccessPoint 'Enable' 'true'
+==[7777][fapi_wlan.c][fapi_wlan_security_set]==
+==[7777][fapi_wlan.c][fapi_wlan_get_vendor]==
+FAPI_WLAN_GET_VENDOR '1' INTERFACE 'wlan0'
+FAPI_WLAN_VENDOR_WAVE: fapi_wave_main ,Handling: 'fapi_wlan_wave_security_set'
+==[7777][fapi_wlan_wave.c][execute_config_in]==
+==[7777][fapi_wlan_wave.c][runWaveScript]==
+    ==[7777][fapi_wlan_wave.c][/opt/lantiq/wave/scripts/fapi_wlan_wave_security_set wlan0]==
+netlink recv: No buffer space available
+FAPI_WLAN_VENDOR_WAVE: running dispatcher script SUCCEED with STATUS '0'
+==[7777][fapi_wlan_wave.c][parse_config_out]==
+FAPI_WLAN_VENDOR_WAVE: parse_config_out, End of configuration output file
+==[7777][fapi_wlan.c][fapi_wlan_wps_set]==
+==[7777][fapi_wlan.c][fapi_wlan_get_vendor]==
+FAPI_WLAN_GET_VENDOR '1' INTERFACE 'wlan0'
+FAPI_WLAN_VENDOR_WAVE: fapi_wave_main ,Handling: 'fapi_wlan_wave_wps_set'
+==[7777][fapi_wlan_wave.c][execute_config_in]==
+==[7777][fapi_wlan_wave.c][runWaveScript]==
+    ==[7777][fapi_wlan_wave.c][/opt/lantiq/wave/scripts/fapi_wlan_wave_wps_set wlan0]==
+FAPI_WLAN_VENDOR_WAVE: running dispatcher script SUCCEED with STATUS '0'
+==[7777][fapi_wlan_wave.c][parse_config_out]==
+FAPI_WLAN_VENDOR_WAVE: parse_config_out, End of configuration output file
+==[7777][fapi_wlan.c][fapi_wlan_wmm_ap_set]==
+==[7777][fapi_wlan.c][fapi_wlan_get_vendor]==
+FAPI_WLAN_GET_VENDOR '1' INTERFACE 'wlan0'
+FAPI_WLAN_VENDOR_WAVE: fapi_wave_main ,Handling: 'fapi_wlan_wave_wmm_ap_set'
+==[7777][fapi_wlan_wave.c][execute_config_in]==
+==[7777][fapi_wlan_wave.c][runWaveScript]==
+    ==[7777][fapi_wlan_wave.c][/opt/lantiq/wave/scripts/fapi_wlan_wave_wmm_ap_set wlan0]==
+FAPI_WLAN_VENDOR_WAVE: running dispatcher script SUCCEED with STATUS '0'
+==[7777][fapi_wlan_wave.c][parse_config_out]==
+FAPI_WLAN_VENDOR_WAVE: parse_config_out, End of configuration output file
+==[7777][wlan_init.c][wlan_init][wlan_convert_and_merge_fapiobjlist_to_objlist]==
+==[7777][wlan_init.c][wlan_init][radioIfName: wlan1, radioInstance: 2]==
+==[7777][wlan_init.c][wlan_init][wlan_add_vap][wlan1]==
+==[7777][fapi_wlan.c][fapi_wlan_ssid_add]==
+==[7777][fapi_wlan.c][fapi_wlan_get_vendor]==
+FAPI_WLAN_GET_VENDOR '1' INTERFACE 'wlan1'
+FAPI_WLAN_VENDOR_WAVE: fapi_wave_main ,Handling: 'fapi_wlan_wave_ssid_add'
+==[7777][fapi_wlan_wave.c][execute_config_in]==
+==[7777][fapi_wlan_wave.c][runWaveScript]==
+    ==[7777][fapi_wlan_wave.c][/opt/lantiq/wave/scripts/fapi_wlan_wave_ssid_add wlan1]==
+FAPI_WLAN_VENDOR_WAVE: running dispatcher script SUCCEED with STATUS '0'
+==[7777][fapi_wlan_wave.c][parse_config_out]==
+FAPI_WLAN_VENDOR_WAVE: parse_config_out, End of configuration output file
+==[7777][fapi_wlan.c][addMapObj]==
+FAPI_WLAN_COMMON, addMapObj DB_NAME 'wlan_fapi_db' VENDOR '1' vapName 'wlan1'
+==[7777][fapi_wlan.c][fapi_wlan_ssid_set]==
+==[7777][fapi_wlan.c][fapi_wlan_get_vendor]==
+FAPI_WLAN_GET_VENDOR '1' INTERFACE 'wlan1'
+FAPI_WLAN_VENDOR_WAVE: fapi_wave_main ,Handling: 'fapi_wlan_wave_ssid_set'
+==[7777][fapi_wlan_wave.c][execute_config_in]==
+==[7777][fapi_wlan_wave.c][runWaveScript]==
+    ==[7777][fapi_wlan_wave.c][/opt/lantiq/wave/scripts/fapi_wlan_wave_ssid_set wlan1]==
+netlink recv: No buffer space available
+FAPI_WLAN_VENDOR_WAVE: running dispatcher script SUCCEED with STATUS '0'
+==[7777][fapi_wlan_wave.c][parse_config_out]==
+FAPI_WLAN_VENDOR_WAVE: parse_config_out, End of configuration output file
+==[7777][fapi_wlan.c][fapi_wlan_ap_set]==
+==[7777][fapi_wlan.c][fapi_wlan_get_vendor]==
+FAPI_WLAN_GET_VENDOR '1' INTERFACE 'wlan1'
+FAPI_WLAN_VENDOR_WAVE: fapi_wave_main ,Handling: 'fapi_wlan_wave_ap_set'
+==[7777][fapi_wlan_wave.c][execute_config_in]==
+==[7777][fapi_wlan_wave.c][runWaveScript]==
+    ==[7777][fapi_wlan_wave.c][/opt/lantiq/wave/scripts/fapi_wlan_wave_ap_set wlan1]==
+FAPI_WLAN_VENDOR_WAVE: running dispatcher script SUCCEED with STATUS '0'
+==[7777][fapi_wlan_wave.c][parse_config_out]==
+FAPI_WLAN_VENDOR_WAVE: parse_config_out, End of configuration output file
+==[7777][fapi_wlan.c][updateMapObj]==
+Device.WiFi.AccessPoint 'Enable' 'true'
+==[7777][fapi_wlan.c][fapi_wlan_security_set]==
+==[7777][fapi_wlan.c][fapi_wlan_get_vendor]==
+FAPI_WLAN_GET_VENDOR '1' INTERFACE 'wlan1'
+FAPI_WLAN_VENDOR_WAVE: fapi_wave_main ,Handling: 'fapi_wlan_wave_security_set'
+==[7777][fapi_wlan_wave.c][execute_config_in]==
+==[7777][fapi_wlan_wave.c][runWaveScript]==
+    ==[7777][fapi_wlan_wave.c][/opt/lantiq/wave/scripts/fapi_wlan_wave_security_set wlan1]==
+FAPI_WLAN_VENDOR_WAVE: running dispatcher script SUCCEED with STATUS '0'
+==[7777][fapi_wlan_wave.c][parse_config_out]==
+FAPI_WLAN_VENDOR_WAVE: parse_config_out, End of configuration output file
+==[7777][fapi_wlan.c][fapi_wlan_wps_set]==
+==[7777][fapi_wlan.c][fapi_wlan_get_vendor]==
+FAPI_WLAN_GET_VENDOR '1' INTERFACE 'wlan1'
+FAPI_WLAN_VENDOR_WAVE: fapi_wave_main ,Handling: 'fapi_wlan_wave_wps_set'
+==[7777][fapi_wlan_wave.c][execute_config_in]==
+==[7777][fapi_wlan_wave.c][runWaveScript]==
+    ==[7777][fapi_wlan_wave.c][/opt/lantiq/wave/scripts/fapi_wlan_wave_wps_set wlan1]==
+netlink recv: No buffer space available
+FAPI_WLAN_VENDOR_WAVE: running dispatcher script SUCCEED with STATUS '0'
+==[7777][fapi_wlan_wave.c][parse_config_out]==
+FAPI_WLAN_VENDOR_WAVE: parse_config_out, End of configuration output file
+==[7777][fapi_wlan.c][fapi_wlan_wmm_ap_set]==
+==[7777][fapi_wlan.c][fapi_wlan_get_vendor]==
+FAPI_WLAN_GET_VENDOR '1' INTERFACE 'wlan1'
+FAPI_WLAN_VENDOR_WAVE: fapi_wave_main ,Handling: 'fapi_wlan_wave_wmm_ap_set'
+==[7777][fapi_wlan_wave.c][execute_config_in]==
+==[7777][fapi_wlan_wave.c][runWaveScript]==
+    ==[7777][fapi_wlan_wave.c][/opt/lantiq/wave/scripts/fapi_wlan_wave_wmm_ap_set wlan1]==
+FAPI_WLAN_VENDOR_WAVE: running dispatcher script SUCCEED with STATUS '0'
+==[7777][fapi_wlan_wave.c][parse_config_out]==
+FAPI_WLAN_VENDOR_WAVE: parse_config_out, End of configuration output file
+==[7777][wlan_init.c][wlan_init][wlan_convert_and_merge_fapiobjlist_to_objlist]==
+==[7777][wlan_init.c][wlan_init][radioIfName: wlan0, radioInstance: 1]==
+==[7777][wlan_init.c][wlan_init][fapi_wlan_up]==
+==[7777][fapi_wlan.c][fapi_wlan_up]==
+==[7777][fapi_wlan.c][fapi_wlan_get_vendor]==
+FAPI_WLAN_GET_VENDOR '1' INTERFACE 'wlan0'
+FAPI_WLAN_VENDOR_WAVE: fapi_wave_main ,Handling: 'fapi_wlan_wave_up'
+==[7777][fapi_wlan_wave.c][execute_config_in]==
+==[7777][fapi_wlan_wave.c][runWaveScript]==
+    ==[7777][fapi_wlan_wave.c][/opt/lantiq/wave/scripts/fapi_wlan_wave_up wlan0]==
+[MTLKD] rtlog_set_mac_address(rtlog0)
+[   83.920000] device rtlog0 entered promiscuous mode
+[   83.930000] [MTLKD] rtlog_open(rtlog0)
+[   83.930000] br-lan: port 5(rtlog0) entered forwarding state
+[   83.930000] br-lan: port 5(rtlog0) entered forwarding state
+[   83.980000] [4294945694] mtlk0(mtlk_log_set_conf:390): Using value of 0 for all console debug levels, OID 0
+[   84.010000] [4294945697] mtlk0(mtlk_rcvry_set_cfg:767): CID-0000: Set Recovery counter configuration
+==[7777][hostapd][main][0000]==
+==[7777][hostapd][main][wpa_msg_register_ifname_cb]==
+==[7777][hostapd][main][hostapd_global_init]==
+==[7777][hostapd][hostapd_global_init]==
+==[7777][hostapd][main][hostapd_interface_init]==
+Configuration file: /tmp/[   84.280000] (null): iftype=3, chanmode=0, radar_detect=0x00, center_freq=0
+[   84.280000] wdev_iter=wlan0
+[   84.280000] [4294945724] mtlk0(_mtlk_df_user_iface_open:979): wlan0: start the interface
+wlan_wave/hostap[   84.290000] device wlan0 entered promiscuous mode
+[   84.300000] br-lan: port 6(wlan0) entered forwarding state
+[   84.300000] br-lan: port 6(wlan0) entered forwarding state
+d_wlan0.conf
+==[   84.310000] [4294945727] mtlk0(vendor_send_country_code:2883): Country code set to: US
+[   84.320000] cfg80211: Calling CRDA for country: US
+[7777][hostapd][main][num_bss_configs=0]==
+==[7777][hostapd][hostapd_driver_init]==
+rfkill: Cannot open RFKILL control device
+==[7777][hostapd.c][hostapd_setup_interface]==
+==[7777][hostapd.c][setup_interface]==
+wlan0: interface state UNINITIALIZED->COUNTRY_UPDATE
+==[7777][ap_drv_ops.c][hostapd_set_country]==
+==[7777][driver_n80211.c][hostapd_set_country]==
+==[7777][hostapd][main][hostapd_global_ctrl_iface_init]==
+==[7777][ctrl_iface.c][hostapd_global_ctrl_iface_init]==
+==[7777][hostapd][main][hostapd_global_run]==
+==[7777][hostapd][hostapd_global_run]==
+        ==[7777][hostapd][hostapd_global_run][os_daemonize]==
+[   84.400000] cfg80211: Regulatory domain changed to country: US
+[   84.400000] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp)
+[   84.410000] cfg80211:   (2402000 KHz - 2472000 KHz @ 40000 KHz), (N/A, 3000 mBm)
+[   84.420000] cfg80211:   (5170000 KHz - 5250000 KHz @ 80000 KHz), (N/A, 3000 mBm)
+[   84.430000] cfg80211:   (5250000 KHz - 5330000 KHz @ 80000 KHz), (N/A, 2300 mBm)
+[   84.430000] cfg80211:   (5490000 KHz - 5730000 KHz @ 160000 KHz), (N/A, 2300 mBm)
+[   84.440000] cfg80211:   (5735000 KHz - 5835000 KHz @ 80000 KHz), (N/A, 3000 mBm)
+[   84.450000] cfg80211:   (57240000 KHz - 63720000 KHz @ 2160000 KHz), (N/A, 4000 mBm)
+[   84.460000] [4294945742] mtlkE(_mtlk_df_fw_request_firmware:42): Request Firmware ('ProgModel_gen5b_BG.bin') is starting
+[   84.600000] [4294945756] mtlk0(prepare_progmodel_string:3240): CID-0000: ProgModel: ProgModel_gen5b_BG.bin version 2677
+[   84.600000]
+[   84.610000] [4294945757] mtlkE(mtlk_hw_send_cal_afe_data:9989): dump of afe_calibration_data_t
+[   84.620000] [4294945758] mtlkE(mtlk_hw_send_cal_afe_data:9989): cp= 0x7a883554 l=11
+[   84.630000] [4294945759] mtlkE(mtlk_hw_send_cal_afe_data:9989): 0000:  f1 db b6 6d 9a 5f 37 49  12 00 00
+[   84.640000] [4294945760] mtlkW(mtlk_hw_send_cal_rfic_data:10013): RFIC calibration data missing
+[   84.650000] [4294945761] mtlkE(mtlk_hw_send_cal_rssi_data:10087): dump of RSSI calibration data
+[   84.660000] [4294945762] mtlkE(mtlk_hw_send_cal_rssi_data:10087): cp= 0x7a883775 l=88
+[   84.660000] [4294945762] mtlkE(mtlk_hw_send_cal_rssi_data:10087): 0000:  07 04 00 00 40 00 00 00  04 00 00 00 00 00 00 07
+[   84.670000] [4294945763] mtlkE(mtlk_hw_send_cal_rssi_data:10087): 0010:  03 04 00 03 04 00 0a 1a  27 27 33 1f 00 00 00 05
+[   84.680000] [4294945764] mtlkE(mtlk_hw_send_cal_rssi_data:10087): 0020:  00 00 00 00 7b d5 00 00  00 00 00 00 0a 18 26 26
+[   84.700000] [4294945766] mtlkE(mtlk_hw_send_cal_rssi_data:10087): 0030:  33 1f 00 00 00 05 00 00  00 00 77 d6 00 00 00 00
+[   84.710000] [4294945767] mtlkE(mtlk_hw_send_cal_rssi_data:10087): 0040:  00 00 0a 18 25 25 32 1e  00 00 00 05 00 00 00 00
+[   84.720000] [4294945768] mtlkE(mtlk_hw_send_cal_rssi_data:10087): 0050:  75 d0 00 00 00 00 00 00
+[   84.740000] [4294945770] mtlk0(mtlk_core_set_net_state:783): wlan0: Going from NET_STATE_READY to NET_STATE_ACTIVATING
+[   84.750000] [4294945771] mtlk0(mtlk_mbss_send_vap_activate:2328): CID-0000: UMI_ADD_VAP
+[   84.760000] [4294945772] mtlk0(mtlk_mbss_send_vap_activate:2331): CID-0000: mtlk_txmm_msg_send, MsgId=0x41f, BSSID=00:E0:92:00:01:50
+[   84.840000] [4294945780] mtlkE(send_calibrate:272): dump of UMI_CALIBRATE_PARAMS:
+[   84.850000] [4294945781] mtlkE(send_calibrate:272): cp= 0x7a882ab4 l=44
+[   84.850000] [4294945781] mtlkE(send_calibrate:272): 0000:  00 00 00 00 00 00 00 00  01 02 03 04 05 06 07 08
+[   84.860000] [4294945782] mtlkE(send_calibrate:272): 0010:  09 0a 0b 00 00 00 00 00  00 00 00 00 00 00 00 00
+[   84.870000] [4294945783] mtlkE(send_calibrate:272): 0020:  00 00 00 00 00 00 00 00  0b 00 00 00
+[   85.930000] br-lan: port 5(rtlog0) entered forwarding state
+[   86.300000] br-lan: port 6(wlan0) entered forwarding state
+[   88.540000] dp_fp_coc_confirm: CoC state changed from : 1 to : 3 enable irq !
+[   92.540000] [4294946550] mtlkE(PMCU_Notifier:448): prechange failed, ret=-10
+[   93.000000] [4294946596] mtlkE(send_calibrate:272): dump of UMI_CALIBRATE_PARAMS:
+[   93.000000] [4294946596] mtlkE(send_calibrate:272): cp= 0x7a882cd4 l=44
+[   93.010000] [4294946597] mtlkE(send_calibrate:272): 0000:  00 00 00 00 00 00 00 00  01 02 03 04 05 06 07 00
+[   93.020000] [4294946598] mtlkE(send_calibrate:272): 0010:  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00
+[   93.030000] [4294946599] mtlkE(send_calibrate:272): 0020:  00 00 00 00 00 00 00 00  07 01 00 00
+[   96.540000] dp_fp_coc_confirm: CoC state changed from : 3 to : 4 enable irq !
+[   97.880000] [4294947084] mtlk0(scan_do_scan:1129): wlan0: Beginning scan: ss=7c6bc450, master_core=7affc804, saved_request=7a90ce00, wiphy=7db81960, saved_req_wiphy=7db81960
+[   98.540000] [4294947150] mtlkW(mtlk_cc_handle_algo_calibration_failure:99): CID-0000: MAC event: Offline calibration failed on channel 1, failure mask is 0x0001C7C0
+[   98.550000] [4294947151] mtlkW(mtlk_cc_handle_algo_calibration_failure:99): CID-0000: MAC event: Offline calibration failed on channel 2, failure mask is 0x0000C160
+[   98.570000] [4294947153] mtlkW(mtlk_cc_handle_algo_calibration_failure:99): CID-0000: MAC event: Offline calibration failed on channel 3, failure mask is 0x0000C100
+[   98.580000] [4294947154] mtlkW(mtlk_cc_handle_algo_calibration_failure:99): CID-0000: MAC event: Offline calibration failed on channel 4, failure mask is 0x0001C000
+[   98.600000] [4294947156] mtlkW(mtlk_cc_handle_algo_calibration_failure:99): CID-0000: MAC event: Offline calibration failed on channel 5, failure mask is 0x0001C400
+[   98.610000] [4294947157] mtlkW(mtlk_cc_handle_algo_calibration_failure:99): CID-0000: MAC event: Offline calibration failed on channel 6, failure mask is 0x0001C000
+[   98.630000] [4294947158] mtlkW(mtlk_cc_handle_algo_calibration_failure:99): CID-0000: MAC event: Offline calibration failed on channel 7, failure mask is 0x000087E0
+[   99.040000] dp_fp_coc_confirm: CoC state changed from : 4 to : 1 disable irq, do nothing !
+[   99.280000] [4294947224] mtlkW(mtlk_cc_handle_algo_calibration_failure:99): CID-0000: MAC event: Offline calibration failed on channel 8, failure mask is 0x0000C400
+[   99.290000] [4294947225] mtlkW(mtlk_cc_handle_algo_calibration_failure:99): CID-0000: MAC event: Offline calibration failed on channel 9, failure mask is 0x0001C360
+[   99.310000] [4294947227] mtlkW(mtlk_cc_handle_algo_calibration_failure:99): CID-0000: MAC event: Offline calibration failed on channel 10, failure mask is 0x00014460
+[   99.320000] [4294947228] mtlkW(mtlk_cc_handle_algo_calibration_failure:99): CID-0000: MAC event: Offline calibration failed on channel 11, failure mask is 0x00004740
+[   99.340000] [4294947230] mtlkW(mtlk_cc_handle_algo_calibration_failure:99): CID-0000: MAC event: Offline calibration failed on channel 1, failure mask is 0x0001C000
+[   99.350000] [4294947231] mtlkW(mtlk_cc_handle_algo_calibration_failure:99): CID-0000: MAC event: Offline calibration failed on channel 2, failure mask is 0x0001C240
+[   99.370000] [4294947233] mtlkW(mtlk_cc_handle_algo_calibration_failure:99): CID-0000: MAC event: Offline calibration failed on channel 3, failure mask is 0x0001C000
+Command failed: Request timed out
+[  100.000000] [4294947296] mtlkW(mtlk_cc_handle_algo_calibration_failure:99): CID-0000: MAC event: Offline calibration failed on channel 4, failure mask is 0x0001C000
+[  100.010000] [4294947297] mtlkW(mtlk_cc_handle_algo_calibration_failure:99): CID-0000: MAC event: Offline calibration failed on channel 5, failure mask is 0x0001C100
+[  100.030000] [4294947299] mtlkW(mtlk_cc_handle_algo_calibration_failure:99): CID-0000: MAC event: Offline calibration failed on channel 6, failure mask is 0x0001C2C0
+[  100.040000] [4294947300] mtlkW(mtlk_cc_handle_algo_calibration_failure:99): CID-0000: MAC event: Offline calibration failed on channel 7, failure mask is 0x0001C000
+[  100.060000] [4294947302] mtlkW(mtlk_cc_handle_algo_calibration_failure:99): CID-0000: MAC event: Offline calibration failed on channel 1, failure mask is 0x0001C040
+[  100.070000] [4294947303] mtlkW(mtlk_cc_handle_algo_calibration_failure:99): CID-0000: MAC event: Offline calibration failed on channel 2, failure mask is 0x0000C240
+[  100.090000] [4294947305] mtlkW(mtlk_cc_handle_algo_calibration_failure:99): CID-0000: MAC event: Offline calibration failed on channel 3, failure mask is 0x0000C400
+[  100.710000] [4294947367] mtlkE(mtlk_core_check_and_set_radio_mode:5158): scan is running
+[  100.720000] [4294947368] mtlkW(mtlk_cc_handle_algo_calibration_failure:99): CID-0000: MAC event: Offline calibration failed on channel 4, failure mask is 0x0001C000
+FAPI_WLAN_VENDOR_WAVE: running dispatcher script SUCCEED with STATUS '0'
+==[7777][fapi_wlan_wave.c][parse_config_out]==
+FAPI_WLAN_VENDOR_WAVE: parse_config_out, End of configuration output file
+==[7777][wlan_init.c][wlan_init][radioIfName: wlan1, radioInstance: 2]==
+==[7777][wlan_init.c][wlan_init][fapi_wlan_up]==
+==[7777][fapi_wlan.c][fapi_wlan_up]==
+==[7777][fapi_wlan.c][fapi_wlan_get_vendor]==
+FAPI_WLAN_GET_VENDOR '1' INTERFACE 'wlan1'
+FAPI_WLAN_VENDOR_WAVE: fapi_wave_main ,Handling: 'fapi_wlan_wave_up'
+==[7777][fapi_wlan_wave.c][execute_config_in]==
+==[7777][fapi_wlan_wave.c][runWaveScript]==
+    ==[7777][fapi_wlan_wave.c][/opt/lantiq/wave/scripts/fapi_wlan_wave_up wlan1]==
+Command failed: Request timed out
+[  101.450000] [4294947441] mtlkW(mtlk_cc_handle_algo_calibration_failure:99): CID-0000: MAC event: Offline calibration failed on channel 5, failure mask is 0x0001C160
+[  101.560000] [4294947452] mtlk0(mtlk_log_set_conf:390): Using value of 0 for all console debug levels, OID 0
+[  101.590000] [4294947455] mtlk0(mtlk_rcvry_set_cfg:767): CID-0100: Set Recovery counter configuration
+==[7777][hostapd][main][0000]==
+==[7777][hostapd][main][wpa_msg_regist[  101.630000] (null): iftype=3, chanmode=0, radar_detect=0x00, center_freq=0
+[  101.640000] wdev_iter=wlan1
+[  101.640000] [4294947460] mtlk0(_mtlk_df_user_iface_open:979): wlan1: start the interface
+[  101.650000] device wlan1 entered promiscuous mode
+[  101.650000] br-lan: port 7(wlan1) entered forwarding state
+[  101.660000] br-lan: port 7(wlan1) entered forwarding state
+
+==[7777][hostapd][main][hostapd[  101.670000] [4294947463] mtlk0(vendor_send_country_code:2883): Country code set to: US
+_global_init]==
+==[7777][hos[  101.680000] [4294947464] mtlkE(_mtlk_df_fw_request_firmware:42): Request Firmware ('ProgModel_gen5_A.bin') is starting
+tapd][hostapd_global_init]==
+==[7777][hostapd][main][hostapd_interface_init]==
+Configuration file: /tmp/wlan_wave/hostapd_wlan1.conf
+==[7777][hostapd][main][num_bss_configs=0]==
+==[7777][hostapd][hostapd_driver_init]==
+rfkill: Cannot open RFKILL control device
+==[7777][hostapd.c][hostapd_setup_interface]==
+==[7777][hostapd.c][setup_interface]==
+wlan1: interface state UNINITIALIZED->COUNTRY_UPDATE
+==[7777][ap_drv_ops.c][hostapd_set_country]==
+==[7777][driver_n80211.c][hostapd_set_country]==
+ACS: Automatic channel selection started, this may take a bit
+[  101.780000] [4294947474] mtlk0(prepare_progmodel_string:3240): CID-0100: ProgModel: ProgModel_gen5_A.bin version 2676 (modified)
+[  101.780000]
+[  101.790000] [4294947475] mtlkE(mtlk_hw_send_cal_afe_data:9989): dump of afe_calibration_data_t
+[  101.800000] [4294947476] mtlkE(mtlk_hw_send_cal_afe_data:9989): cp= 0x7a960034 l=11
+[  101.810000] [4294947477] mtlkE(mtlk_hw_send_cal_afe_data:9989): 0000:  f8 db 16 49 00 4f 36 49  12 00 00
+[  101.820000] [4294947478] mtlkE(mtlk_hw_send_cal_rfic_data:10038): dump of rficCis
+[  101.820000] [4294947478] mtlkE(mtlk_hw_send_cal_rfic_data:10038): cp= 0x7a960255 l=22
+[  101.830000] [4294947479] mtlkE(mtlk_hw_send_cal_rfic_data:10038): 0000:  00 fe 04 0f 04 fe 25 10  26 21 de dc de ff 01 aa
+[  101.840000] [4294947480] mtlkE(mtlk_hw_send_cal_rfic_data:10038): 0010:  7e 05 0e 90 8b 36
+[  101.850000] [4294947481] mtlkE(mtlk_hw_send_cal_rssi_data:10087): dump of RSSI calibration data
+[  101.860000] [4294947482] mtlkE(mtlk_hw_send_cal_rssi_data:10087): cp= 0x7a960475 l=110
+[  101.870000] [4294947483] mtlkE(mtlk_hw_send_cal_rssi_data:10087): 0000:  0f 00 a3 ca 0d 30 aa dc  00 a3 ca 0d 30 aa dc 64
+[  101.880000] [4294947484] mtlkE(mtlk_hw_send_cal_rssi_data:10087): 0010:  03 d0 0c 03 d0 0c 0d 00  0d 1a 26 33 00 00 0a 0b
+[  101.890000] [4294947485] mtlkE(mtlk_hw_send_cal_rssi_data:10087): 0020:  0c 08 19 01 8d 98 80 7d  79 44 00 00 0d 00 0d 1a
+[  101.900000] [4294947486] mtlkE(mtlk_hw_send_cal_rssi_data:10087): 0030:  26 33 00 00 0b 0b 0d 07  1a 00 80 96 6e 75 61 3d
+[  101.910000] [4294947487] mtlkE(mtlk_hw_send_cal_rssi_data:10087): 0040:  00 00 0c 00 0b 1a 26 33  00 00 09 0b 0b 08 19 01
+[  101.920000] [4294947488] mtlkE(mtlk_hw_send_cal_rssi_data:10087): 0050:  8e 9a 95 83 66 44 00 00  0c fe 0a 1a 26 32 00 00
+[  101.930000] [4294947489] mtlkE(mtlk_hw_send_cal_rssi_data:10087): 0060:  0a 0c 0c 08 19 01 68 99  88 80 72 46 00 00
+[  101.960000] [4294947492] mtlk0(mtlk_core_set_net_state:783): wlan1: Going from NET_STATE_READY to NET_STATE_ACTIVATING
+[  101.970000] [4294947493] mtlk0(mtlk_mbss_send_vap_activate:2328): CID-0100: UMI_ADD_VAP
+[  101.980000] [4294947494] mtlk0(mtlk_mbss_send_vap_activate:2331): CID-0100: mtlk_txmm_msg_send, MsgId=0x41f, BSSID=00:E0:92:00:01:60
+[  102.160000] [4294947512] mtlkW(mtlk_cc_handle_algo_calibration_failure:99): CID-0000: MAC event: Offline calibration failed on channel 6, failure mask is 0x0001C240
+[  102.190000] [4294947515] mtlkE(send_calibrate:272): dump of UMI_CALIBRATE_PARAMS:
+[  102.200000] [4294947516] mtlkE(send_calibrate:272): cp= 0x7a963994 l=44
+[  102.210000] [4294947517] mtlkE(send_calibrate:272): 0000:  00 00 00 00 00 00 00 00  24 28 2c 30 95 99 9d a1
+[  102.220000] [4294947518] mtlkE(send_calibrate:272): 0010:  a5 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00
+[  102.220000] [4294947518] mtlkE(send_calibrate:272): 0020:  00 00 00 00 00 00 00 00  09 00 00 00
+[  102.890000] [4294947585] mtlkW(mtlk_cc_handle_algo_calibration_failure:99): CID-0000: MAC event: Offline calibration failed on channel 7, failure mask is 0x000081A0
+[  103.590000] [4294947655] mtlkW(mtlk_cc_handle_algo_calibration_failure:99): CID-0000: MAC event: Offline calibration failed on channel 8, failure mask is 0x0001C000
+[  103.660000] br-lan: port 7(wlan1) entered forwarding state
+[  104.240000] [4294947720] mtlkE(send_calibrate:272): dump of UMI_CALIBRATE_PARAMS:
+[  104.250000] [4294947721] mtlkE(send_calibrate:272): cp= 0x7a963bb4 l=44
+[  104.250000] [4294947721] mtlkE(send_calibrate:272): 0000:  00 00 00 00 00 00 00 00  24 28 2c 95 99 9d a1 00
+[  104.260000] [4294947722] mtlkE(send_calibrate:272): 0010:  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00
+[  104.270000] [4294947723] mtlkE(send_calibrate:272): 0020:  00 00 00 00 00 00 00 00  07 01 00 00
+[  104.280000] [4294947724] mtlkW(mtlk_cc_handle_algo_calibration_failure:99): CID-0000: MAC event: Offline calibration failed on channel 9, failure mask is 0x0001C100
+[  104.990000] [4294947795] mtlkW(mtlk_cc_handle_algo_calibration_failure:99): CID-0000: MAC event: Offline calibration failed on channel 10, failure mask is 0x0001C100
+[  105.720000] [4294947868] mtlkW(mtlk_cc_handle_algo_calibration_failure:99): CID-0000: MAC event: Offline calibration failed on channel 11, failure mask is 0x0001C5E0
+[  105.810000] [4294947877] mtlkE(send_calibrate:272): dump of UMI_CALIBRATE_PARAMS:
+[  105.820000] [4294947878] mtlkE(send_calibrate:272): cp= 0x7a963dd4 l=44
+[  105.820000] [4294947878] mtlkE(send_calibrate:272): 0000:  00 00 00 00 00 00 00 00  24 95 99 00 00 00 00 00
+[  105.820000] [4294947878] mtlk0(clean_up_after_this_scan:671): wlan0: Leaving the channel as uncertain after the scan
+[  105.820000] [4294947878] mtlk0(scan_timeout_func:1021): wlan0: Scan done: res=0, ss=7c6bc450, master_core=7affc804, saved_request=7a90ce00, wiphy=7db81960, saved_req_wiphy=7db81960
+[  105.860000] [4294947882] mtlkE(send_calibrate:272): 0010:  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00
+[  105.870000] [4294947883] mtlkE(send_calibrate:272): 0020:  00 00 00 00 00 00 00 00  03 02 00 00
+[  106.040000] dp_fp_coc_confirm: CoC state changed from : 1 to : 3 enable irq !
+[  106.510000] [4294947947] mtlk0(scan_do_scan:1129): wlan1: Beginning scan: ss=7c7ec450, master_core=7a8a7804, saved_request=7a9c5880, wiphy=7af1fd60, saved_req_wiphy=7af1fd60
+wlan1: interface state COUNTRY_UPDATE->ACS
+wlan1: ACS-STARTED
+==[7777][hostapd][main][hostapd_global_ctrl_iface_init]==
+==[7777][ctrl_iface.c][hostapd_global_ctrl_iface_init]==
+==[7777][hostapd][main][hostapd_global_run]==
+==[7777][hostapd][hostapd_global_run]==
+        ==[7777][hostapd][hostapd_global_run][os_daemonize]==
+[  106.850000] [4294947981] mtlkE(mtlk_core_check_and_set_radio_mode:5158): scan is running
+[  106.920000] [4294947988] mtlkE(_save_qos_map:6669): dump of QoS map
+[  106.930000] [4294947989] mtlkE(_save_qos_map:6669): cp= 0x7a929db8 l=64
+[  106.930000] [4294947989] mtlkE(_save_qos_map:6669): 0000:  00 00 00 00 00 00 00 00  01 01 01 01 01 01 01 01
+[  106.940000] [4294947990] mtlkE(_save_qos_map:6669): 0010:  02 02 02 02 02 02 02 02  03 03 03 03 03 03 03 03
+[  106.950000] [4294947991] mtlkE(_save_qos_map:6669): 0020:  04 04 04 04 04 04 04 04  05 05 05 05 05 05 05 05
+[  106.960000] [4294947992] mtlkE(_save_qos_map:6669): 0030:  06 06 06 06 06 06 06 06  07 07 07 07 07 07 07 07
+[  106.970000] [4294947993] mtlkE(mtlk_df_user_set_priority_to_wmm:807): dump of prio2wmm
+[  106.980000] [4294947994] mtlkE(mtlk_df_user_set_priority_to_wmm:807): cp= 0x7a929d78 l=8
+[  106.990000] [4294947995] mtlkE(mtlk_df_user_set_priority_to_wmm:807): 0000:  00 01 02 03 04 05 06 07
+FAPI_WLAN_VENDOR[  107.000000] wlan0: iftype=3, chanmode=1, radar_detect=0x00, center_freq=2412
+[  107.010000] wdev_iter=wlan0
+_WAVE: running dispatcher script SUCCEED with STATUS '0'
+==[7777][fapi_wlan_wave.c][parse_config_out]==
+FAPI_WLAN_VENDOR_WAVE: parse_config_out, End of configuration output file
+==[7777][wlan_init.c][wlan_init][fapi_wlan_capability_query]==
+==[7777][fapi_wlan.c][fapi_wlan_capability[  107.040000] dp_fp_coc_confirm: CoC state changed from : 3 to : 1 disable irq, do nothing !
+_query]==
+==[7777][fapi_wlan.c][fapi_wlan_get_vendor]==
+FAPI_WLAN_GET_VENDOR '1' INTERFACE 'wlan0'
+FAPI_WLAN_VENDOR_WAVE: fapi_wave_main ,Handling: 'fapi_wlan_wave_capability_query'
+==[7777][fapi_wlan_wave.c][execute_config_in]==
+==[7777][fapi_wlan_wave.c][runWaveScript]==
+    ==[7777][fapi_wlan_wave.c][/opt/lantiq/wave/scripts/fapi_wlan_wave_capability_query wlan0]==
+[  107.660000] [4294948062] mtlk0(core_cfg_set_chan_clpb:662): Notifying the kernel about the channel switch
+[  107.670000] [4294948063] mtlkW(mtlk_cc_handle_algo_calibration_failure:99): CID-0000: MAC event: Offline calibration failed on channel 1, failure mask is 0x0001C140
+[  107.680000] [4294948064] mtlk0(_mtlk_core_activate:3278): CID-0000: open interface
+[  107.690000] [4294948065] mtlk0(mtlk_core_set_net_state:783): wlan0: Going from NET_STATE_ACTIVATING to NET_STATE_CONNECTED
+FAPI_WLAN_VENDOR_WAVE: running dispatcher script SUCCEED with STATUS '0'
+==[7777][fapi_wlan_wave.c][parse_config_out]==
+FAPI_WLAN_VENDOR_WAVE: parse_config_out, End of configuration output file
+==[7777][wlan_init.c][wlan_init][fapi_wlan_capability_query]==
+==[7777][fapi_wlan.c][fapi_wlan_capability_query]==
+==[7777][fapi_wlan.c][fapi_wlan_get_vendor]==
+FAPI_WLAN_GET_VENDOR '1' INTERFACE 'wlan1'
+FAPI_WLAN_VENDOR_WAVE: fapi_wave_main ,Handling: 'fapi_wlan_wave_capability_query'
+==[7777][fapi_wlan_wave.c][execute_config_in]==
+==[7777][fapi_wlan_wave.c][runWaveScript]==
+    ==[7777][fapi_wlan_wave.c][/opt/lantiq/wave/scripts/fapi_wlan_wave_capability_query wlan1]==
+[  108.320000] [4294948128] mtlk0(clean_up_after_this_scan:671): wlan1: Leaving the channel as uncertain after the scan
+[  108.320000] [4294948128] mtlk0(scan_timeout_func:1021): wlan1: Scan done: res=0, ss=7c7ec450, master_core=7a8a7804, saved_request=7a9c5880, wiphy=7af1fd60, saved_req_wiphy=7af1fd60
+[  108.560000] [4294948152] mtlkE(_save_qos_map:6669): dump of QoS map
+[  108.560000] [4294948152] mtlkE(_save_qos_map:6669): cp= 0x7aae5db8 l=64
+[  108.570000] [4294948153] mtlkE(_save_qos_map:6669): 0000:  00 00 00 00 00 00 00 00  01 01 01 01 01 01 01 01
+[  108.580000] [4294948154] mtlkE(_save_qos_map:6669): 0010:  02 02 02 02 02 02 02 02  03 03 03 03 03 03 03 03
+[  108.590000] [4294948155] mtlkE(_save_qos_map:6669): 0020:  04 04 04 04 04 04 04 04  05 05 05 05 05 05 05 05
+[  108.600000] [4294948156] mtlkE(_save_qos_map:6669): 0030:  06 06 06 06 06 06 06 06  07 07 07 07 07 07 07 07
+[  108.610000] [4294948157] mtlkE(mtlk_df_user_set_priority_to_wmm:807): dump of prio2wmm
+[  108.620000] [4294948158] mtlkE(mtlk_df_user_set_priority_to_wmm:807): cp= 0x7aae5d78 l=8
+[  108.620000] [4294948158] mtlkE(mtlk_df_user_set_priority_to_wmm:807): 0000:  00 01 02 03 04 05 06 07
+[  108.630000] wlan1: iftype=3, chanmode=1, radar_detect=0x00, center_freq=5240
+[  108.640000] wdev_iter=wlan1
+[  108.750000] [4294948171] mtlk0(core_cfg_set_chan_clpb:662): Notifying the kernel about the channel switch
+[  108.760000] [4294948172] mtlk0(_mtlk_core_activate:3278): CID-0100: open interface
+[  108.770000] [4294948173] mtlk0(mtlk_core_set_net_state:783): wlan1: Going from NET_STATE_ACTIVATING to NET_STATE_CONNECTED
+FAPI_WLAN_VENDOR_WAVE: running dispatcher script SUCCEED with STATUS '0'
+==[7777][fapi_wlan_wave.c][parse_config_out]==
+FAPI_WLAN_VENDOR_WAVE: parse_config_out, End of configuration output file
+==[7777][wlan_init.c][wlan_init][end]==
+==[7777][sl_wlan.c][sl_wlan_init][end]==
+==[7777][fapi_wlan.c][fapiWlanFailSafeStore]==
+Calling init of SID: 6 COMPLETED!!
+SL_INIT Success for sid: 6
+Writing to Database using cal_setValue..
+Writing to Database using cal_setValue Complete with Return: 0
+All SL's INIT method completed!! Notify 'NOTIFY_ALL_INIT_COMPLETED'
+{
+                 "owner": {
+                         "paramId" : "0",
+                         "paramValue" : "4",
+                         "paramFlag" : "0"
+                 }
+                 "state": {
+                         "paramId" : "0",
+                         "paramValue" : "success",
+                         "paramFlag" : "0"
+                 }
+                 "version": {
+                         "paramId" : "0",
+                         "paramValue" : "UGW-7.1-1451-29Jun16",
+                         "paramFlag" : "0"
+                 }
+}
+==[7777][servd.c][servd_startSlLibsInit][end]==
+==[7777][servd.c][main][uloop_run]==
+config_init_wireless(357): No wireless configuration found
+uci: Entry not found
+config_init_wireless(357): No wireless configuration found
+config_init_wireless(357): No wireless configuration found
+config_init_wireless(357): No wireless configuration found
+Command failed: Request timed out
+Command failed: Request timed out
+config_init_wireless(357): No wireless configuration found
+[  116.030000] [leds_xrx500] { xrx500_sso_led_blink_set : 216 }blink mask not enable
+[  116.040000] [leds_xrx500] { xrx500_sso_led_blink_set : 216 }blink mask not enable
+[  116.050000] [leds_xrx500] { xrx500_sso_led_blink_set : 216 }blink mask not enable
+==[7777][sl_wlan.c][sl_wlan_handler]==
+==[7777][fapi_wlan.c][fapiWlanFailSafeLoad]==
+FAPI_WLAN_COMMON, HELP_LOADLOCALDB loaded from path '/tmp/wlan_fapi_mapping.db' STATUS '0'
+==[7777][fapi_wlan.c][fapiWlanFailSafeStore]==
+==[7777][sl_wlan.c][sl_wlan_handler]==
+==[7777][fapi_wlan.c][fapiWlanFailSafeLoad]==
+FAPI_WLAN_COMMON, HELP_LOADLOCALDB loaded from path '/tmp/wlan_fapi_mapping.db' STATUS '0'
+==[7777][fapi_wlan.c][fapiWlanFailSafeStore]==
+==[7777][sl_wlan.c][sl_wlan_handler]==
+==[7777][fapi_wlan.c][fapiWlanFailSafeLoad]==
+FAPI_WLAN_COMMON, HELP_LOADLOCALDB loaded from path '/tmp/wlan_fapi_mapping.db' STATUS '0'
+==[7777][fapi_wlan.c][fapiWlanFailSafeStore]==
+==[7777][sl_wlan.c][sl_wlan_handler]==
+==[7777][fapi_wlan.c][fapiWlanFailSafeLoad]==
+FAPI_WLAN_COMMON, HELP_LOADLOCALDB loaded from path '/tmp/wlan_fapi_mapping.db' STATUS '0'
+{
+        "ReturnStatus": "Success"
+}
+==[7777][fapi_wlan.c][fapiWlanFailSafeStore]==
+{
+        "ReturnStatus": "Success"
+}
+==[7777][sl_wlan.c][sl_wlan_handler]==
+==[7777][fapi_wlan.c][fapiWlanFailSafeLoad]==
+FAPI_WLAN_COMMON, HELP_LOADLOCALDB loaded from path '/tmp/wlan_fapi_mapping.db' STATUS '0'
+==[7777][fapi_wlan.c][fapiWlanFailSafeStore]==
+{
+        "ReturnStatus": "Success"
+}
+==[7777][sl_wlan.c][sl_wlan_handler]==
+==[7777][fapi_wlan.c][fapiWlanFailSafeLoad]==
+FAPI_WLAN_COMMON, HELP_LOADLOCALDB loaded from path '/tmp/wlan_fapi_mapping.db' STATUS '0'
+==[7777][fapi_wlan.c][fapiWlanFailSafeStore]==
+{
+        "ReturnStatus": "Success"
+}
+{
+        "ReturnStatus": "Success"
+}
+==[7777][sl_wlan.c][sl_wlan_handler]==
+==[7777][fapi_wlan.c][fapiWlanFailSafeLoad]==
+FAPI_WLAN_COMMON, HELP_LOADLOCALDB loaded from path '/tmp/wlan_fapi_mapping.db' STATUS '0'
+==[7777][fapi_wlan.c][fapiWlanFailSafeStore]==
+{
+        "ReturnStatus": "Success"
+}
+==[7777][sl_wlan.c][sl_wlan_handler]==
+==[7777][fapi_wlan.c][fapiWlanFailSafeLoad]==
+FAPI_WLAN_COMMON, HELP_LOADLOCALDB loaded from path '/tmp/wlan_fapi_mapping.db' STATUS '0'
+==[7777][fapi_wlan.c][fapiWlanFailSafeStore]==
+{
+        "ReturnStatus": "Success"
+}
+config_init_wireless(357): No wireless configuration found
+

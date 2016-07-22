@@ -1,0 +1,2289 @@
+
+
+U-Boot 2010.06-LANTIQ-v-2.3.110 (May 17 2016 - 15:34:21)
+
+interAptiv
+cps cpu/ddr run in 600/666 Mhz
+DRAM:  224 MiB
+NAND:  ONFI flash detected
+ONFI param page 0 valid
+NAND device: Manufacturer ID: 0x01, Chip ID: 0xda (AMD S34ML02G1)
+256 MiB
+Bad block table found at page 131008, version 0x01
+Bad block table found at page 130944, version 0x01
+nand_read_bbt: Bad block at 0x000004b60000
+nand_read_bbt: Bad block at 0x000004ba0000
+In:    serial
+Out:   serial
+Err:   serial
+Net:   multi type
+Internal phy firmware version: 0x853c
+GRX500 Switch
+
+Type "run flash_nfs" to mount root filesystem over NFS
+
+Hit any key to stop autoboot:  0
+Saving Environment to NAND...
+Erasing Nand...
+Erasing at 0x120000 -- 100% complete.
+Writing to Nand... done
+Creating 1 MTD partitions on "nand0":
+0x0000012c0000-0x000007ec0000 : "mtd=6"
+UBI: attaching mtd1 to ubi0
+UBI: physical eraseblock size:   131072 bytes (128 KiB)
+UBI: logical eraseblock size:    126976 bytes
+UBI: smallest flash I/O unit:    2048
+UBI: VID header offset:          2048 (aligned 2048)
+UBI: data offset:                4096
+UBI: attached mtd1 to ubi0
+UBI: MTD device name:            "mtd=6"
+UBI: MTD device size:            108 MiB
+UBI: number of good PEBs:        862
+UBI: number of bad PEBs:         2
+UBI: max. allowed volumes:       128
+UBI: wear-leveling threshold:    4096
+UBI: number of internal volumes: 1
+UBI: number of user volumes:     8
+UBI: available PEBs:             429
+UBI: total number of reserved PEBs: 433
+UBI: number of PEBs reserved for bad PEB handling: 8
+UBI: max/mean erase counter: 1199/192
+bootcoreA volume not found
+Volume kernelA found at volume id 0
+read 0 bytes from volume 0 to 80800000(buf address)
+Read [2793472] bytes
+## Booting kernel from Legacy Image at 80800000 ...
+   Image Name:   MIPS LTQCPE Linux-3.10.12
+   Created:      2016-06-15  11:08:36 UTC
+   Image Type:   MIPS Linux Kernel Image (lzma compressed)
+   Data Size:    2752448 Bytes = 2.6 MiB
+   Load Address: a0020000
+   Entry Point:  a002df00
+   Verifying Checksum ... OK
+   Uncompressing Kernel Image ... OK
+
+Starting kernel ...
+
+[    0.000000] Initializing cgroup subsys cpu
+[    0.000000] Linux version 3.10.12 (seven_tsai@sw6-builder2.arcadyan.com.tw) (gcc version 4.8.3 (OpenWrt/Linaro GCC 4.8-2014.04 15.05_ltq) ) #102 SMP Wed Jun 15 19:08:15 CST 2016
+[    0.000000] TLBINV/F supported, config4=0xc0000000
+[    0.000000] TLBINV/F supported, config4=0xc0000000
+[    0.000000] SoC: GRX500 rev 1.2
+[    0.000000] GCMP present
+[    0.000000] L2-only SYNC available
+[    0.000000] bootconsole [early0] enabled
+[    0.000000] CPU0 revision is: 0001a120 (MIPS interAptiv)
+[    0.000000] Enhanced Virtual Addressing (EVA 1GB) activated
+[    0.000000] IO: BASE = 0xa0000000, SHIFT = 0x10000000, SIZE = 0x10000000
+[    0.000000] GCMP base addr = 0xb2300000, CLB: ResetExcBase = 0xbfc00000, ResetExcExtBase = 0x4ff00001
+[    0.000000] BEV Overlay segment = 0xb0000000, size = 0x10000000
+[    0.000000] segctr0 2d0a0a segctr1 40d020a segctr2 38004d
+[    0.000000] MIPS: machine is EASY350 ANYWAN (GRX350) Main model
+[    0.000000] CMP IOCU detected
+[    0.000000] Hardware DMA cache coherency disabled
+[    0.000000] Determined physical RAM map:
+[    0.000000]  memory: 0e000000 @ 20000000 (usable)
+[    0.000000] Initrd not found or empty - disabling initrd
+[    0.000000] reserving 18874368 bytes @ 6800a6c0 for CBM
+[    0.000000] reserving 8388608 bytes @ 6920a6c0 for CBM
+[    0.000000] Zone ranges:
+[    0.000000]   DMA      [mem 0x20000000-0x27ffffff]
+[    0.000000]   Normal   [mem 0x28000000-0x2dffffff]
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x20000000-0x2dffffff]
+[    0.000000] Detected 3 available secondary CPU(s)
+[    0.000000] Primary instruction cache 32kB, 4-way, VIPT, linesize 32 bytes.
+[    0.000000] Primary data cache 32kB, 4-way, PIPT, no aliases, linesize 32 bytes
+[    0.000000] MIPS secondary cache 256kB, 8-way, linesize 32 bytes.
+[    0.000000] PERCPU: Embedded 8 pages/cpu @69bce000 s8576 r8192 d16000 u32768
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 56896
+[    0.000000] Kernel command line: ubi.mtd=system_sw rootfsname=rootfsA ro rootfstype=squashfs do_overlay console=ttyLTQ0,115200 ethaddr=00:E0:92:00:01:40 panic=1 mtdparts=17c00000.nand-parts:1m(uboot),256k(ubootconfigA),256k(ubootconfigB),256k(gphyfirmware),1m(calibration),16m(bootcore),108m(system_sw),-(res) init=/etc/preinit active_bank=A update_chk=2 maxcpus=4 pci=pcie_bus_perf ethwan= ubootver=U-Boot-2010.06-LANTIQ-v-2.3.110
+[    0.000000] eth0 mac address 00-E0-92-00-01-40
+[    0.000000] PID hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.000000] Dentry cache hash table entries: 32768 (order: 5, 131072 bytes)
+[    0.000000] Inode-cache hash table entries: 16384 (order: 4, 65536 bytes)
+[    0.000000] Writing ErrCtl register=00000000
+[    0.000000] Readback ErrCtl register=00000000
+[    0.000000] allocated 458752 bytes of page_cgroup
+[    0.000000] please try 'cgroup_disable=memory' option if you don't want memory cgroups
+[    0.000000] Memory: 191212k/229376k available (6217k kernel code, 38164k reserved, 1631k data, 340k init, 0k highmem)
+[    0.000000] Hierarchical RCU implementation.
+[    0.000000] NR_IRQS:527
+[    0.000000] GIC: present
+[    0.000000] EIC: off
+[    0.000000] GIC map size 263
+[    0.000000] gic: revision 3.0
+[    0.000000] CPU0: c0 status register 1100fc00
+[    0.000000] of_gic_init init done
+[    0.000000] CPU Clock: 600000000Hz  mips_hpt_frequency 300000000Hz
+[    0.000000] CBM Clock: 200000000Hz DDR Clock: 666666666Hz NGI Clock: 300000000Hz
+[    0.000000] clock event init done !
+[    0.000000] gptu_setup_clocksource: done !
+[    0.000000] Calibrating delay loop... 385.84 BogoMIPS (lpj=1929216)
+[    0.070000] pid_max: default: 32768 minimum: 301
+[    0.070000] Mount-cache hash table entries: 512
+[    0.080000] Initializing cgroup subsys memory
+[    0.090000] size of core = 336, MAXCORE = 2 , MAXCPU = 4, MAXTCS = 6 MAX_VPE = 2
+[    0.090000] [update_DB_from_DT]:[363], cpuid = 0 name = LINUX
+[    0.100000] [update_DB_from_DT]:[363], cpuid = 1 name = VOICEFW
+[    0.100000] [update_DB_from_DT]:[363], cpuid = 2 name = LINUX
+[    0.110000] [update_DB_from_DT]:[363], cpuid = 3 name = MPEFW
+[    0.110000] [vmb_check_IBL_fw_msg]:[331] vpet[j].bl_status = 2 , cpu = 1
+[    0.120000] [vmb_check_IBL_fw_msg]:[331] vpet[j].bl_status = 2 , cpu = 2
+[    0.120000] [vmb_check_IBL_fw_msg]:[331] vpet[j].bl_status = 2 , cpu = 3
+[    0.130000]
+[    0.130000] Initial ITC_Address_Map0 00000000
+[    0.130000]
+def ITC_Address_Map1 01200000
+new ITC_Address_Map1 0120fc00
+def ITC_Address_Map0 00000000
+new ITC_Address_Map0 1c300001
+ ITC Init done on Core 0 on CPU 0 !!!
+[    0.150000] [smp_init]:[553] CPU1 shouldn't run LINUX as per DT (model) config
+[    0.150000] [vmb_cpu_alloc]:[624] CPU vpet.cpu_status = 11
+[    0.160000] [vmb_cpu_start]:[842]  vmb_fw_msg_t = a0000168 cpu = 2 vmb_msg_size = b0 sizeof(VMB_fw_msg_t) = 168 sizeof(FW_vmb_msg_t) = 8 !!!!
+ [gic_trigger]:[555] VMB_CPU_IPI2 - 21 CPU = 2
+
+Outside WAIT got IPI interrupt to launch from cpu 02
+
+ MSG_ID = 01[    0.170000] [vmb_cpu_start]:[881] WAITING FOR RESPONSE vpet->v_wq.wakeup_vpe = 0 !!!!
+ [    0.170000] TLBINV/F supported, config4=0xc0000000
+[    0.170000] TLBINV/F supported, config4=0xc0000000
+[    0.170000] CPU2 revision is: 0001a120 (MIPS interAptiv)
+[    0.170000] Primary instruction cache 32kB, 4-way, VIPT, linesize 32 bytes.
+[    0.170000] Primary data cache 32kB, 4-way, PIPT, no aliases, linesize 32 bytes
+[    0.170000] MIPS secondary cache 256kB, 8-way, linesize 32 bytes.
+[    0.170000] IO: BASE = 0xa0000000, SHIFT = 0x10000000, SIZE = 0x10000000
+[    0.170000] GCMP base addr = 0xb2300000, CLB: ResetExcBase = 0xbfc00000, ResetExcExtBase = 0x4ff00001
+[    0.170000] BEV Overlay segment = 0xb0000000, size = 0x10000000
+[    0.170000]
+[    0.170000] Initial ITC_Address_Map0 00000000
+[    0.170000]
+[    0.170000] def ITC_Address_Map1 01200000
+[    0.170000] new ITC_Address_Map1 0120fc00
+[    0.170000] def ITC_Address_Map0 00000000
+[    0.170000] new ITC_Address_Map0 1c300001
+[    0.170000]  ITC Init done on Core 1 on CPU 2 !!!
+
+[    0.230000] [vmb_cpu_active]:[268] action = 10 , cpu = 2
+[    0.230000] [vmb_cpu_start]:[898] OUTSIDE WAIT wakeup_vpe = 1 vpet->fw_vmb.status = 1 ACK = 1 cpu = 2 ret1 = 9995 vpet = 60823b04, smp_processor_id() = 0 , vpet->fw_vmb =60823b30 !!!!
+[    0.230000]  [vmb_cpu_start]:[905]  ret = 1
+
+[    0.240000] Synchronize counters for CPU 2: done.
+[    0.240000] GPTC clock event init on cpu: 2
+[    0.240000] clock event init done !
+[    0.250000] [smp_init]:[553] CPU3 shouldn't run LINUX as per DT (model) config
+[    0.250000] Brought up 2 CPUs
+[    0.270000] pinctrl core: initialized pinctrl subsystem
+[    0.270000] NET: Registered protocol family 16
+[    0.280000] [gpio_xrx500] { xrx500_gpio_init : 399 }XRX500 GPIO Driver, (C) 2014 Lantiq Deutschland Gmbh
+[    0.290000] dma-grx500 1e300000.dma: DMA3 base address be300000 chained_irq 77 irq_base 447
+[    0.300000] dma-grx500 1e300000.dma: Init done - hw rev: A, ports: 1, channels: 64
+[    0.310000] dma-grx500 1c100000.dma: DMA2TX base address bc100000 chained_irq 75 irq_base 399
+[    0.320000] dma-grx500 1c100000.dma: Init done - hw rev: A, ports: 1, channels: 16
+[    0.320000] dma-grx500 1c200000.dma: DMA2RX base address bc200000 chained_irq 76 irq_base 415
+[    0.330000] dma-grx500 1c200000.dma: Init done - hw rev: A, ports: 1, channels: 32
+[    0.340000] dma-grx500 1a100000.dma: DMA1TX base address ba100000 chained_irq 73 irq_base 351
+[    0.350000] dma-grx500 1a100000.dma: Init done - hw rev: A, ports: 1, channels: 16
+[    0.350000] dma-grx500 1a200000.dma: DMA1RX base address ba200000 chained_irq 74 irq_base 367
+[    0.360000] dma-grx500 1a200000.dma: Init done - hw rev: A, ports: 1, channels: 12
+[    0.370000] [gptu] { gptu_probe : 297 }dev id 16b00000.gptu
+[    0.380000] [gptu] { clkdev_add_gptu : 239 }Memory Allocation suceeded
+[    0.380000] [gptu] { clkdev_add_gptu : 239 }Memory Allocation suceeded
+[    0.390000] gptu-xrx500 16b00000.gptu: gptu: 2 timers loaded
+[    0.390000] gptu driver init successfully
+[    0.400000] [gptu] { gptu_probe : 297 }dev id 16300000.gptu
+[    0.400000] [gptu] { clkdev_add_gptu : 239 }Memory Allocation suceeded
+[    0.410000] [gptu] { clkdev_add_gptu : 239 }Memory Allocation suceeded
+[    0.410000] gptu-xrx500 16300000.gptu: gptu: 2 timers loaded
+[    0.420000] gptu driver init successfully
+[    0.420000] dma0-grx500 16e00000.dma: base address b6e00000 chained_irq 72 irq_base 335
+[    0.430000] dma0-grx500 16e00000.dma: Init done - hw rev: A, ports: 4, channels: 16
+[    0.430000] [pinctrl_xrx500] { pinctrl_xrx500_probe : 1234 }disabling the BBSPI at top-mux
+[    0.440000] pinctrl-xrx500 pinctrl.4: Init done
+[    0.450000] !!!!!!! WAVE400 system registeration on AHB
+[    0.450000] MTLK_MEM_BAR1_START is 14000000
+[    0.460000] MTLK_MEM_BAR1_END is 147fffff
+[    0.460000] MTLK_WIRELESS_IRQ_IN_INDEX is 26
+[    0.460000] [cbm] { cbm_xrx500_probe : 4451 }2
+[    0.470000] Initializing TMU with Base Address=be700000: ...
+[    0.470000] TMU Initialization Done
+[    0.480000] [cbm] { init_fsqm_buf_standard : 531 }init fsqm std successfully
+[    0.480000] [cbm] { init_fsqm_buf_jumbo : 574 }init fsqm jbo successfully
+[    0.490000] [cbm] { init_fsqm : 461 }fsqm init successfully
+[    0.490000] [cbm] { init_cbm_basic : 639 }init basic CBM successfully
+[    0.500000] [cbm] { cbm_hw_init : 1782 }CBM HW init
+[    0.500000] [cbm] { configure_ports : 4295 }configure_ports 7 1 0 0 8 2
+[    0.510000] [cbm] { configure_ports : 4262 }configure_ports 7 1 16 1 8 2
+[    0.510000] [cbm] { configure_ports : 4295 }configure_ports 8 1 15 0 8 2
+[    0.520000] [cbm] { configure_ports : 4262 }configure_ports 8 1 31 1 8 2
+[    0.520000] [cbm] { init_cbm_ls : 992 }Load spreader init successfully
+[    0.530000] [cbm] { cbm_xrx500_probe : 4510 }CBM Clock: 200000000Hz
+[    0.530000] [cbm] { cbm_xrx500_probe : 4578 }CBM: Init Done !!
+[    0.540000] PCI host bridge /ssx3@18000000/pcie@900000 ranges:
+[    0.540000]  MEM 0x00000000b8000000..0x00000000baffffff
+[    0.550000]   IO 0x00000000bb800000..0x00000000bb8fffff
+[    1.150000] pcie_wait_phy_link_up port 0 timeout
+[    1.160000] pcie_rc_initialize port 0 link up failed!!!!!
+[    1.160000] Lantiq PCIe Root Complex Port 0 Init Done
+[    1.170000] PCI host bridge /ssx3@18000000/pcie@400000 ranges:
+[    1.170000]  MEM 0x00000000b4000000..0x00000000b6ffffff
+[    1.180000]   IO 0x00000000b7800000..0x00000000b78fffff
+[    1.780000] pcie_wait_phy_link_up port 1 timeout
+[    1.790000] pcie_rc_initialize port 1 link up failed!!!!!
+[    1.790000] Lantiq PCIe Root Complex Port 1 Init Done
+[    1.800000] PCI host bridge /ssx3@18000000/pcie@E00000 ranges:
+[    1.800000]  MEM 0x00000000bc000000..0x00000000beffffff
+[    1.810000]   IO 0x00000000bf800000..0x00000000bf8fffff
+[    2.120000] Lantiq PCIe Root Complex Port 2 Init Done
+[    2.150000] bio: create slab <bio-0> at 0
+[    2.160000] vgaarb: loaded
+[    2.160000] SCSI subsystem initialized
+[    2.160000] Register xway nand done!
+[    2.170000] usbcore: registered new interface driver usbfs
+[    2.170000] usbcore: registered new interface driver hub
+[    2.180000] usbcore: registered new device driver usb
+[    2.180000] PCI host bridge to bus 0000:00
+[    2.190000] pci_bus 0000:00: root bus resource [mem 0xbc000000-0xbeffffff]
+[    2.190000] pci_bus 0000:00: root bus resource [io  0xbf800000-0xbf8fffff]
+[    2.200000] pci_bus 0000:00: No busn resource found for root bus, will use [bus 00-ff]
+[    2.200000] ltq-pcie 18e00000.pcie: pcie_rc_class_fixup port 2: fixed pci host bridge to pci-pci bridge
+[    2.210000] pci 0000:00:00.0: BAR 9: assigned [mem 0xbc000000-0xbc7fffff pref]
+[    2.210000] pci 0000:01:00.0: BAR 0: assigned [mem 0xbc000000-0xbc7fffff pref]
+[    2.220000] pci 0000:00:00.0: PCI bridge to [bus 01]
+[    2.220000] pci 0000:00:00.0:   bridge window [mem 0xbc000000-0xbc7fffff pref]
+[    2.230000] PCI: Enabling device 0000:00:00.0 (0000 -> 0002)
+[    2.230000] pci 0000:00:00.0: PCI-E Max Payload Size set to  256/ 256 (was  128), Max Read Rq  256
+[    2.240000] pci 0000:01:00.0: PCI-E Max Payload Size set to  128/ 128 (was  128), Max Read Rq  128
+[    2.250000] NET: Registered protocol family 8
+[    2.250000] NET: Registered protocol family 20
+[    2.260000] Switching to clocksource gptc-timer
+[    2.260000] NET: Registered protocol family 2
+[    2.270000] TCP established hash table entries: 2048 (order: 2, 16384 bytes)
+[    2.280000] TCP bind hash table entries: 2048 (order: 2, 16384 bytes)
+[    2.290000] TCP: Hash tables configured (established 2048 bind 2048)
+[    2.290000] TCP: reno registered
+[    2.300000] UDP hash table entries: 256 (order: 1, 8192 bytes)
+[    2.300000] UDP-Lite hash table entries: 256 (order: 1, 8192 bytes)
+[    2.310000] NET: Registered protocol family 1
+[    2.310000] RPC: Registered named UNIX socket transport module.
+[    2.320000] RPC: Registered udp transport module.
+[    2.330000] RPC: Registered tcp transport module.
+[    2.330000] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    2.340000] ltq-pcie 18e00000.pcie: pcie_fixup_bridge port 2 : fixup host controller 0000:00:00.0 (1bef:0030)
+[    2.350000] audit: initializing netlink socket (disabled)
+[    2.350000] type=2000 audit(2.340:1): initialized
+[    2.360000] VFS: Disk quotas dquot_6.5.2
+[    2.360000] Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+[    2.370000] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    2.380000] SGI XFS with ACLs, security attributes, large block/inode numbers, no debug enabled
+[    2.390000] msgmni has been set to 373
+[    2.390000] io scheduler noop registered
+[    2.400000] io scheduler deadline registered (default)
+[    2.400000] io scheduler cfq registered
+[    2.410000] [vmb_yr_get]:[1362] CPU = 0, yri[i].yr_status = 1, yield_bits = 1 n_yr = 1 yri[i].cpu_id = 0
+[    2.420000] [vmb_yr_get]:[1362] CPU = 2, yri[i].yr_status = 1, yield_bits = 1 n_yr = 1 yri[i].cpu_id = 2
+[    2.430000] UMT initialize success!
+[    2.430000] HW MCPY driver: Version: 1.1.0, Init Done !!
+[    2.440000] Serial: 8250/16550 driver, 4 ports, IRQ sharing disabled
+[    2.440000] lantiq,asc 16600000.serial: pins are not configured from the driver
+[    2.450000] 16600000.serial: ttyLTQ0 at MMIO 0x16600000 (irq = 111) is a lantiq,asc
+[    2.470000] console [ttyLTQ0] enabled, bootconsole disabled
+[    2.470000] console [ttyLTQ0] enabled, bootconsole disabled
+[    2.480000] Lantiq MIPSInterAptiv MPS driver, version 1.0.0.0, (c) 2006-2013 Lantiq Deutschland GmbH
+[    2.490000] MPS: major Id 252
+[    2.490000] Major Id is 251
+[    2.490000] ICC driver registered
+[    2.500000] sysrst_init: Trying to register System Reset Driver ...
+[    2.500000] sysrst_pre_init: Detect InterAptiv CPU ...
+[    2.510000] sysrst_init: Lantiq CPE GRX500 System            driver version 1.0.0
+[    2.520000] sysrst_init: GRX500 System Reset initialized successfully!
+[    2.520000] brd: module loaded
+[    2.530000] loop: module loaded
+[    2.530000] Uniform Multi-Platform E-IDE driver
+[    2.530000] ide-gd driver 1.18
+[    2.540000] ONFI param page 0 valid
+[    2.540000] ONFI flash detected
+[    2.540000] NAND device: Manufacturer ID: 0x01, Chip ID: 0xda (AMD/Spansion S34ML02G1), 256MiB, page size: 2048, OOB size: 64
+[    2.560000] Scanning device for bad blocks
+[    2.640000] Bad eraseblock 603 at 0x000004b60000
+[    2.640000] Bad eraseblock 605 at 0x000004ba0000
+[    2.830000] 8 cmdlinepart partitions found on MTD device 17c00000.nand-parts
+[    2.830000] Creating 8 MTD partitions on "17c00000.nand-parts":
+[    2.840000] 0x000000000000-0x000000100000 : "uboot"
+[    2.840000] 0x000000100000-0x000000140000 : "ubootconfigA"
+[    2.850000] 0x000000140000-0x000000180000 : "ubootconfigB"
+[    2.850000] 0x000000180000-0x0000001c0000 : "gphyfirmware"
+[    2.860000] 0x0000001c0000-0x0000002c0000 : "calibration"
+[    2.870000] 0x0000002c0000-0x0000012c0000 : "bootcore"
+[    2.870000] 0x0000012c0000-0x000007ec0000 : "system_sw"
+[    2.880000] 0x000007ec0000-0x000010000000 : "res"
+[    2.880000] Gluebi: Found kernel commandline option 'rootfsname=rootfsA'
+[    2.890000] spi-lantiq-ssc 16800000.spi: master is unqueued, this is deprecated
+[    2.900000] Lantiq SoC SPI controller rev 9 (TXFS 32, RXFS 32, DMA 1)
+[    2.900000] [ltq_ssc] { ifx_ssc_init : 3667 }ifx_ssc_init ifx_ssc_init_count 1
+[    2.910000] [ltq_ssc] { ifx_ssc_init : 3790 }port name ltq_ssc1
+[    2.910000] [ltq_ssc] { ifx_ssc_init : 3886 }Lantiq SoC SSC controller rev 9 (TXFS 32, RXFS 32, DMA 1)
+[    2.920000] [ltq_ssc] { ifx_sscAllocConnection : 3392 }ifx_sscAllocConnection ssc driver must be loaded first!
+[    2.930000] ifx_spi_flash_init: failed to register sflash
+[    2.940000] IMQ driver loaded successfully. (numdevs = 3, numqueues = 1)
+[    2.950000]  Hooking IMQ after NAT on PREROUTING.
+[    2.950000]  Hooking IMQ after NAT on POSTROUTING.
+[    2.960000] pcnet32: pcnet32.c:v1.35 21.Apr.2008 tsbogend@alpha.franken.de
+[    2.970000] PCI: Enabling device 0000:01:00.0 (0000 -> 0002)
+[    2.970000] Lantiq VRX318 Version 3.0.0
+[    2.980000] LTQ ETH SWITCH API, Version 3.0.2.
+[    2.980000] SWAPI: Registered char device [switch_api] with major no [81]
+[    2.990000] drivers/net/ethernet/lantiq/switch-api/gsw_flow_core.c:get_gsw_hw_cap:1684 (pnum:7)
+[    3.000000] drivers/net/ethernet/lantiq/switch-api/gsw_flow_core.c:get_gsw_hw_cap:1751 (gswdev->gipver:48)
+[    3.010000] LTQ ETH SWITCH API, Version 3.0.2.
+[    3.010000] drivers/net/ethernet/lantiq/switch-api/gsw_flow_core.c:get_gsw_hw_cap:1684 (pnum:2)
+[    3.020000] drivers/net/ethernet/lantiq/switch-api/gsw_flow_core.c:get_gsw_hw_cap:1751 (gswdev->gipver:48)
+[    3.030000] gphy_driver_init: fw_mode:11G-FW, no of phys:5, mode:0
+[    3.040000] [datapath_loopeth_dev] { dp_loop_eth_dev_init : 1692 }Loading loop_net_dev driver ......
+[    3.050000] [datapath_loopeth_dev] { dp_loop_eth_dev_init : 1698 }dp_loop_eth_dev_init Succeeded!
+[    3.060000] [datapath_coc] { dp_coc_new_stat_req : 672 }COC is not initialized yet in DP
+[    3.070000] dp init done
+[    3.070000] SoC rev: 2
+[    3.070000] PMAC_EG_CFG_SET for GSW-L
+[    3.070000] PMAC_IG_CFG_SET for GSW-L
+[    3.080000] PMAC_EG_CFG_SET for GSW-R
+[    3.090000] PMAC_IG_CFG_SET for GSW-R
+[    3.090000]
+[    3.090000]   GSW PMAC Init Done!!!
+[    3.090000] registering one of MII bus
+[    3.100000] libphy: lantiq,xrx500-mdio: probed
+[    3.110000] registering PAE MII bus
+[    3.120000] libphy: lantiq,xrx500-mdio-pae: probed
+[    3.120000] xrx500_of_iface: rx csum offload is enabled !
+[    3.130000] trying to connect: eth0_1 to device: 0:02 with irq: 120
+[    3.180000] eth0_1: attached PHY [Lantiq XWAY VR9 GPHY 11G v1.4] (phy_addr=0:02, irq=120)
+[    3.190000] xrx500_of_iface: rx csum offload is enabled !
+[    3.200000] trying to connect: eth0_2 to device: 0:03 with irq: 121
+[    3.250000] eth0_2: attached PHY [Lantiq XWAY VR9 GPHY 11G v1.4] (phy_addr=0:03, irq=121)
+[    3.270000] xrx500_of_iface: rx csum offload is enabled !
+[    3.270000] trying to connect: eth0_3 to device: 0:04 with irq: 134
+[    3.320000] eth0_3: attached PHY [Lantiq XWAY VR9 GPHY 11G v1.4] (phy_addr=0:04, irq=134)
+[    3.340000] xrx500_of_iface: rx csum offload is enabled !
+[    3.340000] trying to connect: eth0_4 to device: 0:05 with irq: 135
+[    3.390000] eth0_4: attached PHY [Lantiq XWAY VR9 GPHY 11G v1.4] (phy_addr=0:05, irq=135)
+[    3.410000] xrx500_of_iface: rx csum offload is enabled !
+[    3.410000] trying to connect: eth1 to device: 1:01 with irq: 119
+[    3.460000] eth1: attached PHY [Lantiq XWAY VR9 GPHY 11G v1.4] (phy_addr=1:01, irq=119)
+[    3.470000] register mc group pass: 0, grp name: eth_mcgrp, grp id:1
+[    3.480000] Lantiq ethernet driver for XRX500 !
+[    3.480000] PPP generic driver version 2.4.2
+[    3.490000] PPP BSD Compression module registered
+[    3.490000] PPP Deflate Compression module registered
+[    3.500000] PPP MPPE Compression module registered
+[    3.500000] NET: Registered protocol family 24
+[    4.480000] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    4.490000] ehci-pci: EHCI PCI platform driver
+[    4.490000] uhci_hcd: USB Universal Host Controller Interface driver
+[    4.500000] usbcore: registered new interface driver usb-storage
+[    4.500000] usbcore: registered new interface driver ums-alauda
+[    4.510000] usbcore: registered new interface driver ums-datafab
+[    4.520000] usbcore: registered new interface driver ums-freecom
+[    4.520000] usbcore: registered new interface driver ums-jumpshot
+[    4.530000] usbcore: registered new interface driver ums-sddr09
+[    4.530000] usbcore: registered new interface driver ums-sddr55
+[    4.540000] usbcore: registered new interface driver ums-usbat
+[    4.550000] mousedev: PS/2 mouse device common for all mice
+[    4.550000] [gptu] { setrate : 154 }cpu_clk 200000000
+[    4.560000] [gptu] { setrate : 158 }reload_counter_value 1
+[    4.560000] gpio-sso-xrx500 16d00000.sso: pins are not configured from the driver
+[    4.570000] gpio-sso-xrx500 16d00000.sso: Init done
+[    4.580000] usbcore: registered new interface driver usbhid
+[    4.580000] usbhid: USB HID core driver
+[    4.590000] u32 classifier
+[    4.590000]     input device check on
+[    4.590000]     Actions configured
+[    4.600000] nf_conntrack version 0.5.0 (2987 buckets, 11948 max)
+[    4.600000] nf_conntrack_rtsp v0.6.21 loading
+[    4.610000] xt_time: kernel timezone is -0000
+[    4.610000] nf_nat_rtsp v0.6.21 loading
+[    4.610000] ip_tables: (C) 2000-2006 Netfilter Core Team
+[    4.620000] TCP: cubic registered
+[    4.620000] Initializing XFRM netlink socket
+[    4.630000] NET: Registered protocol family 10
+[    4.630000] NET: Registered protocol family 17
+[    4.640000] NET: Registered protocol family 15
+[    4.640000] Ebtables v2.0 registered
+[    4.650000] lec:lane_module_init: lec.c: initialized
+[    4.650000] mpoa:atm_mpoa_init: mpc.c: initialized
+[    4.660000] KOAM is loaded successfully.
+[    4.660000] l2tp_core: L2TP core driver, V2.0
+[    4.660000] l2tp_ppp: PPPoL2TP kernel driver, V2.0
+[    4.670000] l2tp_netlink: L2TP netlink interface
+[    4.670000] 8021q: 802.1Q VLAN Support v1.8
+[    4.680000] UBI: attaching mtd6 to ubi0
+[    6.840000] UBI: scanning is finished
+[    6.870000] UBI: attached mtd6 (name "system_sw", size 108 MiB) to ubi0
+[    6.880000] UBI: PEB size: 131072 bytes (128 KiB), LEB size: 126976 bytes
+[    6.890000] UBI: min./max. I/O unit sizes: 2048/2048, sub-page size 2048
+[    6.890000] UBI: VID header offset: 2048 (aligned 2048), data offset: 4096
+[    6.900000] UBI: good PEBs: 862, bad PEBs: 2, corrupted PEBs: 0
+[    6.910000] UBI: user volume: 8, internal volumes: 1, max. volumes count: 128
+[    6.910000] UBI: max/mean erase counter: 1199/192, WL threshold: 4096, image sequence number: 0
+[    6.920000] UBI: available PEBs: 399, total reserved PEBs: 463, PEBs reserved for bad PEB handling: 38
+[    6.930000] UBI: background thread "ubi_bgt0d" started, PID 515
+[    6.930000] Gluebi: mtd 'rootfsA' set to be root filesystem
+[    6.940000] drivers/rtc/hctosys.c: unable to open rtc d[    6.970000] VFS: Mounted root (squashfs filesystem) readonly on device 31:9.
+[    6.970000] Freeing unused memory: 340k freed
+rootdir=/
+table='/etc/device_table.txt'
+makedevs: line 67: can't create node dev/ram: File exists
+makedevs: line 111: can't create node dev/vcc/: File exists
+makedevs: line 113: can't create node dev/vc/: File exists
+[    8.070000] init: Console is alive
+[   11.080000] init: - preinit -
+[   12.200000] UBIFS: background thread "ubifs_bgt0_6" started, PID 811
+[   12.340000] UBIFS: recovery needed
+[   12.790000] UBIFS: recovery completed
+[   12.790000] UBIFS: mounted UBI device 0, volume 6, name "data_vol"
+[   12.800000] UBIFS: LEB size: 126976 bytes (124 KiB), min./max. I/O unit sizes: 2048 bytes/2048 bytes
+[   12.810000] UBIFS: FS size: 4063232 bytes (3 MiB, 32 LEBs), journal size 1015809 bytes (0 MiB, 6 LEBs)
+[   12.820000] UBIFS: reserved for root: 191915 bytes (187 KiB)
+[   12.820000] UBIFS: media format: w4/r0 (latest is w4/r0), UUID EEF76ABB-774A-4699-9EE4-651AB56AE3F8, small LPT model
+[   13.050000] procd: - early -
+[   14.760000] procd: - ubus -
+[   15.760000] procd: - init -
+[   15.970000] sysctl: The scan_unevictable_pages sysctl/node-interface has been disabled for lack of a legitimate use case.  If you have one, please send an email to linux-mm@kvack.org.
+
+(none) login: [18:7116] NOTICE: Initial logging level 7
+[18:7117] NOTICE: Library version: 1.3 c021130
+[18:7118] NOTICE: IPV6 compiled in and enabled
+[18:7118] NOTICE: libev support not compiled in
+[18:7120] NOTICE:  static allocation: 4472 + (12 x 1024 fds) = 16760 bytes
+[18:7123] NOTICE:  canonical_hostname = (none)
+[18:7124] NOTICE:  per-conn mem: 128 + 1594 headers + protocol rx buf
+[18:7125] NOTICE:  Compiled with OpenSSL support
+[18:7125] NOTICE:  Using non-SSL mode
+[19:1527] NOTICE:  Listening on port 5001
+Ubus connect Success !!!
+1970-01-01 00:00:18: (network.c.264) warning: server.set-v6only will be removed soon, update your config to have different sockets for ipv4 and ipv6
+1970-01-01 00:00:18: (log.c.166) server started
+1970-01-01 00:00:18: (server.c.968) WARNING: unknown config-key: alias.url (ignored)
+[   20.310000] drv_event_logger: Unknown symbol IFXOS_LockInit (err 0)
+[   20.310000] drv_event_logger: Unknown symbol IFXOS_CpyFromUser (err 0)
+[   20.320000] drv_event_logger: Unknown symbol IFXOS_MutexGet (err 0)
+[   20.320000] drv_event_logger: Unknown symbol IFXOS_MutexInit (err 0)
+[   20.330000] drv_event_logger: Unknown symbol IFXOS_MutexRelease (err 0)
+[   20.340000] drv_event_logger: Unknown symbol IFXOS_LockDelete (err 0)
+[   20.340000] drv_event_logger: Unknown symbol IFXOS_SocketClose (err 0)
+[   20.350000] drv_event_logger: Unknown symbol IFXOS_SocketSendTo (err 0)
+[   20.360000] drv_event_logger: Unknown symbol IFXOS_LockRelease (err 0)
+[   20.360000] drv_event_logger: Unknown symbol IFXOS_BlockFree (err 0)
+[   20.370000] drv_event_logger: Unknown symbol IFXOS_BlockAlloc (err 0)
+[   20.380000] drv_event_logger: Unknown symbol IFXOS_MemAlloc (err 0)
+[   20.380000] drv_event_logger: Unknown symbol IFXOS_ThreadInit (err 0)
+[   20.390000] drv_event_logger: Unknown symbol IFXOS_ElapsedTimeMSecGet (err 0)
+[   20.390000] drv_event_logger: Unknown symbol IFXOS_SocketBind (err 0)
+[   20.400000] drv_event_logger: Unknown symbol IFXOS_MutexDelete (err 0)
+[   20.410000] drv_event_logger: Unknown symbol IFXOS_MemFree (err 0)
+[   20.410000] drv_event_logger: Unknown symbol IFXOS_CpyToUser (err 0)
+[   20.420000] drv_event_logger: Unknown symbol IFXOS_LockGet (err 0)
+[   20.430000] drv_event_logger: Unknown symbol IFXOS_SocketAton (err 0)
+[   20.430000] drv_event_logger: Unknown symbol IFXOS_ThreadDelete (err 0)
+[   20.440000] drv_event_logger: Unknown symbol IFXOS_SocketCreate (err 0)
+[   20.590000] IFXOS, Version 1.5.19 (c) Copyright 2009, Lantiq Deutschland GmbH
+[   20.620000] libsrtp module, Copyright (c) 2001-2006 Cisco Systems, Inc
+[   20.630000] http://srtp.sourceforge.net/srtp.html
+[   20.700000] Lantiq kernel event logger, version 1.1.6, (c) 2007-2010 Lantiq Deutschland GmbH
+[   20.780000] TAPI, Version 4.15.0.9, (c) 2001-2015 Lantiq Beteiligungs-GmbH & Co.KG
+[   20.900000] lantiq-vmmc 1f107000.mps: failed to get clock
+[   20.900000] Lantiq MIPS34KEc MPS driver, version 3.2.4.0, (c) 2006-2015 Lantiq Deutschland GmbH
+[   20.910000] Lantiq SDD device driver, version 1.1.10.0, (c) 2013-2015 Lantiq Beteiligungs-GmbH & Co.KG
+[   21.020000] Lantiq VMMC device driver, version 1.16.11.0, (c) 2006-2015 Lantiq Beteiligungs-GmbH & Co.KG
+FAPI_WLAN_COMMON dll_init called
+FAPI_WLAN_COMMON: vendor 'Lantiq WAVE 3.5.x', opened lib '/opt/lantiq/lib/libfapiwave.so'
+FAPI_WLAN_COMMON: vendor 'QCA', opened lib '/opt/lantiq/lib/libfapiwlanqca.so'
+[   21.320000] Lantiq SDD mailbox driver version 1.0.5.0 (c) 2014-2015 Lantiq Beteiligungs-GmbH & Co.KG
+[   21.430000] Lantiq KPI2UDP driver, version 3.0.5.1, (c) 2008-2013 Lantiq Deutschland GmbH
+[   22.610000]
+[   22.610000]  ltqdect_driver_probe : INT = 302, CS= 0, RESET=28
+[   22.650000]
+[   22.650000]  ltqdect_page driver_probe : PagePin = 29, pageBit= 1
+[   23.360000] Genconf offset correct
+[   23.390000] Min TC:1 Max TC:4
+[   23.390000] [vmb_cpu_alloc]:[594] CPU vpet[j].cpu_status = 11
+[   23.400000] [vmb_yr_get]:[1362] CPU = 3, yri[i].yr_status = 1, yield_bits = 2 n_yr = 1 yri[i].cpu_id = 3
+[   23.410000] [fw_vmb_get_irq]:[1465] CPU = 3  IRQ = 110 !!!
+[   23.420000] [vmb_tc_alloc]:[938] CPU tct[i].tc_status = 1
+[   23.420000] [vmb_yr_get]:[1362] CPU = 3, yri[i].yr_status = 1, yield_bits = 4 n_yr = 1 yri[i].cpu_id = 3
+[   23.430000] [fw_vmb_get_irq]:[1465] CPU = 3  IRQ = 110 !!!
+[   23.440000] mpe_hal_to_vmb_callback_hdlr not support status 0x0
+[   23.440000] [vmb_cpu_start]:[842]  vmb_fw_msg_t = a0000218 cpu = 3 vmb_msg_size = b0 sizeof(VMB_fw_msg_t) = 168 sizeof(FW_vmb_msg_t) = 8 !!!!
+ [gic_trigger]:[559] VMB_CPU_IPI3 - 85 CPU = 3
+ O 2sid6 WAI] got IPI intertupt to laAnch f om cpu 0O
+
+ pSG_ID = 01akeup_vpe = 0 !!!!
+ [   23.480000] [fw_vmb_ipi3_hdlr]:[166] CPU = 0 irq = 110
+[   23.480000] [fw_vmb_ipi3_hdlr]:[173] cid = 1 , vid = 1
+[   23.480000] [fw_vmb_ipi3_hdlr]:[210]
+[   23.480000] [fw_vmb_ipi3_hdlr]:[212]
+[   23.480000]   vmb_wq = 60823b58
+[vmb_cpu_start]:[898] OUTSIDE WAIT wakeup_vpe = 1 vpet->fw_vmb.status = 1 ACK = 1 cpu = 3 ret1 = 9996 vpet = 60823b3c, smp_processor_id() = 0 , vpet->fw_vmb =60823b68 !!!!
+
+[   23.520000] [vmb_cpu_start]:[905]  ret = 1
+[   23.520000]  <mpe_hal_set_fw_connectivity> CPU TMU resources for MPE are Port:3 ,SB:20, Q:36
+[   23.530000] MPE HAL Run FW success .
+[   23.540000] MPE Proc Creation....!!!
+bind(): Address already in use
+bind(): Address already in use
+Error: No sockets bound, unable to continue
+[   24.230000] TMU HAL Init.
+[   24.240000] <hal_init> Number of CPU TMU Ports are:1
+[   24.240000] <hal_init> CPU TMU resources are Port:2 ,SB:19, Q:35
+[   24.250000] TMU HAL Init.
+[   24.250000] Done!!
+[   24.770000] Lantiq directpath datapath driver for XRX500, version lantiq_directpath_drv_xrx500.c:v1.1.1
+[   24.770000] ,(c)2009 Lantiq AG
+[   25.350000] PPA API --- init successfully
+[   25.720000] xhci-hcd xhci-hcd.0.auto: xHCI Host Controller
+[   25.720000] xhci-hcd xhci-hcd.0.auto: new USB bus registered, assigned bus number 1
+[   25.730000] xhci_gen_setup() 4717  MSWAP=0
+[   25.740000] xhci_gen_setup() 4718  VERSION=0x0100
+[   25.740000] xhci_gen_setup() 4719  HC_LENGTH=0x20
+[   25.750000] xhci-hcd xhci-hcd.0.auto: irq 62, io mem 0x1a300000
+[   25.750000] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+[   25.760000] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[   25.770000] usb usb1: Product: xHCI Host Controller
+[   25.770000] usb usb1: Manufacturer: Linux 3.10.12 xhci-hcd
+[   25.780000] usb usb1: SerialNumber: xhci-hcd.0.auto
+[   25.790000] xHCI xhci_add_endpoint called for root hub
+[   25.790000] xHCI xhci_check_bandwidth called for root hub
+[   25.810000] hub 1-0:1.0: USB hub found
+[   25.810000] hub 1-0:1.0: 1 port detected
+[   25.820000] xhci-hcd xhci-hcd.0.auto: xHCI Host Controller
+[   25.820000] xhci-hcd xhci-hcd.0.auto: new USB bus registered, assigned bus number 2
+[   25.830000] usb usb2: New USB device found, idVendor=1d6b, idProduct=0003
+[   25.830000] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[   25.840000] usb usb2: Product: xHCI Host Controller
+[   25.850000] usb usb2: Manufacturer: Linux 3.10.12 xhci-hcd
+[   25.850000] usb usb2: SerialNumber: xhci-hcd.0.auto
+[   25.920000] xHCI xhci_add_endpoint called for root hub
+[   25.920000] xHCI xhci_check_bandwidth called for root hub
+[   25.930000] hub 2-0:1.0: USB hub found
+[   25.930000] hub 2-0:1.0: 1 port detected
+[   25.940000] xhci-hcd xhci-hcd.1.auto: xHCI Host Controller
+[   25.940000] xhci-hcd xhci-hcd.1.auto: new USB bus registered, assigned bus number 3
+[   25.950000] xhci_gen_setup() 4717  MSWAP=0
+[   25.950000] xhci_gen_setup() 4718  VERSION=0x0100
+[   25.960000] xhci_gen_setup() 4719  HC_LENGTH=0x20
+[   25.960000] xhci-hcd xhci-hcd.1.auto: irq 91, io mem 0x1a500000
+[   25.970000] usb usb3: New USB device found, idVendor=1d6b, idProduct=0002
+[   25.980000] usb usb3: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[   25.980000] usb usb3: Product: xHCI Host Controller
+[   25.990000] usb usb3: Manufacturer: Linux 3.10.12 xhci-hcd
+[   25.990000] usb usb3: SerialNumber: xhci-hcd.1.auto
+[   26.020000] xHCI xhci_add_endpoint called for root hub
+[   26.020000] xHCI xhci_check_bandwidth called for root hub
+[   26.030000] hub 3-0:1.0: USB hub found
+[   26.030000] hub 3-0:1.0: 1 port detected
+[   26.030000] xhci-hcd xhci-hcd.1.auto: xHCI Host Controller
+[   26.040000] xhci-hcd xhci-hcd.1.auto: new USB bus registered, assigned bus number 4
+[   26.050000] usb usb4: New USB device found, idVendor=1d6b, idProduct=0003
+[   26.050000] usb usb4: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[   26.060000] usb usb4: Product: xHCI Host Controller
+[   26.060000] usb usb4: Manufacturer: Linux 3.10.12 xhci-hcd
+[   26.070000] usb usb4: SerialNumber: xhci-hcd.1.auto
+[   26.080000] xHCI xhci_add_endpoint called for root hub
+[   26.090000] xHCI xhci_check_bandwidth called for root hub
+[   26.110000] hub 4-0:1.0: USB hub found
+[   26.110000] hub 4-0:1.0: 1 port detected
+[   26.350000] usb 3-1: new high-speed USB device number 2 using xhci-hcd
+[   26.370000] usb 3-1: New USB device found, idVendor=0424, idProduct=2412
+[   26.370000] usb 3-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[   26.450000] hub 3-1:1.0: USB hub found
+[   26.450000] hub 3-1:1.0: 2 ports detected
+[   26.540000] swa_stack_al: module license 'unspecified' taints kernel.
+[   26.540000] Disabling lock debugging due to kernel taint
+[   26.550000] ltq_temp: Lantiq Temperature Sensor Driver, Version 1.0.10 (c) Copyright 2014, Lantiq Deutschland GmbH
+[   26.800000] ltq_pmcu: PMCU Lantiq Power Management Control Unit, Version 1.3.0 (c) Copyright 2014, Lantiq Deutschland GmbH
+[   26.950000] try to register spd_mon driver
+[   26.960000] spdmon 16080110.speedm: base address: 0xb6080110
+[   26.960000] spdmon 16080110.speedm: PHY base address: 0x16080110
+[   26.970000] device number :245
+[   27.000000] spdmon 16080110.speedm: spd_mon driver : init done !!
+[   27.020000] spd_mon driver registered
+[   27.210000] i2c-lantiq 16a00000.i2c: pins are not configured from the driver
+[   27.230000] i2c-lantiq 16a00000.i2c: setup clocks (in 200000000 kHz, bus 100000 kHz,rmc =20 dec=50 10000000)
+[   27.230000] i2c-lantiq 16a00000.i2c: version 1.00
+[   27.300000] i2c-lantiq 16a00000.i2c: Register I2CCOCDRV to CPUFREQ.
+[   27.370000] i2c /dev entries driver
+[   27.430000] ina2xx 0-0040: power monitor: ina219, railname:  PWR_12V, Rshunt: 10000 uOhm
+[   28.100000] [ltqmips_dtlk] { wlan_detect_ath_card : 407 }Can not found any Atheros card
+[   28.100000] <mpe_hal_dl_alloc_resource> Allocating resources for DL
+[   28.140000] <mpe_hal_dl_alloc_resource>: dl_buf_info_addr: 0x67c9d48c dl_ep_2radio_addr: 0x67c9e774
+[   28.150000] <mpe_hal_dl_alloc_resource> DlCommmIpi: 154
+[   28.150000] [ltqmips_dtlk] { dlrx_drv_init : 3161 }dlrx_drv_init: 0x67c9d48c 0x67c9e774
+[   28.160000] [ltqmips_dtlk] { dlrx_drv_init : 3169 }DirectLink resource from MPE HAL
+[   28.170000] [ltqmips_dtlk] { dlrx_drv_init : 3171 }    COMM base[6b290000]
+[   28.170000] [ltqmips_dtlk] { dlrx_drv_init : 3173 }    COMM size[65536]
+[   28.180000] [ltqmips_dtlk] { dlrx_drv_init : 3175 }    RX CFG context base[67800000]
+[   28.190000] [ltqmips_dtlk] { dlrx_drv_init : 3177 }    RX CFG context size[1048576]
+[   28.200000] [ltqmips_dtlk] { dlrx_drv_init : 3179 }    RX Message base[67a00000]
+[   28.200000] [ltqmips_dtlk] { dlrx_drv_init : 3181 }    RX Message size[2097152]
+[   28.210000] [ltqmips_dtlk] { dlrx_drv_init : 3183 }    TX CFG context base[67f00000]
+[   28.220000] [ltqmips_dtlk] { dlrx_drv_init : 3185 }    TX CFG context size[1048576]
+[   28.230000] [ltqmips_dtlk] { dlrx_drv_init : 3187 }    Uncached context base[60000000]
+[   28.230000] [ltqmips_dtlk] { dlrx_drv_init : 3189 }    Uncached context size[4096]
+[   28.240000] [ltqmips_dtlk] { dlrx_drv_init : 3209 }    COMM base[6b290000] KSEG0[0x60000000] KSEG1[0xa0000000] [0x2b290000]
+[   28.250000] [ltqmips_dtlk] { dlrx_drv_init : 3215 }Test tao lao: 0x67800000
+[   28.260000] [ltqmips_dtlk] { dtlk_mem_base_get : 484 }DTLK RX base :0x67a00000
+[   28.280000] [ltqmips_dtlk] { ppa_dl_detect_11ac_card : 338 }ppa_dl_detect_11ac_card:g11ACWirelessCardID 0
+[   28.290000] [ltqmips_dtlk] { dlrx_data_structure_init : 1844 }dlrx_data_structure_init: dlrx_cfg_ctxt_ce5des_ptr->cfg_num_ce5des[512]
+[   28.300000] [ltqmips_dtlk] { ppa_dl_detect_11ac_card : 338 }ppa_dl_detect_11ac_card:g11ACWirelessCardID 0
+[   28.310000] [ltqmips_dtlk] { dlrx_drv_init : 3228 }dlrx_drv_init: before create proc
+[   28.320000] [ltqmips_dtlk] { dlrx_drv_init : 3231 }DLRX driver init successfully!
+[   28.320000] [ltqmips_dtlk] { dlrx_drv_init : 3233 }DLRX driver version: 0x1
+[   28.330000] <mpe_hal_feature_start> Flags: 1 Mpe Feature: 0
+[   28.340000] <mpe_hal_feature_start> EXIT
+bind(): Address already in use
+bind(): Address already in use
+Error: No sockets bound, unable to continue
+[   28.930000] Hello, dlrx_fw
+[   28.930000] =============
+[   28.930000] DRE_Version is 0x20b, DRE_Feature is 0x11ac0201
+[   28.940000] DLRX FW: Peregrine board detected
+[   29.370000] Device IRQ: 97 line: 100
+[   29.380000] GlobalControl97_Capabilities_Get
+[   29.380000] EIP202: PEs=1 rings=4 64-bit=No, fill level extension=No
+[   29.380000] CF size=4 RF size=3 DMA len = 10 Align=0 HDW=0 HostIfc=3
+[   29.390000] EIP96 options:
+[   29.390000] AES: Yes with CFB/OFB: Yes Fast: Yes
+[   29.390000] DES: Yes with CFB/OFB: Yes Fast: No
+[   29.390000] ARCFOUR level: 3
+[   29.390000] MD5: Yes SHA1: Yes Fast: Yes SHA256: Yes SHA512: Yes
+[   29.390000] (X)CBC-MAC: Yes Fast: Yes All key sizes: No GHASH Yes
+[   29.420000] EIP97 options: PEs=1, In Dbuf size=6 In Tbuf size=5, Out Dbuf size=6, Out Tbuf size=4,
+[   29.420000] Token Generator: No, Transform Record Cache: No
+[   29.440000] EIP206 options: PE type=0 InClassifier=0 OutClassifier=0 MAC chans=0
+[   29.440000] InDBuf=0kB InTBuf=0kB OutDBuf=0kB OutTBuf=0kB
+[   29.450000] Global EIP-97 capabilities: EIP-97 v1.2p1  with EIP-202 v1.3p0 and EIP-96 v2.2p3, #PE=01 #rings=04
+[   29.460000] Global Status of the EIP-97
+[   29.460000] Packet Engine 0 Status
+[   29.470000] DFE Status: CD FIFO Words: 0, CDR ID: 15, DMA size: 0
+[   29.470000] AtDMA busy: false, DataDMA busy: false, DMA err: false
+[   29.480000] DSE Status: RD FIFO Words: 0, RDR ID: 15, DMA size: 0
+[   29.480000] Data flush  busy: false, DataDMA busy: false, DMA err: false
+[   29.490000] Token Status: Active: 0, loc available: true
+[   29.490000] res available: false, read active: false, ccache active: false
+[   29.490000] cntx fetch: false, res cntx: false
+[   29.490000] processing held: true, busy: false
+[   29.510000] Context Status: Err mask: 0000, Available: 0
+[   29.510000] Active cntx: false, next cntx: false, result cntx: false Err recov: false
+[   29.520000] Interrupt Status: input DMA err: false, output DMA err false
+[   29.520000] pkt proc err: false, pkt timeout: false, f a t a l err: false, PE int out: false
+[   29.520000] inp DMA enable: false, outp DMA enable false, pkt proc enable: false
+[   29.520000] pkt timeout enable: false, f a t a l enable: false,PE int out enable: false
+[   29.550000] Output Transfer Status: availabe: 71, min: 8, max: 64, size mask: 252
+[   29.560000] PRNG Status: busy: true, res ready: false
+[   29.570000] Adapter_Lock_Alloc: Lock = spinlock
+[   29.570000] Adapter_Lock_Alloc: Lock = spinlock
+[   29.580000] Adapter_PECDev_Init: CDR fetch size 0x8, thresh 0x6, HDW=0, CFsize=4
+[   29.580000] Adapter_PECDev_Init: RDR fetch size 0x8, thresh 0x2, RFsize=3
+[   29.590000] Status of CDR/RDR interface 0
+[   29.590000] CDR Status: DMA err: false, err: false: ovf/under err: false
+[   29.590000] Threshold int: false, timeout int: false, FIFO count: 16
+[   29.590000] Init Success
+[   29.590000] ppa_hal_generic_hook not support cmd 0xd
+[   29.590000] ppa_hal_generic_hook not support cmd 0xd
+[   29.590000] directpath start id: 0, end id: 256
+[   29.590000] ppa_init - init succeeded
+[   29.630000] RDR Status: DMA err: false, err: false: ovf/under err: false
+[   29.630000] Buf ovf: false, Descriptor ovf false
+[   29.630000] Threshold int: false, timeout int: false, FIFO count: 8
+[   29.650000] Adapter_Lock_Alloc: Lock = spinlock
+[   29.650000] Adapter_Lock_Alloc: Lock = spinlock
+[   29.650000] Adapter_PECDev_Init: CDR fetch size 0x8, thresh 0x6, HDW=0, CFsize=4
+[   29.660000] Adapter_PECDev_Init: RDR fetch size 0x8, thresh 0x2, RFsize=3
+[   29.670000] Status of CDR/RDR interface 1
+[   29.670000] CDR Status: DMA err: false, err: false: ovf/under err: false
+[   29.670000] Threshold int: false, timeout int: false, FIFO count: 16
+[   29.690000] RDR Status: DMA err: false, err: false: ovf/under err: false
+[   29.690000] Buf ovf: false, Descriptor ovf false
+[   29.690000] Threshold int: false, timeout int: false, FIFO count: 8
+[   29.700000] LTQ Crypto Hardware Initialized ..
+[   29.750000] LTQ crypto driver version: 1.2.1
+[   29.840000] [cbm] { setup_DMA_p2p : 3788 }setup_DMA_p2p executed
+[   29.840000] p2p channel turned ON !
+[   29.850000] IPv6: ADDRCONF(NETDEV_UP): eth0_1: link is not ready
+[   29.960000] p2p channel already ON !
+[   29.960000] IPv6: ADDRCONF(NETDEV_UP): eth0_2: link is not ready
+[   29.970000] p2p channel already ON !
+[   29.970000] IPv6: ADDRCONF(NETDEV_UP): eth0_3: link is not ready
+[   29.980000] p2p channel already ON !
+[   29.980000] IPv6: ADDRCONF(NETDEV_UP): eth0_4: link is not ready
+[   29.990000] p2p channel already ON !
+[   29.990000] IPv6: ADDRCONF(NETDEV_UP): eth1: link is not ready
+dd: writing 'standard output': Broken pipe
+430+0 records in
+429+0 records out
+[   30.450000] gphy-fw gphy-fw.10: proc_write_phy_fw:   Found:GRX500 V1.1 GPHY BE  FW
+[   30.460000] gphy-fw gphy-fw.10: booting GPHY0 firmware at 27EA0000 for GRX500
+[   30.470000] gphy-fw gphy-fw.10: booting GPHY1 firmware at 27EA0000 for GRX500
+[   30.470000] gphy-fw gphy-fw.10: booting GPHY2 firmware at 27EA0000 for GRX500
+[   30.480000] gphy-fw gphy-fw.10: booting GPHY3 firmware at 27EA0000 for GRX500
+[   30.490000] gphy-fw gphy-fw.10: booting GPHY4 firmware at 27EA0000 for GRX500
+[   30.500000] ltq_gphy_firmware_config: fw_mode:11G-FW, no of phys:5,data_ptr:27EA0000
+Enabling GMII SSC ...
+bind(): Address already in use
+bind(): Address already in use
+Error: No sockets bound, unable to continue
+Enabling GPHY SSC and DDR SSC ...
+[   34.560000] libphy: 0:05 - Link is Up - 100/Full
+[   34.570000] IPv6: ADDRCONF(NETDEV_CHANGE): eth0_4: link becomes ready
+FAPI_WLAN_VENDOR_WAVE: fapi_wave_main ,Handling: 'fapi_wlan_wave_hw_init'
+fapi_wlan_wave_discover.sh: ALL  PCI DEVICES COUNT: 2
+fapi_wlan_wave_discover.sh: WLAN PCI DEVICES COUNT: 0
+fapi_wlan_wave_discover.sh: AHB_WLAN_COUNT: 1
+fapi_wlan_wave_discover.sh: TOTAL WLAN COUNT: 1
+[   36.740000] [0036736983] mtlk0(mtlk_cdev_init:355): Max nodex set to 1048575
+[   36.750000] [0036742887] mtlk0(mtlk_ddr_root_init:97): Allocated DDR buffer at address 0x67400000
+netifd_ubus_init(1154): connected as cf51a3ea
+proto_shell_add_handler(908): Add handler for script ./dhcp.sh: dhcp
+proto_shell_add_handler(908): Add handler for script ./dhcpv6.sh: dhcpv6
+proto_shell_add_handler(908): Add handler for script ./dslite.sh: dslite
+proto_shell_add_handler(908): Add handler for script ./map.sh: map
+[   38.380000] Lantiq (VRX) DSL CPE MEI driver, version 1.5.17.3-pd1, (c) 2007-2015 Lantiq Beteiligungs-GmbH & Co. KGUsing major number 241
+MEI_DRV: create proc config entry
+proto_shell_add_handler(908): Add handler for script ./ppp.sh: ppp
+[   38.650000] [vrx318_tc] { pcie_ep_probe : 178 }Probe VRX318 total num: 1
+[   38.660000] [vrx318_tc] { vrx318_soc_cfg_get : 515 }cpu (phybase: 0x0, dnum: 0), fp (phybase: 0x1e7e7100, fp dnum: 32), ds (phybase: 0x1e79f100, dnum: 32), pmac_en: 0, us desown: 1, ds desown: 0
+[   38.680000] [vrx318_tc] { vrx318_drv_init : 565 }DP register VRX318 successfully, dp_id: 7
+[   38.680000] [vrx318_tc] { print_ver : 516 }VRX318_DRIVER version: 2.0.4
+[   38.690000] [vrx318_tc] { vrx318_drv_init : 568 }Total 1 device are detected
+[   38.790000] [3635148941] mtlk0(__mtlk_print_endianess:5363): The system is Big endian (0xbeadfeed, 0xedfeadbe)
+[   38.800000] [3635158060] mtlkE(_ahb_irq_get:434): Found device IRQ: 26
+[   38.810000] [3635164470] mtlk0(_mtlk_df_user_alloc_devname:8598): NDEV Name pattern: wlan%d
+[   38.810000] [3635172711] mtlk0(mtlk_core_pdb_fast_handles_open:42): Open Hot-path parameters
+[   38.820000] [3635181224] mtlkW(_mtlk_mmb_cleanup_reset_mac:3554): FW CPU reset is done
+bind(): Address already in use
+bind(): Address already in use
+Error: No sockets bound, unable to continue
+[   38.860000] [MTLKD] Direct ACCESS addr:0xa7400000
+[   38.860000] [MTLKD] BBCPU Reg: offs=0x01c0 (b42f01c0) val=0xfff02740 (offset_mb=628)
+[   38.870000] [MTLKD] Interrupt enabled
+[   38.870000] [MTLKD] ChipID: 0x07E0
+proto_shell_add_handler(908): Add handler for script ./ppp.sh: pppoe
+proto_shell_add_handler(908): Add handler for script ./ppp.sh: pppoa
+[   39.190000]
+[   39.190000]
+[   39.190000] Lantiq CPE API Driver version: DSL CPE API V4.17.18.3
+[   39.200000]
+[   39.200000] Predefined debug level: 3
+
+[   39.200000] MEI_DRV[00]: INIT DEVICE - NO INTERUPTS --> ACTIVE POLL MODE
+MEI_DRV[00]: Start Driver Control Thread
+
+[   39.220000] MEI_DRV: Cntrl Thr Enter - VrxCtrl
+proto_shell_add_handler(908): Add handler for script ./wwan.sh: wwan
+[   39.300000] DSL[00]: ERROR - No valid XTSE settings!
+[   39.320000] DSL[00]: ERROR - no data in the current line state!
+[   39.320000] DSL[00]: ERROR - Function is only available in the SHOWTIME!
+[   39.330000] DSL[00]: ERROR - Function is only available in the SHOWTIME!
+[   39.360000] DSL[00]: ERROR - Function is only available in the SHOWTIME!
+[   39.360000] DSL[00]: ERROR - Function is only available in the SHOWTIME!
+[   39.370000] [vrx318_tc] { vrx318_ptm_tc_hw_fw_init : 2492 }vrx318 id  = 0
+[   39.380000] [vrx318_tc] { vrx318_ptm_tc_hw_fw_init : 2494 }irq        = 32
+[   39.380000] [vrx318_tc] { vrx318_ptm_tc_hw_fw_init : 2496 }membase    = 0xfc000000
+[   39.390000] [vrx318_tc] { vrx318_ptm_tc_hw_fw_init : 2498 }phy_membase = 0xbc000000
+[   39.400000] [vrx318_tc] { vrx318_ptm_tc_hw_fw_init : 2500 }peer_num    = 0
+[   39.410000] [vrx318_tc] { vrx318_ptm_tc_hw_fw_init : 2502 }tc_mode         = PTM Single Line
+[   39.430000] [vrx318_tc] { pp32_load : 2324 }Download E1 FW
+[   39.430000] [vrx318_tc] { pp32_download_code : 90 }pp32: 0, code_src: 0x6ace43e8, code dw len: 0x1267
+[   39.440000] [vrx318_tc] { pp32_download_code : 100 }addr(CDM_CFG) = 0x00000000
+[   39.450000] [vrx318_tc] { pp32_load : 2333 }Downdload B1 FW
+[   39.450000] [vrx318_tc] { pp32_download_code : 90 }pp32: 1, code_src: 0x6ace140c, code dw len: 0xbf7
+[   39.460000] [vrx318_tc] { pp32_download_code : 100 }addr(CDM_CFG) = 0x000000c0
+[   39.470000] [vrx318_tc] { pp32_start : 44 }mask : 0x10000
+[   39.480000] [vrx318_tc] { pp32_start : 44 }mask : 0x0
+[   39.480000] [vrx318_tc] { print_fw_version : 218 }FW Family:  VRX318
+[   39.480000] FW Package:       B1 - (PTM_BONDING) Package
+[   39.480000] FW Version:       3.2.2
+[   39.500000] [vrx318_tc] { print_fw_version : 218 }FW Family:  VRX318
+[   39.500000] FW Package:       B1 - (PTM_BONDING) Package
+[   39.500000] FW Version:       3.2.2
+[   39.510000] [vrx318_tc] { vrx318_ptm_tc_hw_fw_init : 2547 }VRX318 PTM init HW successfully
+[   39.520000] [vrx318_tc] { vrx_tc_msg_send : 572 }Failed to send out the multicast message
+[   39.530000] [vrx318_tc] { vrx318_ptm_tc_init : 2622 }VRX318 PTM TC is successfully loaded
+[   39.570000] DSL[00]: ERROR - Function is only available in the SHOWTIME!
+[   39.570000] DSL[00]: ERROR - Function is only available in the SHOWTIME!
+ltq_cpe_control_init.sh: xDSL_MaxPipeIdx=0
+[   39.620000] MEI_DRV[00]: ERROR Wait for device - invalid drv state 1
+MEI_DRV[00-01]: ERROR - ioctl - Start device, no response
+MEI_DRV[00-01]: ERROR ioctl - inval state 1, not ready for send !!!
+
+[   39.630000] DSL[00]: Error -1021 during FIO_MEI_MBOX_MSG_SEND (MsgID=0x7F03), FctCode 0xFFFF!
+[   39.640000] DSL[00]: Config Error or line not available - block!
+ltq_cpe_control_init.sh: DSL related system status:
+ltq_cpe_control_init.sh:   L2 vectoring = 0
+ltq_cpe_control_init.sh:   bonding      = 0
+[   39.860000] [3636221394] mtlk0(get_firmware_version:1193): CID-0000: ap_upper_ar10.bin: @@@ VERSION INFO @@@ version number: FW_3.5.0_r4566 MIPS:  Single CPU(TMC AGG AP) interface: PCI  phy type: real phy on Jul  1 2015 at 17:43:12@@@ END @@@
+[   39.860000]
+config_init_wireless(357): No wireless configuration found
+[   39.940000] p2p channel already ON !
+[   39.940000] IPv6: ADDRCONF(NETDEV_UP): eth0_1: link is not ready
+sh: 2: unknown operand
+[   39.960000] [3636314954] mtlkW(_mtlk_mmb_send_hw_dep_cfg:2559): AFE value[0]: 0x0016D00F, AFE value[1]: 0x00000324
+[   39.970000] device eth0_1 entered promiscuous mode
+[   39.980000] IPv6: ADDRCONF(NETDEV_UP): br-lan: link is not ready
+[   39.990000] p2p channel already ON !
+[   39.990000] IPv6: ADDRCONF(NETDEV_UP): eth0_2: link is not ready
+[   40.030000] [3636384506] mtlk0(mtlk_eeprom_check_ee_data:1353): Options mask is 0x00
+[   40.030000] device eth0_2 entered promiscuous mode
+[   40.030000] p2p channel already ON !
+[   40.030000] IPv6: ADDRCONF(NETDEV_UP): eth0_3: link is not ready
+[   40.030000] device eth0_3 entered promiscuous mode
+[   40.030000] p2p channel already ON !
+[   40.030000] device eth0_4 entered promiscuous mode
+[   40.030000] br-lan: port 4(eth0_4) entered forwarding state
+[   40.030000] br-lan: port 4(eth0_4) entered forwarding state
+[   40.030000] IPv6: ADDRCONF(NETDEV_CHANGE): br-lan: link becomes ready
+[   40.030000] p2p channel already ON !
+[   40.030000] IPv6: ADDRCONF(NETDEV_UP): eth1: link is not ready
+[   40.100000] device eth1 entered promiscuous mode
+[   40.100000] IPv6: ADDRCONF(NETDEV_UP): eth1_wan1: link is not ready
+[   40.210000] [vrx318_tc] { ptm_open : 151 }ptm open
+[   40.250000] device ptm0 entered promiscuous mode
+[   40.320000] [3636675005] mtlk0(load_default_hw_table:2128): HW configuration is 3X3
+[   40.320000] [3636681625] mtlk0(_mtlk_dut_core_irbd_register:197): CID-0000: Register DUT IRBD...
+[   40.370000] DSL[00]: Error for send CMD MsgID=0x7F03 - BLOCK line!
+[   40.370000] DSL[00]: ERROR - T1.413 Revision Number get failed!
+[   40.400000] MEI_DRV[00]: ERROR Wait for device - invalid drv state 1
+[   40.410000] <ppa_directpath_register_dev> Entry port id =0
+[   40.410000] <ppa_directpath_ex_register_dev> Entry port id =-1
+[   40.410000] <ppa_directpath_register_dev_ex> Entry port_id =-1
+[   40.410000] <ltq_directpath_register> Entry
+[   40.410000] <ltq_directpath_register> Register
+[   40.410000] <ltq_directpath_register> Free Module Index 0
+[   40.410000] <ltq_directpath_register> Allocate port for net device wlan0
+[   40.410000] ltq_directpath_register: NO DIRECTLINK
+[   40.410000] <ltq_directpath_register> For Legacy --> register subif
+[   40.410000] <ltq_directpath_register> g_q_conn_status[dp_port_id].egress_q=0 g_q_conn_status[dp_port_id].ingress_q=0
+[   40.410000]  Setup Egress Connectivity for Directpath port!!!
+[   40.410000] <tmu_hal_setup_dp_egress_connectivity> ingress_subif_index is 6b175b00 Queue Count 1
+[   40.410000]  Updating egress connection status for pmac port 8!!!
+[   40.410000]  Setup Ingress Connectivity for Directpath port!!!
+[   40.410000]  Updating ingress connection status for pmac port 8!!!
+[   40.410000] <ltq_directpath_register> Owner name dp_module00
+[   40.410000] <ltq_directpath_register> Port Id 8 subif 0
+[   40.410000] <ltq_directpath_register>
+[   40.410000]   g_dp_index: 0
+[   40.410000] <ppa_directpath_register_dev_ex> Port id: 8 subif -1 if_id=128
+[   40.410000] <ppa_directpath_register_dev_ex> Exit - DP Register
+[   40.410000] [3636765925] mtlk0(_mtlk_df_user_ppa_register:531): PPA device function is registered (id=8)
+MEI_DRV[00-01]: ERROR - ioctl - Start device, no response
+MEI_DRV[00-01]: ERROR ioctl - inval state 1, not ready for send !!!
+
+[   40.550000] DSL[00]: Error -1021 during FIO_MEI_MBOX_MSG_SEND (MsgID=0x8103), FctCode 0xFFFF!
+[   40.560000] DSL[00]: Config Error or line not available - block!
+mtlk module loaded in address: 0x6ae00000
+mtlkroot module loaded in address: 0x6b2f0000
+ltq_cpe_control_init.sh: TestCfg: XTM_MULTIMODE=-T1:0x1:0x1_2:0x1:0x1
+sh: 2: unknown operand
+ltq_cpe_control_init.sh: StandardCfg: xTSE=05_00_04_00_0C_01_00_07 (system level data base)
+[   41.290000] DSL[00]: Error for send CMD MsgID=0x8103 - BLOCK line!
+[   41.290000] DSL[00]: ERROR - T1.413 Vendor Revision Number get failed!
+[   41.300000] MEI_DRV[00]: ERROR Wait for device - invalid drv state 1
+MEI_DRV[00-01]: ERROR - ioctl - Start device, no response
+MEI_DRV[00-01]: ERROR ioctl - inval state 1, not ready for send !!!
+
+[   41.310000] DSL[00]: Error -1021 during FIO_MEI_MBOX_MSG_SEND (MsgID=0x7E03), FctCode 0xFFFF!
+[   41.320000] DSL[00]: Config Error or line not available - block!
+[   42.030000] br-lan: port 4(eth0_4) entered forwarding state
+[   42.030000] DSL[00]: Error for send CMD MsgID=0x7E03 - BLOCK line!
+[   42.040000] DSL[00]: ERROR - T1.413 Revision Number get failed!
+[   42.040000] MEI_DRV[00]: ERROR message send - invalid drv state 5
+
+[   42.050000] DSL[00]: Error -1021 during FIO_MEI_MBOX_MSG_SEND (MsgID=0x8003), FctCode 0xFFFF!
+[   42.060000] DSL[00]: Config Error or line not available - block!
+[MTLKA] STARTCTRL: drvhlpr_main:PARSE_CFG_FILE_INIT FAILED! step (7)
+[MTLKA] STARTCTRL: drvhlpr_main INIT FAILED! Initiating rollback...
+fapi_wlan_wave_drvhlpr.sh: drvhlpr terminated with status 4
+[   42.760000] DSL[00]: Error for send CMD MsgID=0x8003 - BLOCK line!
+[   42.760000] DSL[00]: ERROR - T1.413 Vendor Revision Number get failed!
+[   42.770000] DSL[00]: ERROR - Function is only available in the SHOWTIME!
+[   42.770000] DSL[00]: ERROR - no data in the current line state!
+[   42.780000] DSL[00]: ERROR - Function is only available in the SHOWTIME!
+[   42.790000] DSL[00]: ERROR - Function is only available in the SHOWTIME!
+[   42.790000] DSL[00]: ERROR - Function is only available in the SHOWTIME!
+FAPI_WLAN_VENDOR_WAVE: running dispatcher script FAILED
+FAPI_WLAN_VENDOR_WAVE: parse_config_out, End of configuration output file
+FAPI_WLAN_COMMON, addMapObj DB_NAME 'wlan_fapi_db' VENDOR '1' vapName 'wlan0'
+FAPI_WLAN_COMMON INIT DONE 'Lantiq WAVE 3.5.x' VENDOR '1' radioNumOfEntries '1'
+Function: rm -rf FAILED
+running fapi_wlan_qca_hw_init: args:
+fapi_wlan_qca_hw_init done
+Function: running dispatcher script FAILED
+FAPI_WLAN_VENDOR_QCA: parse_config_out, Add Object 'Device.WiFi'
+FAPI_WLAN_VENDOR_QCA: parse_config_out, EDIT_NODE 'RadioNumberOfEntries'
+FAPI_WLAN_VENDOR_QCA: parse_config_out, End of configuration output file
+FAPI_WLAN_COMMON INIT skipped for 'Lantiq QCA'
+FAPI_WLAN_GET_VENDOR '1' INTERFACE 'wlan0'
+FAPI_WLAN_VENDOR_WAVE: fapi_wave_main ,Handling: 'fapi_wlan_wave_radio_set'
+[   43.340000] MEI_DRV[00]: TcReset failed, no PP callback defined!
+MEI_DRV[00]: Could not perform reset of TC-Layer!
+[   43.380000] pecostat_noIRQ module loaded
+[   43.390000] pecostat LKM installed, version 2.0.2.
+[   43.410000] [pecoevent_collect] { kpeco_init : 294 }pecostat event installed.. with major device number 350
+         "Device.Ethernet.Interface.1": {
+                 "Sid" :"2",
+                 "Oid" : "29",
+                 "ObjOper" : "0",
+                 "Flag" : "0x200000",
+                 "MACAddress": {
+                         "paramId" : "37",
+                         "paramValue" : "00:e0:92:00:01:40",
+                         "paramFlag" : "0x200000"
+                 },
+         },
+}
+bind(): Address already in use
+bind(): Address already in use
+Error: No sockets bound, unable to continue
+ltq_cpe_control_init.sh: US-ReTx: Set BAR13 of line 0 to 0x1E234000 (VRX300)
+
+[   44.790000] BAR register set: BAR[13]=0x1E234000
+Please note that changes will be valid after link restart only!
+[0005208904] mtlk0(mtlk_log_set_conf:354): Using value of 0 for all console debug levels, OID 0
+ltq_cpe_control_init.sh: Firmware ready wait time 0 sec.
+nReturn=0
+
+FAPI_WLAN_VENDOR_WAVE: running dispatcher script FAILED
+FAPI_WLAN_VENDOR_WAVE: parse_config_out, End of configuration output file
+FAPI_WLAN_GET_VENDOR '1' INTERFACE 'wlan0'
+FAPI_WLAN_VENDOR_WAVE: fapi_wave_main ,Handling: 'fapi_wlan_wave_ssid_add'
+FAPI_WLAN_VENDOR_WAVE: running dispatcher script FAILED
+FAPI_WLAN_VENDOR_WAVE: parse_config_out, End of configuration output file
+FAPI_WLAN_COMMON, addMapObj DB_NAME 'wlan_fapi_db' VENDOR '1' vapName 'wlan0'
+FAPI_WLAN_GET_VENDOR '1' INTERFACE 'wlan0'
+FAPI_WLAN_VENDOR_WAVE: fapi_wave_main ,Handling: 'fapi_wlan_wave_ssid_set'
+config_init_wireless(357): No wireless configuration found
+
+[   47.320000] MEI_DRV[00]: TcReset failed, no PP callback defined!
+MEI_DRV[00]: Could not perform reset of TC-Layer!
+[   47.470000] ip6_tables: (C) 2000-2006 Netfilter Core Team
+FAPI_WLAN_VENDOR_WAVE: running dispatcher script FAILED
+FAPI_WLAN_VENDOR_WAVE: parse_config_out, End of configuration output file
+FAPI_WLAN_GET_VENDOR '1' INTERFACE 'wlan0'
+FAPI_WLAN_VENDOR_WAVE: fapi_wave_main ,Handling: 'fapi_wlan_wave_ap_set'
+Warning: never matched protocol: ah. use extension match instead.
+Warning: never matched protocol: ah. use extension match instead.
+bind(): Address already in use
+bind(): Address already in use
+Error: No sockets bound, unable to continue
+FAPI_WLAN_VENDOR_WAVE: running dispatcher script FAILED
+FAPI_WLAN_VENDOR_WAVE: parse_config_out, End of configuration output file
+Device.WiFi.AccessPoint 'Enable' 'true'
+FAPI_WLAN_GET_VENDOR '1' INTERFACE 'wlan0'
+FAPI_WLAN_VENDOR_WAVE: fapi_wave_main ,Handling: 'fapi_wlan_wave_security_set'
+mknod: /dev/vmmc10: File exists
+mknod: /dev/vmmc11: File exists
+mknod: /dev/vmmc12: File exists
+mknod: /dev/vmmc13: File exists
+mknod: /dev/vmmc14: File exists
+mknod: /dev/vmmc15: File exists
+mknod: /dev/vmmc16: File exists
+mknod: /dev/vmmc17: File exists
+mknod: /dev/vmmc18: File exists
+mknod: /dev/timer_drv: File exists
+mknod: /dev/dect_drv: File exists
+mknod: /dev/pb: File exists
+[   49.650000] usbcore: registered new interface driver cdc_ncm
+[   49.680000] usbcore: registered new interface driver cdc_acm
+[   49.690000] cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+[   49.750000] usbcore: registered new interface driver cdc_wdm
+[   49.790000] usbcore: registered new interface driver cdc_mbim
+FAPI_WLAN_VENDOR_WAVE: running dispatcher script FAILED
+FAPI_WLAN_VENDOR_WAVE: parse_config_out, End of configuration output file
+FAPI_WLAN_GET_VENDOR '1' INTERFACE 'wlan0'
+FAPI_WLAN_VENDOR_WAVE: fapi_wave_main ,Handling: 'fapi_wlan_wave_wps_set'
+[   50.690000] Registeration is a success The major device number is 240.
+
+[   50.690000] proc initializedFAPI_WLAN_VENDOR_WAVE: running dispatcher script FAILED
+FAPI_WLAN_VENDOR_WAVE: parse_config_out, End of configuration output file
+FAPI_WLAN_GET_VENDOR '1' INTERFACE 'wlan0'
+FAPI_WLAN_VENDOR_WAVE: fapi_wave_main ,Handling: 'fapi_wlan_wave_wmm_ap_set'
+{
+                 "owner": {
+                         "paramId" : "0",
+                         "paramValue" : "4",
+                         "paramFlag" : "0"
+                 }
+                 "state": {
+                         "paramId" : "0",
+                         "paramValue" : "success",
+                         "paramFlag" : "0"
+                 }
+                 "version": {
+                         "paramId" : "0",
+                         "paramValue" : "UGW-7.1-BETA-1908-15Jun16",
+                         "paramFlag" : "0"
+                 }
+}
+FAPI_WLAN_VENDOR_WAVE: running dispatcher script FAILED
+FAPI_WLAN_VENDOR_WAVE: parse_config_out, End of configuration output file
+config_init_wireless(357): No wireless configuration found
+FAPI_WLAN_GET_VENDOR '1' INTERFACE 'wlan0'
+FAPI_WLAN_VENDOR_WAVE: fapi_wave_main ,Handling: 'fapi_wlan_wave_up'
+uci: Entry not found
+config_init_wireless(357): No wireless configuration found
+Configuration file: /ramdisk/flash/hostapd_wlan0.conf
+config_init_wireless(357): No wireless configuration found
+Using interface wlan0 with hwaddr 00:e0:92:00:01:50 and ssid "latiq_16015"
+config_init_wireless(357): No wireless configuration found
+[0013326260] mtlk0(_mtlk_core_mbss_is_rescan_exempted:2869): Re-Scan cannot be exempted (20/40 is active)
+[   53.240000] [0013334166] mtlk0(mtlk_mbss_init:3576): CID-0000: _mtlk_core_mbss_check_activation_params returned successfully
+[   53.250000] [0013345501] mtlk0(_mtlk_mbss_preactivate:3028): CID-0000: Pre-activation configured parameters:
+[   53.260000] [0013355248] mtlk0(mtlk_core_configuration_dump:5220): CID-0000: Country             : US
+[   53.270000] [0013364409] mtlk0(mtlk_core_configuration_dump:5221): CID-0000: Domain              : 16
+[   53.280000] [0013373628] mtlk0(mtlk_core_configuration_dump:5222): CID-0000: Network mode        : 802.11bgn
+[   53.290000] [0013383469] mtlk0(mtlk_core_configuration_dump:5223): CID-0000: Band                : 2.4
+[   53.300000] [0013392754] mtlk0(mtlk_core_configuration_dump:5224): CID-0000: Prog Model Spectrum : 40 MHz
+[   53.310000] [0013402281] mtlk0(mtlk_core_configuration_dump:5225): CID-0000: Selected Spectrum   : 40 MHz
+[   53.320000] [0013411839] mtlk0(mtlk_core_configuration_dump:5226): CID-0000: User Sel. Spectrum  : 40 MHz
+[   53.330000] [0013421339] mtlk0(mtlk_core_configuration_dump:5227): CID-0000: Bonding             : lower
+[   53.340000] [0013430855] mtlk0(mtlk_core_configuration_dump:5228): CID-0000: HT mode             : enabled
+[   53.350000] [0013440484] mtlk0(mtlk_core_configuration_dump:5230): CID-0000: SM enabled          : enabled
+[   53.360000] [0013450130] mtlk0(mtlk_aocs_set_config_frequency_band:3165): Overriding AOCS type for 2.4 GHz (NONE)
+[   53.370000] [0013460358] mtlk0(_mtlk_mbss_preactivate:3043): CID-0000: Start AOCS
+[   53.380000] [0013468111] mtlk0(_mtlk_mbss_preactivate:3056): CID-0000: ap_scan_band_cfg = 1
+[   53.390000] [0013476432] mtlk0(_mtlk_core_perform_initial_scan:2812): CID-0000: Scan started 40MHz
+[   53.390000] [0013485035] mtlk0(do_scan:600): Starting normal scan...
+[   53.690000] [0013778465] mtlk0(prepare_progmodel_string:2178): CID-0000: ProgModel: ProgModel_BG_CB_45_RevC_ar10.bin version 2252
+[   53.690000]
+config_init_wireless(357): No wireless configuration found
+{
+        "ReturnStatus": "Success"
+}
+Not Supported
+[   55.490000] [0015577977] mtlk0(_mtlk_core_perform_initial_scan:2812): CID-0000: Scan started 20MHz
+[   55.490000] [0015585966] mtlk0(do_scan:600): Starting normal scan...
+[   55.780000] [0015866483] mtlk0(prepare_progmodel_string:2178): CID-0000: ProgModel: ProgModel_BG_nCB_45_RevC_ar10.bin version 2252
+[   55.780000]
+[   58.700000] [0018786692] mtlkE(_aocs_is_non_wifi_noise:3597): Force to 20 MHz mode due to interferer detection: ch:10 load:96 thrsh:15
+[   58.710000] [0018797825] mtlkW(aocs_detect_non_wifi_noise:3641): Coexistance switching to 20MHz Mode
+[   58.720000] [0018806541] mtlk0(_mtlk_core_aocs_on_spectrum_change:3100): CID-0000: Spectrum changed to 20MHz
+[   58.730000] [0018816736] mtlk0(_mtlk_mbss_preactivate:3151): CID-0000: Pre-activation selected parameters:
+[   58.730000] [0018825942] mtlk0(mtlk_core_configuration_dump:5220): CID-0000: Country             : US
+[   58.740000] [0018835160] mtlk0(mtlk_core_configuration_dump:5221): CID-0000: Domain              : 16
+[   58.750000] [0018844385] mtlk0(mtlk_core_configuration_dump:5222): CID-0000: Network mode        : 802.11bgn
+[   58.760000] [0018854168] mtlk0(mtlk_core_configuration_dump:5223): CID-0000: Band                : 2.4
+[   58.770000] [0018863451] mtlk0(mtlk_core_configuration_dump:5224): CID-0000: Prog Model Spectrum : 20 MHz
+[   58.780000] [0018873005] mtlk0(mtlk_core_configuration_dump:5225): CID-0000: Selected Spectrum   : 20 MHz
+[   58.790000] [0018882549] mtlk0(mtlk_core_configuration_dump:5226): CID-0000: User Sel. Spectrum  : 40 MHz
+[   58.800000] [0018892104] mtlk0(mtlk_core_configuration_dump:5227): CID-0000: Bonding             : lower
+[   58.810000] [0018901565] mtlk0(mtlk_core_configuration_dump:5228): CID-0000: HT mode             : enabled
+[   58.820000] [0018911196] mtlk0(mtlk_core_configuration_dump:5230): CID-0000: SM enabled          : enabled
+[   58.830000] [0018921637] mtlk0(_mtlk_channels_frequency_element_dump:3117): CID-0000: Channel        : 2
+[   58.840000] [0018930327] mtlk0(_mtlk_channels_frequency_element_dump:3118): CID-0000: ChannelACT     : 0
+[   58.850000] [0018939766] mtlk0(_mtlk_channels_frequency_element_dump:3119): CID-0000: ScanType       : 0
+[   58.860000] [0018949218] mtlk0(_mtlk_channels_frequency_element_dump:3120): CID-0000: ChannelSwCnt   : 0
+[   58.870000] [0018958782] mtlk0(_mtlk_channels_frequency_element_dump:3121): CID-0000: SwitchMode     : 0
+[   58.880000] [0018968170] mtlk0(_mtlk_channels_frequency_element_dump:3122): CID-0000: SmRequired     : 0
+[   58.890000] [0018977610] mtlk0(_mtlk_channels_frequency_element_dump:3123): CID-0000: CbTxPowerLim   : 124
+[   58.900000] [0018987242] mtlk0(_mtlk_channels_frequency_element_dump:3124): CID-0000: nCbTxPowerLim  : 124
+[   58.910000] [0018996877] mtlk0(_mtlk_channels_frequency_element_dump:3125): CID-0000: AntennaGain    : 0
+[   58.920000] [0019006336] mtlk0(_mtlk_channels_frequency_element_dump:3126): CID-0000: ChannelLoad    : 0
+[   58.920000] [0019015786] mtlk0(_mtlk_channels_frequency_element_dump:3128): CID-0000: MaxTxPwr[0]    : 0
+[   58.930000] [0019025263] mtlk0(_mtlk_channels_frequency_element_dump:3129): CID-0000: MaxTxPwrIdx[0] : 0
+[   58.940000] [0019034727] mtlk0(_mtlk_channels_frequency_element_dump:3128): CID-0000: MaxTxPwr[1]    : 0
+[   58.950000] [0019044187] mtlk0(_mtlk_channels_frequency_element_dump:3129): CID-0000: MaxTxPwrIdx[1] : 0
+[   58.960000] [0019053650] mtlk0(_mtlk_channels_frequency_element_dump:3128): CID-0000: MaxTxPwr[2]    : 0
+[   58.970000] [0019063112] mtlk0(_mtlk_channels_frequency_element_dump:3129): CID-0000: MaxTxPwrIdx[2] : 0
+[   58.980000] [0019072574] mtlk0(_mtlk_channels_frequency_element_dump:3131): CID-0000: SwitchType     : 0
+[   58.990000] [0019082041] mtlk0(_mtlk_mbss_send_preactivate_req:2940): CID-0000: Sending UMI FW Preactivation
+[   59.210000] [0019297280] mtlk0(_mtlk_coc_set_antennas:217): CID-0000: CoC power mode set to TX3xRX3
+[   59.210000] [0019305015] mtlk0(_mtlk_mbss_preactivate:3196): CID-0000: _mtlk_mbss_preactivate returned successfully
+[   59.220000] [0019315463] mtlk0(mtlk_mbss_init:3583): CID-0000: _mtlk_mbss_preactivate_if_needed returned successfully
+[   59.230000] [0019325979] mtlk0(mtlk_mbss_send_vap_activate:3265): CID-0000: Start VAP activation
+[   59.240000] [0019334817] mtlk0(mtlk_mbss_send_vap_activate:3332): CID-0000: UMI_ACTIVATE_VAP
+[   59.250000] [0019343189] mtlk0(mtlk_mbss_send_vap_activate:3333): CID-0000:  sBSSID = 00:E0:92:00:01:50
+[   59.260000] [0019352560] mtlk0(mtlk_mbss_send_vap_activate:3334): CID-0000:  sSSID = latiq_16015
+[   59.270000] [0019361267] mtlk0(mtlk_mbss_send_vap_activate:3335): CID-0000:  Hidden = 0
+[   59.280000] [0019369247] mtlkE(mtlk_mbss_send_vap_activate:3336):    sRSNie =
+[   59.290000] [0019376281] mtlkE(mtlk_mbss_send_vap_activate:3336): cp= 0x6ac90988 l=80
+[   59.290000] [0019384216] mtlkE(mtlk_mbss_send_vap_activate:3336): 0000:  30 14 01 00 00 0f ac 02  01 00 00 0f ac 04 01 00
+[   59.300000] [0019395108] mtlkE(mtlk_mbss_send_vap_activate:3336): 0010:  00 0f ac 02 00 00 dd 16  00 50 f2 01 01 00 00 50
+[   59.320000] [0019406176] mtlkE(mtlk_mbss_send_vap_activate:3336): 0020:  f2 02 01 00 00 50 f2 02  01 00 00 50 f2 02 00 00
+[   59.330000] [0019416974] mtlkE(mtlk_mbss_send_vap_activate:3336): 0030:  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00
+[   59.340000] [0019427908] mtlkE(mtlk_mbss_send_vap_activate:3336): 0040:  00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00
+[   59.350000] [0019438868] mtlk0(mtlk_mbss_send_vap_activate:3338): CID-0000: mtlk_txmm_msg_send, MsgId = 0x438, ESSID = latiq_16015
+[   59.360000] [0019450792] mtlk0(mtlk_mbss_init:3590): CID-0000: mtlk_mbss_send_vap_activate returned successfully
+wlan0: interface state UNINITIALIZED->ENABLED
+wlan0: AP-ENABLED
+[   59.400000] device ptm0 left promiscuous mode
+[   59.490000] device ptm0 entered promiscuous mode
+[   59.730000] device wlan0 entered promiscuous mode
+[   59.730000] br-lan: port 5(wlan0) entered forwarding state
+[   59.740000] br-lan: port 5(wlan0) entered forwarding state
+[   59.900000] <ppa_check_if_netif_directpath> match Entry Found !!!!!!
+FAPI_WLAN_VENDOR_WAVE: running dispatcher script FAILED
+FAPI_WLAN_VENDOR_WAVE: parse_config_out, End of configuration output file
+FAPI_WLAN_GET_VENDOR '1' INTERFACE 'wlan0'
+FAPI_WLAN_VENDOR_WAVE: fapi_wave_main ,Handling: 'fapi_wlan_wave_capability_query'
+FAPI_WLAN_VENDOR_WAVE: running dispatcher script FAILED
+FAPI_WLAN_VENDOR_WAVE: parse_config_out, End of configuration output file
+{
+        "ReturnStatus": "Success"
+}
+[   61.740000] br-lan: port 5(wlan0) entered forwarding state
+[   64.350000] [0024595347] mtlk0(_mtlk_coc_set_antennas:224): CID-0000: CoC power mode changed from TX3xRX3 to TX1xRX1
+config_init_wireless(357): No wireless configuration found
+{
+        "ReturnStatus": "Success"
+}
+{
+        "ReturnStatus": "Success"
+}
+
+(none) login: wlan0: STA 90:b9:31:15:fb:08 IEEE 802.11: associated
+wlan0: AP-STA-CONNECTED 90:b9:31:15:fb:08
+wlan0: STA 90:b9:31:15:fb:08 RADIUS: starting accounting session 5761A7B9-00000000
+wlan0: STA 90:b9:31:15:fb:08 WPA: pairwise key handshake completed (RSN)
+
+(none) login:
+(none) login:
+(none) login: admin
+Password:
+
+
+BusyBox v1.17.1 (2016-05-18 11:57:17 CST) built-in shell (ash)
+Enter 'help' for a list of built-in commands.
+
+ +------------------------------------------------+
+ | Lantiq UGW Software UGW-7.1-BETA on XRX500 CPE |
+ +------------------------------------------------+
+
+... run alias defs for DSL Subsystem (type 'dsl' for a list of CLI commands)
+root@(none):~#
+root@(none):~#
+root@(none):~#
+root@(none):~#
+root@(none):~#
+root@(none):~#
+root@(none):~#
+root@(none):~# ps
+  PID USER       VSZ STAT COMMAND
+    1 root      1380 S    /sbin/procd
+    2 root         0 SW   [kthreadd]
+    3 root         0 SW   [ksoftirqd/0]
+    4 root         0 SW   [kworker/0:0]
+    5 root         0 SW<  [kworker/0:0H]
+    6 root         0 SW   [kworker/u8:0]
+    7 root         0 SW   [migration/0]
+    8 root         0 SW   [rcu_bh]
+    9 root         0 SW   [rcu_sched]
+   10 root         0 SW   [migration/2]
+   11 root         0 SW   [ksoftirqd/2]
+   12 root         0 SW   [kworker/2:0]
+   13 root         0 SW<  [kworker/2:0H]
+   14 root         0 SW<  [khelper]
+   15 root         0 SW   [kworker/u8:1]
+  101 root         0 SW   [kworker/2:1]
+  235 root         0 SW<  [writeback]
+  237 root         0 SW<  [bioset]
+  239 root         0 SW<  [kblockd]
+  246 root         0 SW<  [ata_sff]
+  256 root         0 SW   [khubd]
+  284 root         0 SW<  [rpciod]
+  285 root         0 SW   [kworker/0:1]
+  290 root         0 SW   [kswapd0]
+  291 root         0 SW   [fsnotify_mark]
+  292 root         0 SW<  [nfsiod]
+  294 root         0 SW<  [xfsalloc]
+  295 root         0 SW<  [xfs_mru_cache]
+  296 root         0 SW<  [xfslogd]
+  297 root         0 SW<  [crypto]
+  327 root         0 SW<  [ICCWQ4]
+  328 root         0 SW<  [ICCWQ2]
+  385 root         0 SW<  [16800000.spi]
+  446 root         0 SW   [kworker/0:2]
+  473 root         0 SW<  [kpsmoused]
+  503 root         0 SW<  [deferwq]
+  515 root         0 SW   [ubi_bgt0d]
+  811 root         0 SW   [ubifs_bgt0_6]
+ 1194 root       972 S    /sbin/ubusd
+ 1223 root       940 S    -ash
+ 1294 root       936 S    /usr/sbin/inetd /etc/inetd.conf
+ 1301 root      4188 S    csd
+ 1306 root       768 S    /usr/bin/cgroup_notifier
+ 1314 root      1552 S    polld
+ 1317 root         0 SW<  [kworker/0:1H]
+ 1324 root      4008 S    lighttpd -D -f /etc/lighttpd/lighttpd.conf
+ 1328 root         0 SW<  [kworker/2:1H]
+ 1334 root      1920 S    netlinkd
+ 1342 root      4004 S    wsd
+ 1352 root      6808 S    servd
+ 1361 root      1568 S    /sbin/rpcd
+ 1368 root         0 SW   [kworker/2:2]
+ 1426 root         0 SW   [el_handler]
+ 1435 root         0 SW   [TAPIkpi_in]
+ 1437 root         0 SW<  [TAPItimers]
+ 1438 root         0 SW<  [TAPIevents]
+ 1537 root         0 SW   [irq/217-sdd_mbx]
+ 1662 root      1148 S    /usr/sbin/dropbear -F -P /var/run/dropbear.1.pid -p
+ 1719 root      3944 S N  smbd -D
+ 1726 root       780 S    /opt/lantiq/usr/sbin/ppasessmgmtd
+ 1803 root         0 SW   [kworker/u8:2]
+ 2007 root         0 SW<  [pmcu_wq]
+ 2296 root      1092 S    /sbin/mountd
+ 2319 root         0 SW   [ppa_rt_chk_hit_]
+ 2377 root      3152 S    stunnel
+ 2430 root       872 S    /usr/sbin/br2684ctld
+ 2492 root      1580 S    netifd
+ 2498 root      3756 S    /tmp/logserver -f /tmp/dev/mtlkroot0 -s /tmp/fw_scd_
+ 2641 root         0 SW   [VrxCtrl]
+ 2738 root         0 DW   [mtlk]
+ 2831 root      5544 S    /opt/lantiq/bin/dsl_cpe_control -i05_00_04_00_0C_01_
+ 3545 root         0 SW   [autbtex]
+ 3547 root         0 SW   [pmex_ne]
+ 3549 root         0 SW   [pmex_fe]
+ 3930 root      2900 S    devm
+ 4187 root      1760 S    qosd
+ 4188 root      1248 S    syslog-ng -f /tmp/syslog-ng.conf
+ 4461 root       980 S    dnsmasq --conf-file=/opt/lantiq/etc/dnsrelay.conf --
+ 4780 root      1192 S    /usr/sbin/odhcpd
+ 4938 root      3876 S    /tmp/hostapd_wlan0 /ramdisk/flash/hostapd_wlan0.conf
+ 4996 root      1120 S    hostapd_cli -iwlan0 -a/opt/lantiq/wave/scripts/fapi_
+ 5025 root      1608 S    /usr/sbin/pppd nodetach ipparam wan0 ifname pppoe-wa
+ 5285 root      1508 R    ps
+root@(none):~# [   75.180000] device ptm0 left promiscuous mode
+[   75.250000] device ptm0 entered promiscuous mode
+
+root@(none):~#
+root@(none):~#
+root@(none):~# /usr/sbin/bringup_tapidemo br-lan dect
+Init DECT drivers ... ok
+root@(none):~# td 00 init  ==[7777][tapidemo][tapidemo_init]==
+td 00 init  ==[7777][tapidemo][ReadOptions]==
+td 00 init  ==[7777][ReadOptions][nArgCnt=9]==
+td 00 init  ==[7777][ReadOptions][d]==
+td 00 init  ==[7777][ReadOptions][q]==
+td 00 init  ==[7777][ReadOptions][i]==
+td 00 init  ==[7777][ReadOptions][l]==
+td 00 init  ==[7777][ReadOptions][t]==
+td 00 init  ==[7777][111][111][0]==
+td 00 init  TAPIDEMO version 5.7.0.0
+td 00 init  ITM version 0.0.0.57.
+td 00 init  ==[7777][TAPIDEMO_SetMainBoard][nType=14][nID=1]==
+td 00 init  ==[7777][tapidemo][extension board=0]==
+td 00 init  Compiled for XWAY_XRX500, with:
+td 00 init     - FXO (Slic121)
+td 00 init     - DECT
+td 00 init     - FXS Phone Detection
+td 00 init     - Event Logger support
+td 00 init     - TAPI V3 API
+td 00 init  ==[7777][TAPIDEMO_SetDefaultAddr]==
+td 00 init  ==[7777][TAPIDEMO_SetDefaultAddr][TAPIDEMO_SetNetInterfaceName][eth0]==
+td 00 init  ==[7777][TAPIDEMO_SetDefaultAddr][MAC address][]==
+td 01 init  ==[7777][TAPIDEMO_RegisterSigHandler]==
+td 01 init  ==[7777][TAPIDEMO_RunServices]==
+td 01 init  Using network interface: 192.168.1.1, 00:E0:92:00:01:40.
+td 01 init  ==[7777][COM_COMMUNICATION_INIT][br-lan]==
+==[7777][ Initialize the timers]==
+td 01 init  Timer successfully initialized.
+td 01 init  ==[7777][tapidemo][nBoardCnt=1]==
+td 01 init  ==[7777][tapidemo][TAPIDEMO_StartBoard(0)]==
+td 01 init  ----- Start board XWAY_XRX500 initialization. -----
+td 01 init  ==[7777][BOARD_XwayXRX500_Init]==
+td 01 init  ==[7777][BOARD_XwayXRX500_Init][BOARD_XwayXRX500_PrepareBoard]==
+td 01 init  ==[7777][BOARD_XwayXRX500_Init][BOARD_XwayXRX500_PrepareBoard][Common_SetFwFilenames]==
+td 01 init  ==[7777][Common_SetFwFilenames][!!!!!][;;]==
+td 01 init  Optional file /root/.tapidemorc is not available.
+td 01 init  ==[7777][BOARD_XwayXRX500_Init][BOARD_XwayXRX500_PrepareBoard][Common_SetDownloadPath]==
+td 01 init  Setting user's download path: /lib/firmware/...ok.
+td 01 init  ==[7777][BOARD_XwayXRX500_Init][BOARD_XwayXRX500_PrepareBoard][Common_AddDevice]==
+td 01 init  ==[7777][BOARD_XwayXRX500_Init][BOARD_XwayXRX500_PrepareBoard][DEVICE_Vmmc_Register]==
+td 01 init  ==[7777][BOARD_XwayXRX500_Init][BOARD_XwayXRX500_PrepareBoard][BOARD_XwayXRX500_PrepareNames]==
+td 01 init  ==[7777][BOARD_XwayXRX500_PrepareNames][Device name(pszChDevName):/dev/vmmc]==
+td 01 init  ==[7777][BOARD_XwayXRX500_PrepareNames][Device control name(pszCtrlDevName):/dev/vmmc10]==
+td 01 init  ==[7777][BOARD_XwayXRX500_PrepareNames][System device name(pszSystemDevName):]==
+td 01 init  ==[7777][BOARD_XwayXRX500_Init][BOARD_XwayXRX500_PrepareBoard][BOARD_XwayXRX500_GetCapabilities]==
+td 01 init  ==[7777][BOARD_XwayXRX500_GetCapabilities][DEVICE_Vmmc_setupChannel][pPath:/lib/firmware/]==
+td 01 init  ==[7777][DEVICE_Vmmc_SetupChannelUseDevStart][start]==
+td 01 init  Filesystem firmware binary used (/lib/firmware/xrx500_firmware.bin).
+td 01 init  Filesystem BBD binary used (/lib/firmware/xrx500_bbd_fxs.bin).
+[   88.310000] IFXOS ERROR - Kernel ThreadDelete, invalid object
+[   88.310000]
+[   88.320000] IFX_MPS: Info - use FW MBox Layout 2
+[   88.320000] ifx_mps_fastbuf_cfg_setup() - warning, keep external setup
+
+td 01 init  ==[7777][DEVICE_Vmmc_SetupChannelUseDevStart][open device:/dev/vmmc10]==
+td 01 init  ==[7777]
+[   88.340000] [vmb_cpu_alloc]:[594] CPU vpet[j].cpu_status = 11
+[   88.350000] [vmb_tc_alloc]:[938] CPU tct[i].tc_status = 1
+[   88.350000] [vmb_yr_get]:[1362] CPU = 1, yri[i].yr_status = 1, yield_bits = 2 n_yr = 1 yri[i].cpu_id = 1
+[   88.360000] [vmb_cpu_start]:[842]  vmb_fw_msg_t = a00000b8 cpu = 1 vmb_msg_size = b0 sizeof(VMB_fw_msg_t) = 168 sizeof(FW_vmb_msg_t) = 8 !!!!
+ [gic_trigger]:[551] VMB_CPU_IPI1 - 20 CPU = 1
+[ Ou8side0W0IT gvt _Pp _ntertu:t to lWAnThNf omRcRuS0O
+E
+  pSG_ID = 0wakeup_vpe = 0 !!!!
+ [fw_vmb_ipi1_hdlr]:[50] CPU = 0 irq = 87
+[   88.390000] [fw_vmb_ipi1_hdlr]:[57] cid = 0 , vid = 1
+[   88.390000] [fw_vmb_ipi1_hdlr]:[94]
+[   88.390000] [fw_vmb_ipi1_hdlr]:[96]
+[   88.390000]   vmb_wq = 60823ab0
+[   88.410000] [vmb_cpu_start]:[898] OUTSIDE WAIT wakeup_vpe = 1 vpet->fw_vmb.status = 1 ACK = 1 cpu = 1 ret1 = 10000 vpet = 60823a94, smp_processor_id() = 0 , vpet->fw_vmb =60823ac0 !!!!
+
+[   88.420000] [vmb_cpu_start]:[905]  ret = 1
+[   88.420000]  VCODEC FW info - version 01030103, magic: 0x000C0DEC, timestamp: 0x56175FA0, mem: 0x00013E70 (81520), CRC32: DA7A2C7A.
+[DEVICE_Vmmc_SetupChannelUseDevStart][IFX_TAPI_DEV_STOP]==
+td 01 init  ==[7777][DEVICE_Vmmc_SetupChannelUseDevStart][FIO_FW_DOWNLOAD]==
+[   90.440000] icc_wait_and_exit_transaction: ICC timeout
+[   90.710000] device ptm0 left promiscuous mode
+[   90.850000] device ptm0 entered promiscuous mode
+td 01 init  ==[7777][DEVICE_Vmmc_SetupChannelUseDevStart][IFX_TAPI_DEV_START]==
+td 01 init  ==[7777][DEVICE_Vmmc_SetupChannelUseDevStart][FIO_BBD_DOWNLOAD]==
+td 01 init  ==[7777][DEVICE_Vmmc_SetupChannelUseDevStart][end]==
+td 01 init  ==[7777][BOARD_XwayXRX500_GetCapabilities][Common_GetCapabilities]==
+td 01 init  ==[7777][Common_GetCapabilities][IFX_TAPI_CAP_NR][30]==
+td 01 init  Number of capabilities 30.
+td 01 init  ==[7777][Common_GetCapabilities][IFX_TAPI_CAP_LIST]==
+td 01 init  ==[7777][Common_GetCapabilities][i=20,IFX_TAPI_CAP_TYPE_T38]==
+td 01 init  ==[7777][Common_GetCapabilities][i=21,IFX_TAPI_CAP_TYPE_CODECS]==
+td 01 init  ==[7777][Common_GetCapabilities][i=24,IFX_TAPI_CAP_TYPE_DECT]==
+td 01 init  ==[7777][Common_GetCapabilities][i=27,IFX_TAPI_CAP_TYPE_PHONES]==
+td 01 init  ==[7777][Common_GetCapabilities][i=28,IFX_TAPI_CAP_TYPE_FXO]==
+td 01 init  Available channels: phone 2, data 10, PCM 0, T.38 10, FXO 0, DECT 6.
+td 01 init  ==[7777][BOARD_XwayXRX500_Init][BOARD_XwayXRX500_PrepareBoard][Common_SetPhonesAndUsedChannlesNumber]==
+td 01 init  ==[7777][Common_SetPhonesAndUsedChannlesNumber][nMaxPhones=8,nUsedChannels=10]==
+td 01 init  ==[7777][BOARD_XwayXRX500_Init][BOARD_XwayXRX500_PrepareBoard][Common_SocketAllocateIPv6]==
+td 01 init  ==[7777][BOARD_XwayXRX500_Init][BOARD_XwayXRX500_PrepareBoard][Common_Set_FDs]==
+td 01 init  ==[7777][Common_Set_FDs][pszCtrlDevName=/dev/vmmc10]==
+td 01 init  ==[7777][Common_Set_FDs][pszChDevName=/dev/vmmc,/dev/vmmc11]==
+td 01 init  ==[7777][Common_Set_FDs][pszChDevName=/dev/vmmc,/dev/vmmc12]==
+td 01 init  ==[7777][Common_Set_FDs][pszChDevName=/dev/vmmc,/dev/vmmc13]==
+td 01 init  ==[7777][Common_Set_FDs][pszChDevName=/dev/vmmc,/dev/vmmc14]==
+td 01 init  ==[7777][Common_Set_FDs][pszChDevName=/dev/vmmc,/dev/vmmc15]==
+td 01 init  ==[7777][Common_Set_FDs][pszChDevName=/dev/vmmc,/dev/vmmc16]==
+td 01 init  ==[7777][Common_Set_FDs][pszChDevName=/dev/vmmc,/dev/vmmc17]==
+td 01 init  ==[7777][Common_Set_FDs][pszChDevName=/dev/vmmc,/dev/vmmc18]==
+td 01 init  ==[7777][Common_Set_FDs][pszChDevName=/dev/vmmc,/dev/vmmc19]==
+td 01 init  ==[7777][Common_Set_FDs][pszChDevName=/dev/vmmc,/dev/vmmc20]==
+td 01 init  Device (/dev/vmmc10) and channel (/dev/vmmc1x) fds opened.
+td 01 init  ==[7777][BOARD_XwayXRX500_Init][DEVICE_Vmmc_Init]==
+td 01 init  ==[7777][DEVICE_Vmmc_Init][111][0]==
+td 01 init  ==[7777][DEVICE_Vmmc_Init][333]==
+td 01 init  ==[7777][DEVICE_Vmmc_Init][IFX_TAPI_LINE_FEED_SET]==
+td 01 init  ==[7777][DEVICE_Vmmc_Init][111][1]==
+td 01 init  ==[7777][DEVICE_Vmmc_Init][333]==
+td 01 init  ==[7777][DEVICE_Vmmc_Init][IFX_TAPI_LINE_FEED_SET]==
+td 01 init  ==[7777][DEVICE_Vmmc_Init][111][2]==
+td 01 init  ==[7777][DEVICE_Vmmc_Init][333]==
+td 01 init  ==[7777][DEVICE_Vmmc_Init][111][3]==
+td 01 init  ==[7777][DEVICE_Vmmc_Init][333]==
+td 01 init  ==[7777][DEVICE_Vmmc_Init][111][4]==
+td 01 init  ==[7777][DEVICE_Vmmc_Init][333]==
+td 01 init  ==[7777][DEVICE_Vmmc_Init][111][5]==
+td 01 init  ==[7777][DEVICE_Vmmc_Init][333]==
+td 01 init  ==[7777][DEVICE_Vmmc_Init][111][6]==
+td 01 init  ==[7777][DEVICE_Vmmc_Init][333]==
+td 01 init  ==[7777][DEVICE_Vmmc_Init][111][7]==
+td 01 init  ==[7777][DEVICE_Vmmc_Init][333]==
+td 01 init  ==[7777][DEVICE_Vmmc_Init][111][8]==
+td 01 init  ==[7777][DEVICE_Vmmc_Init][333]==
+td 01 init  ==[7777][DEVICE_Vmmc_Init][111][9]==
+td 01 init  ==[7777][DEVICE_Vmmc_Init][333]==
+td 01 init  ==[7777][DEVICE_Vmmc_Init][111][10]==
+td 01 init  VMMC [version 0x00, type 0x0A, channels 2] ready!
+td 01 init  FW Version 1.1.0
+td 01 init  VMMC Driver version 1.16.11.0
+td 01 init  ==[7777][DEVICE_Vmmc_Init][555]==
+td 01 init  ==[7777][DEVICE_Vmmc_Init][666]==
+td 01 init  ==[7777][BOARD_XwayXRX500_Init][0]==
+td 01 init  PCM not supported.
+td 01 init  ==[7777][BOARD_XwayXRX500_Init][TD_T38_Init]==
+td 01 debug Warning, Name for enum value (0x0) type IFX_TAPI_T38_FACSIMILE_CNVT_t not found in the table.
+td 01 debug Warning, Name for enum value (0x0) type IFX_TAPI_T38_RMM_t not found in the table.
+td 01 init  T.38 capabilities for XWAY_XRX500:
+td 01 init     - FacConvOpt: 0 (enum value not found)
+td 01 init     - nBitRateMax: 14400
+td 01 init     - nT38Ver: 0
+td 01 init     - nTCPRateManagement: 0 (enum value not found)
+td 01 init     - nUDPBuffSizeMax: 4096
+td 01 init     - nUDPDatagramSizeMax: 512
+td 01 init     - nUDPRateManagement: 3 (IFX_TAPI_T38_LOC_TRANS_TCF)
+td 01 init     - Protocol: 2 (IFX_TAPI_T38_UDP)
+td 01 init     - UDPErrCorr: 3 (IFX_TAPI_T38_CAP_RED_FEC)
+td 01 debug Warning, Name for enum value (0x0) type IFX_TAPI_T38_FACSIMILE_CNVT_t not found in the table.
+td 01 init  XWAY_XRX500: T.38 session configuration:
+td 01 init     - FacConvOpt: 0 (enum value not found)
+td 01 init     - nBitRateMax: 14400
+td 01 init     - nProtocol: 2 (IFX_TAPI_T38_UDP)
+td 01 init     - nRateManagement: 2 (IFX_TAPI_T38_TRANS_TCF)
+td 01 init     - nT38Ver: 0
+td 01 init     - nUDPBuffSizeMax: 4096
+td 01 init     - nUDPDatagramSizeMax: 512
+td 01 init     - nUDPErrCorr: 1 (IFX_TAPI_T38_FEC)
+td 01 init  TAPI Fax T.38 initilized successfully.
+td 01 init  ==[7777][BOARD_XwayXRX500_Init][TD_DECT_Init]==
+td 01 init  ==[7777][td_dect][TD_DECT_Init]==
+td 01 init  ############# XWAY_XRX500 DECT STACK INITIALIZATION start #############
+td 01 dect  DECT STACK: Open communication pipe.
+td 01 dect  DECT STACK: TD_DECT_STACK_CliSocketOpen
+td 01 dect  DECT STACK: sockets to communicate with Production Test Tool opened
+td 01 dect  DECT STACK: RFPI: 0x00:0x50:0x04:0x01:0x00
+td 01 dect  DECT STACK: Using BMC Params:
+td 01 dect      -xBMCPrams.ucRSSIFreeLevel =7 (RSSI Free level value)
+td 01 dect      -xBMCPrams.ucRSSIBusyLevel = 14 (RSSI Busy level value)
+td 01 dect      -xBMCPrams.ucBearerChgLim = 15 (Bearer Change limit for RSSI)
+td 01 dect      -xBMCPrams.ucDelayReg = 19 (Delay Register for RXDSG)
+td 01 dect      -xBMCPrams.ucDefaultAntenna = 161 (Default Antenna Settings)
+td 01 dect      -xBMCPrams.ucCNTUPCtrlReg = 1 (Control Register for DRON)
+td 01 dect      -xBMCPrams.ucWOPNSF = 32 (Windows open sync free mode)
+td 01 dect      -xBMCPrams.ucWWSF = 8 (Window width sync-free mode)
+td 01 dect      -xBMCPrams.ucReserved_0 = 255 (End of Clock-recovery reset)
+td 01 dect      -xBMCPrams.ucReserved_1 = 255 (PLL settle time)
+td 01 dect      -xBMCPrams.ucReserved_2 = 0x03 (0x03 disable , 0x0B - enable)
+td 01 dect      -xBMCPrams.ucReserved_3 = 0 (RXDSG deactivate bit timer)
+td 01 dect      -xBMCPrams.ucSYNCMCtrlReg = 148 (General Mode control 2 register)
+td 01 dect      -xBMCPrams.ucHandOverEvalper = 4 (Handover evaluation period)
+td 01 dect  Err, Unable to find #<< CtrySet in file /flash/dect_rc.conf. (File: ./td_dect_config.c, line: 335)
+td 01 dect  Warning, Failed to get symbol CtrySet for tag CtrySet_0_Txoffset in file /flash/dect_rc.conf.
+td 01 dect  DECT STACK: Unable to get frequency parameters - using default
+td 01 dect  DECT: Mute control Registers: Freq TX 0x00, Freq RX 0x00, Freq range 0x09
+td 01 dect  DECT STACK: OscTrimValHI 2, OscTrimValLOW 101, CheckSum
+td 01 dect  DECT STACK: GAUSSIAN VALUE: 175
+td 01 dect  DECT STACK: BASE PIN: 0000
+td 01 dect  DECT STACK: debug level 4, debug type 1
+td 01 init  DECT: FT Cap, Fixed:  0x38 0x41 0x90 0xCE 0x00.
+td 01 init  DECT: FT Cap, Extended 1:  0x40 0x01 0x00 0x00 0x00.
+td 01 init  DECT: FT Cap, Extended 2:  0xC8 0x00 0x80 0x00 0x80.
+td 01 init  DECT: Running in async mode.
+td 01 init  ==[7777][td_dect_stack][TD_DECT_STACK_InitDownload]==
+td 01 dect  DECT STACK: TD_DECT_STACK_InitDownload 0
+[DectTk] <_Main>  The number of registration is: :0
+[DectTk] <_Main>  The Base pin is: :6059860
+[DECTSTACK] ########## DECT STACK Entry ##########
+[MM] IFX_DECT_ST_SetPinCode: Length: 4
+[MM] IFX_DECT_ST_SetPinCode: AC: 0000, ff ff 00 00
+[DectTk] <_MsgRt_Init> Entered IFX_DECT_MsgRt_Init
+[DectTk] <_MsgRt_Init>  Returning from MsgRouter Init
+[DECTSTACK] ########## IN ASYNC MODE ##########
+td 01 dect  DECT STACK: download files: BMCFw.BIN and COSICFw.BIN from /opt/ifx/downloads/.
+[DectTk] <_USU_ModemFirmwareDownload> Entry
+[DectTk] <_USU_ModemFirmwareDownload> Path and file found
+[DectTk] <_USU_ModemFirmwareDownload> No Calls moving to Download mode
+[CP] M: FP_SOFTWARE_RESET_RQ, 00, 00 00 00 00
+td 01 init  ############# XWAY_XRX500 DECT STACK INITIALIZED #############
+td 01 dect  DECT: TD_DECT_STACK_HandlePaging
+[DectTk] <_ReceivedFwDownloadStatus> Baud Rate Confirm arrived
+[  106.340000] device ptm0 left promiscuous mode
+[  106.460000] device ptm0 entered promiscuous mode
+[DectTk] <_ReceivedFwDownloadStatus> DOWNLOAD COMPLETE Moving to APP Mode
+td 01 dect  DECT: calling IFX_TLIB_CurrTimerExpiry
+[APP] M: FP_MODEM_BOOT_IND, 00, 01 00 20 50
+[DectTk] <_MsgRt_ProcessStackMessage>  Hello,Message Received from Stack
+[DectTk] <_MsgRt_ProcessStackMessage>
+Message ID=  :242
+[DectTk] <_MsgRt_ProcessStackMessage>  Calling MU Process Stack Message
+[DectTk] <_MU_ProcessStackMsg> Entered IFX_DECT_MU_ProcessStackMsg
+[DectTk] <_MU_ProcessStackMsg> FP_MODEM_BOOT_IND: message arrived
+[DectTk] <_MU_ProcessStackMsg> Calling vxMUCallBks.pf_MU_ModemReset if not null
+td 01 dect  STACK CALLBACK: TD_DECT_STACK_MU_ModemReset
+[DectTk] <_MsgRt_ProcessStackMessage> Returning from MsgRt ProcessStack Message
+[ME] M: ME_RFP_PRELOAD_DIS, 00 21 00 00
+[ME] ########## COSIC Modem Detected ##########
+[APP] M: FP_DEBUG_INFO_IND, 00, 06 00 00 ff
+[DectTk] <_MsgRt_ProcessStackMessage>  Hello,Message Received from Stack
+[DectTk] <_MsgRt_ProcessStackMessage>
+Message ID=  :240
+[DectTk] <_USU_ProcessStkMesg> <USU_ProcessStkMesg>Entry.
+[DectTk] <_USU_ProcessStkMesg> <USU_ProcessStkMesg> callback XRAM not registered or API failed.
+[DectTk] <_MsgRt_ProcessStackMessage> Returning from MsgRt ProcessStack Message
+[ME] M: ME_RANDOM_TIMER_EXPIRY, 00 00 00 00
+[ME] ########## COSIC Modem Parameters Downloaded ##########
+[ME] UserFeatures: 00 00 00 08
+[ME] RFCountry: 00 00 09
+[ME] BMC: 07 0e 0f a1 20 08 01 13 04 94
+[ME] OSC: 02 65
+[ME] GFSK: af 00
+[ME] DefaultCK for Modem
+[MM] DefaultCK for Modem: 1, 00, 0000, 00 00 00 00 00 00 00 00
+[MM] DefaultCK for Modem: 2, 00, 0000, 00 00 00 00 00 00 00 00
+[MM] DefaultCK for Modem: 3, 00, 0000, 00 00 00 00 00 00 00 00
+[MM] DefaultCK for Modem: 4, 00, 0000, 00 00 00 00 00 00 00 00
+[MM] DefaultCK for Modem: 5, 00, 0000, 00 00 00 00 00 00 00 00
+[MM] DefaultCK for Modem: 6, 00, 0000, 00 00 00 00 00 00 00 00
+[ME] RFPI: 00 50 04 01 00
+[ME] NoEMO: 00 00
+[DectTk] <_MsgRt_PostToStack>
+Message ID=  :53
+[DectTk] <_MsgRt_PostToStack> Posting to DECT Stack Fifo
+[DectTk] <_MsgRt_PostToStack>
+Message ID=  :53
+[DectTk] <_MsgRt_PostToStack> Posting to DECT Stack Fifo
+[DectTk] <_MsgRt_PostToStack>
+Message ID=  :53
+[DectTk] <_MsgRt_PostToStack> Posting to DECT Stack Fifo
+td 01 init  ==[7777][td_dect_stack][TD_DECT_STACK_InitDownload]==
+td 01 dect  DECT STACK: TD_DECT_STACK_InitDownload 99
+td 01 dect  DECT STACK: DECT working status received.
+td 01 dect  DECT STACK: TD_DECT_STACK_SendToTD (nEvent TD_DECT_EVENT_DECT_WORKING(8), nHandset 3855)
+td 01 dect  DECT: TD_DECT_GetEventData
+td 01 event DECT: MSG received ch 3855, event TD_DECT_EVENT_DECT_WORKING(8)
+td 01 dect  DECT: Initialization ended (DECT working event received).
+td 01 init  -----      Board XWAY_XRX500 initialized.     -----
+td 01 init  Using board XWAY_XRX500 with:
+td 01 init  - DECT support.
+td 01 init  - CID support: ETSI FSK, Europe (standard 1).
+td 01 init  - VAD support: IFX_TAPI_ENC_VAD_NOVAD - no voice activity detection.
+td 01 init  - LEC support: IFX_TAPI_WLEC_TYPE_NE -
+td 01 init                 LEC using fixed window. No Echo Suppressor.
+td 01 init  - Echo Suppressor for DECT channels turned on.
+td 01 init  - External UDP redirection.
+td 01 init  - Debug level: LOW.
+td 01 init  - Transparent fax/modem and T.38 transmission support.
+td 01 init  - Ground Start support disabled.
+td 01 init  ==[7777][COM_MOD_VERIFY_SYSTEM_INIT_SEND_DONE]==
+td 01 init  ==[7777][TAPIDEMO_InitAdminSocket]==
+td 01 init  ==[7777][socket alocate memory]==
+td 01 init  ==[7777][socket alocate memory][0]==
+td 01 init  ==[7777][socket alocate memory][nSocket]==
+td 01 init  ==[7777][socket alocate memory][1]==
+td 01 init  ==[7777][socket alocate memory][nSocket]==
+td 01 init  ==[7777][socket alocate memory][2]==
+td 01 init  ==[7777][socket alocate memory][nSocket]==
+td 01 init  ==[7777][socket alocate memory][3]==
+td 01 init  ==[7777][socket alocate memory][nSocket]==
+td 01 init  ==[7777][socket alocate memory][4]==
+td 01 init  ==[7777][socket alocate memory][nSocket]==
+td 01 init  ==[7777][socket alocate memory][5]==
+td 01 init  ==[7777][socket alocate memory][nSocket]==
+td 01 init  ==[7777][socket alocate memory][6]==
+td 01 init  ==[7777][socket alocate memory][nSocket]==
+td 01 init  ==[7777][socket alocate memory][7]==
+td 01 init  ==[7777][socket alocate memory][nSocket]==
+td 01 init  ==[7777][socket alocate memory][8]==
+td 01 init  ==[7777][socket alocate memory][nSocket]==
+td 01 init  ==[7777][socket alocate memory][9]==
+td 01 init  ==[7777][socket alocate memory][nSocket]==
+td 01 init  ==[7777][Holds called phone number]==
+td 01 init  ==[7777][tapidemo][oCtrlStatus.nBoardCnt:1][i=0]==
+td 01 init  Using encoder type G.711 u-Law with 64kbit/s and packetisation time 10ms.
+td 01 init  ==[7777][TAPIDEMO_Setup][ABSTRACT_DefaultMapping]==
+td 01 init  ==[7777][ABSTRACT_DefaultMapping][nMaxAnalogCh=2]==
+td 01 init  XWAY_XRX500: Map phone ch 0 to data ch 0
+td 01 init  ==[7777][ABSTRACT_DefaultMapping][IFX_TAPI_MAP_DATA_ADD]==
+td 01 init  XWAY_XRX500: Map phone ch 1 to data ch 1
+td 01 init  ==[7777][ABSTRACT_DefaultMapping][IFX_TAPI_MAP_DATA_ADD]==
+td 01 init  DECT: Phone No 3: TD_DECT_KpiCfg
+td 01 init  DECT: Phone No 4: TD_DECT_KpiCfg
+td 01 init  DECT: Phone No 5: TD_DECT_KpiCfg
+td 01 init  DECT: Phone No 6: TD_DECT_KpiCfg
+td 01 init  DECT: Phone No 7: TD_DECT_KpiCfg
+td 01 init  DECT: Phone No 8: TD_DECT_KpiCfg
+td 01 init  ==[7777][TAPIDEMO_Setup][pBoard->nMaxPhones=8,ch=0]==
+td 01 init  ==[7777][TAPIDEMO_Setup][CID_Display]==
+td 01 init  Phone No 1: Set CID (ETSI FSK) data [XWAY_XRX500#0, 1]
+td 01 init  ==[7777][TAPIDEMO_Setup][pBoard->nMaxPhones=8,ch=1]==
+td 01 init  ==[7777][TAPIDEMO_Setup][CID_Display]==
+td 01 init  Phone No 2: Set CID (ETSI FSK) data [XWAY_XRX500#1, 2]
+td 01 init  ==[7777][TAPIDEMO_Setup][pBoard->nMaxPhones=8,ch=2]==
+td 01 init  ==[7777][TAPIDEMO_Setup][CID_Display]==[  112.980000] ltq_cpufreq: ltq_cpufreq_state_req is called: Module=VE, ModuleNr=1, State=D0D3
+
+td 01 init  Phone No 3: Set CID (ETSI FSK) data [XWAY_XRX500#DECT0, 3]
+td 01 init  ==[7777][TAPIDEMO_Setup][pBoard->nMaxPhones=8,ch=3]==
+td 01 init  ==[7777][TAPIDEMO_Setup][CID_Display]==
+td 01 init  Phone No 4: Set CID (ETSI FSK) data [XWAY_XRX500#DECT1, 4]
+td 01 init  ==[7777][TAPIDEMO_Setup][pBoard->nMaxPhones=8,ch=4]==
+td 01 init  ==[7777][TAPIDEMO_Setup][CID_Display]==
+td 01 init  Phone No 5: Set CID (ETSI FSK) data [XWAY_XRX500#DECT2, 5]
+td 01 init  ==[7777][TAPIDEMO_Setup][pBoard->nMaxPhones=8,ch=5]==
+td 01 init  ==[7777][TAPIDEMO_Setup][CID_Display]==
+td 01 init  Phone No 6: Set CID (ETSI FSK) data [XWAY_XRX500#DECT3, 6]
+td 01 init  ==[7777][TAPIDEMO_Setup][pBoard->nMaxPhones=8,ch=6]==
+td 01 init  ==[7777][TAPIDEMO_Setup][CID_Display]==
+td 01 init  Phone No 7: Set CID (ETSI FSK) data [XWAY_XRX500#DECT4, 7]
+td 01 init  ==[7777][TAPIDEMO_Setup][pBoard->nMaxPhones=8,ch=7]==
+td 01 init  ==[7777][TAPIDEMO_Setup][CID_Display]==
+td 01 init  Phone No 8: Set CID (ETSI FSK) data [XWAY_XRX500#DECT5, 8]
+td 01 init  XWAY_XRX500: Disable DTMF detection on all data channels
+td 01 init  ==[7777][tapidemo][Common_LineTypeSetForALL]==
+td 01 init  ==[7777][Common_LineTypeSetForALL][use default setting]==
+td 01 init  ==[7777][444]==
+td 01 init  ==[7777][tapidemo][ configure indication tones]==
+td 01 init  ==[7777][Common_ToneIndicationCfg][IFX_TAPI_TONE_TABLE_CFG_SET]==
+td 01 init  ==[7777][tapidemo][TAPIDEMO_Call_Info]==
+td 01 init  Dialing sequences for different call types:
+td 01 init   a) Local connection: <c>
+td 01 init   b) Extern connection: <0iiic>
+td 01 init   c) FXO connection: <05D>
+td 01 init   d) FEATURE selection first digit must be 'STAR (*),
+td 01 init      afterthat feature number (4 digits).
+td 01 init   e) CONFERENCING first digit must be 'HASH (#)',
+td 01 init      afterthat normal dialing sequence,
+td 01 init   f) Extern connection with full ip:
+td 01 init      <0*xxx*xxx*xxx*xxx*c> - each part separated with STAR (*),
+td 01 init   g) Extern connection with using phonebook: <06PPc>.
+td 01 init
+td 01 init  Legend:
+td 01 init  <c> - phone number.
+td 01 init  <iii> - lowest part of external board IP address (a.b.c.<iii>).
+td 01 init  <D> - FXO number, only one digit at the moment.
+td 01 init  <xxx*xxx*xxx*xxx> - external board IP address (xxx.xxx.xxx.xxx).
+td 01 init  <PP> - phonebook index.
+td 01 init
+td 01 init  FXS channels calling table:
+td 01 init   ------------------------------------------------
+td 01 init  | Dial |          Board          | Phone channel |
+td 01 init  |------------------------------------------------|
+td 01 init  |    1 |         XWAY_XRX500     |        0      |
+td 01 init  |    2 |         XWAY_XRX500     |        1      |
+td 01 init   ------------------------------------------------
+td 01 init  | Dial |          Board          |  DECT channel |
+td 01 init   ------------------------------------------------
+td 01 init  |    3 |         XWAY_XRX500     |        0      |
+td 01 init  |    4 |         XWAY_XRX500     |        1      |
+td 01 init  |    5 |         XWAY_XRX500     |        2      |
+td 01 init  |    6 |         XWAY_XRX500     |        3      |
+td 01 init  |    7 |         XWAY_XRX500     |        4      |
+td 01 init  |    8 |         XWAY_XRX500     |        5      |
+td 01 init   ------------------------------------------------
+td 01 pbook Sending BroadCast [192.168.1.255]:9876.
+td 01 pbook Phonebook file "/tmp/tapidemo_phonebook" is not available.
+td 01 init  ==[7777][tapidemo][Start handle devices]==
+td 01 msg   Received MSG from [192.168.1.1]:9876 action IE_PHONEBOOK_UPDATE:
+td 01 pbook Phonebook:
+td 01 pbook  -----------------------------------------------------------------------------
+td 01 pbook | Index | Board             | IP address                                      |
+td 01 pbook |-----------------------------------------------------------------------------|
+td 01 pbook |  00   | XWAY_XRX500       | 192.168.1.1                                     |
+td 01 pbook  -----------------------------------------------------------------------------
+[ME] TPC: 47 37 30 3c 41-44 45
+[ME] TPC1: 4c 47 42 21 37-50 03 00 00 00-00 00 00 00
+[ME] TPC2: ff
+[ME] ########## COSIC Modem Parameters Done To Download ##########
+[CP] M: FP_ME_QT_SET_RQ, 00, 00 01 00 00
+[CP] M: FP_ME_QT_SET_RQ, 00, 00 03 00 00
+[CP] M: FP_ME_QT_SET_RQ, 00, 00 04 00 00
+[  121.900000] device ptm0 left promiscuous mode
+[  122.040000] device ptm0 entered promiscuous mode
+[  137.470000] device ptm0 left promiscuous mode
+[  137.610000] device ptm0 entered promiscuous mode
+[  153.090000] device ptm0 left promiscuous mode
+[  153.190000] device ptm0 entered promiscuous mode
+FAPI_WLAN_COMMON, HELP_LOADLOCALDB loaded from path '/tmp/wlan_fapi_mapping.db' STATUS '0'
+FAPI_WLAN_COMMON GET_VENDOR WARNING!!! could not find interface 'ath0'.
+FAPI_WLAN_COMMON, HELP_LOADLOCALDB loaded from path '/tmp/wlan_fapi_mapping.db' STATUS '0'
+FAPI_WLAN_GET_VENDOR '1' INTERFACE 'wlan0'
+FAPI_WLAN_VENDOR_WAVE: fapi_wave_main ,Handling: 'fapi_wlan_wave_ssid_stats_query'
+FAPI_WLAN_VENDOR_WAVE: running dispatcher script FAILED
+FAPI_WLAN_VENDOR_WAVE: parse_config_out, End of configuration output file
+[  156.920000] DSL[00]: ERROR - no data in the current line state!
+[  156.920000] DSL[00]: ERROR - Function is only available in the SHOWTIME!
+[  156.930000] DSL[00]: ERROR - Function is only available in the SHOWTIME!
+[  156.940000] DSL[00]: ERROR - Function is only available in the SHOWTIME!
+[  156.940000] DSL[00]: ERROR - Function is only available in the SHOWTIME!
+[  156.950000] DSL[00]: ERROR - Function is only available in the SHOWTIME!
+[  156.960000] DSL[00]: ERROR - Function is only available in the SHOWTIME!
+[  156.960000] DSL[00]: ERROR - xTU-R T1.413 Revision are not supported in current VDSL mode
+[  156.970000] DSL[00]: ERROR - xTU-R T1.413 VendorRevision are not supported in current VDSL mode
+[  156.980000] DSL[00]: ERROR - xTU-O T1.413 Revision are not supported in current VDSL mode
+[  156.990000] DSL[00]: ERROR - xTU-O T1.413 Vendor Revision are not supported in current VDSL mode
+[  157.000000] DSL[00]: ERROR - Function is only available in the SHOWTIME!
+[  157.080000] DSL[00]: ERROR - no data in the current line state!
+[  157.080000] DSL[00]: ERROR - Function is only available in the SHOWTIME!
+[  157.100000] DSL[00]: ERROR - Function is only available in the SHOWTIME!
+[  157.100000] DSL[00]: ERROR - Function is only available in the SHOWTIME!
+[  157.110000] DSL[00]: ERROR - Function is only available in the SHOWTIME!
+[  157.120000] DSL[00]: ERROR - Function is only available in the SHOWTIME!
+[  157.120000] DSL[00]: ERROR - Function is only available in the SHOWTIME!
+[  157.130000] DSL[00]: ERROR - xTU-R T1.413 Revision are not supported in current VDSL mode
+[  157.140000] DSL[00]: ERROR - xTU-R T1.413 VendorRevision are not supported in current VDSL mode
+[  157.140000] DSL[00]: ERROR - xTU-O T1.413 Revision are not supported in current VDSL mode
+[  157.150000] DSL[00]: ERROR - xTU-O T1.413 Vendor Revision are not supported in current VDSL mode
+[  157.160000] DSL[00]: ERROR - Function is only available in the SHOWTIME!
+[  157.270000] DSL[00]: ERROR - no data in the current line state!
+[  157.270000] DSL[00]: ERROR - Function is only available in the SHOWTIME!
+[  157.280000] DSL[00]: ERROR - Function is only available in the SHOWTIME!
+[  157.290000] DSL[00]: ERROR - Function is only available in the SHOWTIME!
+[  157.290000] DSL[00]: ERROR - Function is only available in the SHOWTIME!
+[  157.300000] DSL[00]: ERROR - Function is only available in the SHOWTIME!
+[  157.310000] DSL[00]: ERROR - Function is only available in the SHOWTIME!
+[  157.310000] DSL[00]: ERROR - xTU-R T1.413 Revision are not supported in current VDSL mode
+[  157.320000] DSL[00]: ERROR - xTU-R T1.413 VendorRevision are not supported in current VDSL mode
+[  157.330000] DSL[00]: ERROR - xTU-O T1.413 Revision are not supported in current VDSL mode
+[  157.340000] DSL[00]: ERROR - xTU-O T1.413 Vendor Revision are not supported in current VDSL mode
+[  157.350000] DSL[00]: ERROR - Function is only available in the SHOWTIME!
+[  168.670000] device ptm0 left promiscuous mode
+[  168.760000] device ptm0 entered promiscuous mode
+[  184.250000] device ptm0 left promiscuous mode
+[  184.370000] device ptm0 entered promiscuous mode
+[  199.810000] device ptm0 left promiscuous mode
+[  199.950000] device ptm0 entered promiscuous mode
+[  215.400000] device ptm0 left promiscuous mode
+[  215.510000] device ptm0 entered promiscuous mode
+[  231.020000] device ptm0 left promiscuous mode
+[  231.120000] device ptm0 entered promiscuous mode
+[  246.590000] device ptm0 left promiscuous mode
+[  246.690000] device ptm0 entered promiscuous mode
+[  262.150000] device ptm0 left promiscuous mode
+[  262.250000] device ptm0 entered promiscuous mode
+
+root@(none):~#
+root@(none):~#
+root@(none):~#
+root@(none):~#
+root@(none):~#
+root@(none):~#
+root@(none):~# ps
+  PID USER       VSZ STAT COMMAND
+    1 root      1380 S    /sbin/procd
+    2 root         0 SW   [kthreadd]
+    3 root         0 SW   [ksoftirqd/0]
+    4 root         0 SW   [kworker/0:0]
+    5 root         0 SW<  [kworker/0:0H]
+    6 root         0 SW   [kworker/u8:0]
+    7 root         0 SW   [migration/0]
+    8 root         0 SW   [rcu_bh]
+    9 root         0 SW   [rcu_sched]
+   10 root         0 SW   [migration/2]
+   11 root         0 SW   [ksoftirqd/2]
+   12 root         0 SW   [kworker/2:0]
+   13 root         0 SW<  [kworker/2:0H]
+   14 root         0 SW<  [khelper]
+   15 root         0 SW   [kworker/u8:1]
+  101 root         0 SW   [kworker/2:1]
+  235 root         0 SW<  [writeback]
+  237 root         0 SW<  [bioset]
+  239 root         0 SW<  [kblockd]
+  246 root         0 SW<  [ata_sff]
+  256 root         0 SW   [khubd]
+  284 root         0 SW<  [rpciod]
+  285 root         0 SW   [kworker/0:1]
+  290 root         0 SW   [kswapd0]
+  291 root         0 SW   [fsnotify_mark]
+  292 root         0 SW<  [nfsiod]
+  294 root         0 SW<  [xfsalloc]
+  295 root         0 SW<  [xfs_mru_cache]
+  296 root         0 SW<  [xfslogd]
+  297 root         0 SW<  [crypto]
+  327 root         0 SW<  [ICCWQ4]
+  328 root         0 SW<  [ICCWQ2]
+  385 root         0 SW<  [16800000.spi]
+  446 root         0 SW   [kworker/0:2]
+  473 root         0 SW<  [kpsmoused]
+  503 root         0 SW<  [deferwq]
+  515 root         0 SW   [ubi_bgt0d]
+  811 root         0 SW   [ubifs_bgt0_6]
+ 1194 root       972 S    /sbin/ubusd
+ 1223 root       940 S    -ash
+ 1294 root       936 S    /usr/sbin/inetd /etc/inetd.conf
+ 1301 root      4180 S    csd
+ 1306 root       768 S    /usr/bin/cgroup_notifier
+ 1314 root      1552 S    polld
+ 1317 root         0 SW<  [kworker/0:1H]
+ 1324 root      4452 S    lighttpd -D -f /etc/lighttpd/lighttpd.conf
+ 1328 root         0 SW<  [kworker/2:1H]
+ 1334 root      1920 S    netlinkd
+ 1342 root      4004 S    wsd
+ 1352 root      6808 S    servd
+ 1361 root      1568 S    /sbin/rpcd
+ 1368 root         0 SW   [kworker/2:2]
+ 1426 root         0 SW   [el_handler]
+ 1435 root         0 SW   [TAPIkpi_in]
+ 1437 root         0 SW<  [TAPItimers]
+ 1438 root         0 SW<  [TAPIevents]
+ 1537 root         0 SW   [irq/217-sdd_mbx]
+ 1662 root      1148 S    /usr/sbin/dropbear -F -P /var/run/dropbear.1.pid -p
+ 1719 root      3944 S N  smbd -D
+ 1726 root       780 S    /opt/lantiq/usr/sbin/ppasessmgmtd
+ 1803 root         0 SW   [kworker/u8:2]
+ 2007 root         0 SW<  [pmcu_wq]
+ 2296 root      1092 S    /sbin/mountd
+ 2319 root         0 SW   [ppa_rt_chk_hit_]
+ 2377 root      3152 S    stunnel
+ 2430 root       872 S    /usr/sbin/br2684ctld
+ 2492 root      1580 S    netifd
+ 2498 root      3756 S    /tmp/logserver -f /tmp/dev/mtlkroot0 -s /tmp/fw_scd_
+ 2641 root         0 SW   [VrxCtrl]
+ 2738 root         0 DW   [mtlk]
+ 2831 root      5544 S    /opt/lantiq/bin/dsl_cpe_control -i05_00_04_00_0C_01_
+ 3545 root         0 SW   [autbtex]
+ 3547 root         0 SW   [pmex_ne]
+ 3549 root         0 SW   [pmex_fe]
+ 3930 root      2900 S    devm
+ 4187 root      1760 S    qosd
+ 4188 root      1252 S    syslog-ng -f /tmp/syslog-ng.conf
+ 4461 root       980 S    dnsmasq --conf-file=/opt/lantiq/etc/dnsrelay.conf --
+ 4780 root      1192 S    /usr/sbin/odhcpd
+ 4938 root      3876 S    /tmp/hostapd_wlan0 /ramdisk/flash/hostapd_wlan0.conf
+ 4996 root      1120 S    hostapd_cli -iwlan0 -a/opt/lantiq/wave/scripts/fapi_
+ 5369 root      7676 S    /opt/lantiq/bin/tapidemo -d 1 -q -i 192.168.1.1 -l /
+ 5414 root         0 SW   [TAPIsdd_int]
+ 6177 root      1608 S    /usr/sbin/pppd nodetach ipparam wan0 ifname pppoe-wa
+ 6190 root      1508 R    ps
+root@(none):~#
+root@(none):~#
+root@(none):~# [  277.730000] device ptm0 left promiscuous mode
+[  277.840000] device ptm0 entered promiscuous mode
+[  288.620000] DSL[00]: Reboot on training timeout (240)!!!
+xDSL Leave SHOWTIME!!
+Not Supported
+network interface config called with status : 0 for tc_mode = ptm
+[  288.870000] MEI_DRV: allocated chunks reuse failed! (chunk[0] 65536 bytes, CRC 0xBD4B831B)
+MEI_DRV: FW chunks setup/fill failed!
+
+[  288.880000] DSL[00]: ERROR - VRx FW downloading failed, (nReturn = -1029)!
+[  288.890000] [vrx318_tc] { ptm_stop : 173 }ptm stop
+{
+        "ReturnStatus": "Success"
+}
+[  290.340000] MEI_DRV[00]: TcReset failed, no PP callback defined!
+MEI_DRV[00]: Could not perform reset of TC-Layer!
+Not Supported
+td 01 dect  DECT: TD_DECT_STACK_HandlePaging
+td 01 dect  DECT: Buffer Received From Paging Driver = 95
+td 01 dect  DECT: Actual Duration Of Key Pressed = 95
+td 01 dect  DECT STACK: IFX_DECT_ProcessPagekeyMessage
+td 01 dect  User Pressed Registration Key. Allowing Registration....
+[DectTk] <_MU_RegistrationAllow> Received Allow Registration from App
+[DectTk] <_MsgRt_PostToStack>
+Message ID=  :50
+[DectTk] <_MsgRt_PostToStack> Posting to DECT Stack Fifo
+[CP] M: FP_ME_A44_SET_RQ, 00, 00 00 00 00
+[ME] M: ME_A44_SET_RQ_DIS, 00 00 00 00
+
+root@(none):~# D
+DECT_VERSION  DEVM_VERSION  DectCli       DevmLogLevel
+root@(none):~# [LC] M: LC_CON_IN_MAC, CLOSED, 00, 00 00 00 00
+[LC] M: LC_CO_DATA_DTR_MAC, OPEN, 00, 00 00 00 00
+[LC] M: LC_CO_DATA_IN_MAC, FREE, 00, 00 00 00 00
+[LC] Data In: 00 Data: 91 00 01 b7 b5
+[LAP] M: LAP_I_FRAME_NLF_LC, ULI_RELEASED, 00, 00 00 00 00
+[LCE] M: LCE_DL_EST_IN_LAP, LINK_RELEASED, 00, 00 00 00 00
+[LC] M: LC_CO_DATA_RQ_LAP, FREE, 00, 00 00 00 00
+[LC] Data Out: 00 Data: 91 21 01 54 f7
+[LC] M: LC_CO_DATA_DTR_MAC, OPEN, 00, 00 00 00 00
+[LC] M: LC_CO_DATA_IN_MAC, FREE, 00, 00 00 00 00
+[LC] Data In: 00 Data: 11 02 c5 05 44
+[LC] M: LC_CO_DATA_IN_MAC, FREE, 00, 00 00 00 00
+[LC] Data In: 00 Data: 05 07 80 a8 01
+[LC] M: LC_CO_DATA_IN_MAC, FREE, 00, 00 00 00 00
+[LC] Data In: 00 Data: 5a d7 76 d2 0a
+[LC] M: LC_CO_DATA_IN_MAC, FREE, 00, 00 00 00 00
+[LC] Data In: 00 Data: 03 01 48 00 63
+[LC] M: LC_CO_DATA_IN_MAC, FREE, 00, 00 00 00 00
+[LC] Data In: 00 Data: 0e 30 35 8a 02
+[LC] M: LC_CO_DATA_IN_MAC, FREE, 00, 00 00 00 00
+[LC] Data In: 00 Data: 00 00 00 00 40
+[LC] M: LC_CO_DATA_IN_MAC, FREE, 00, 00 00 00 00
+[LC] Data In: 00 Data: 16 00 a3 80 a0
+[LC] M: LC_CO_DATA_IN_MAC, FREE, 00, 00 00 00 00
+[LC] Data In: 00 Data: 77 06 c0 81 11
+[LC] M: LC_CO_DATA_IN_MAC, FREE, 00, 00 00 00 00
+[LC] Data In: 00 Data: 81 fe ff 7c 07
+[LC] M: LC_CO_DATA_IN_MAC, FREE, 00, 00 00 00 00
+[LC] Data In: 00 Data: 90 03 00 01 02
+[LC] M: LC_CO_DATA_IN_MAC, FREE, 00, 00 00 00 00
+[LC] Data In: 00 Data: 00 84 f0 2d 49
+[LAP] M: LAP_I_FRAME_LC, ULI_CLASS_A_ESTABLISHED, 00, 00 00 00 00
+[LCE] M: LCE_DL_DATA_IN_LAP, LINK_ESTABLISHED, 00, 00 00 00 00
+[LC] M: LC_CO_DATA_RQ_LAP, FREE, 00, 00 00 00 00
+[LC] Data Out: 00 Data: 11 01 01 b6 36
+[MM] M: MM_ACCESS_RIGHTS_REQUEST_LCE, MM_OPEN, 00, 00 00 00 00
+[MM] PT ULE: 00
+[MM] EMC By PT: 11 81
+[APP] M: FP_PORTABLE_REGISTER_ONGOING_IN_MM, 00, ff ff ff ff
+[DectTk] <_MsgRt_ProcessStackMessage>  Hello,Message Received from Stack
+[DectTk] <_MsgRt_ProcessStackMessage>
+Message ID=  :20
+[DectTk] <_MsgRt_ProcessStackMessage>
+In valid Handset ID=  :255
+[ME] M: ME_A44_CLEAR_RQ_DIS, 00 00 00 00
+[MM] M: MM_KEY_ALLOCATION_RQ, MM_KEY_ALLOCATION, 00, 08 0f 00 ff
+[LCE] M: LCE_DL_DATA_RQ, LINK_ESTABLISHED, 00, 00 00 00 00
+[LAP] M: LAP_DL_DATA_RQ_LCE, ULI_CLASS_A_ESTABLISHED, 00, 00 00 00 00
+[LC] M: LC_CO_DATA_RQ_LAP, OPEN, 00, 00 00 00 00
+[LC] M: LC_CO_DATA_DTR_MAC, OPEN, 00, 00 00 00 00
+[LC] Data Out: 00 Data: 13 00 69 05 42
+[LC] M: LC_CO_DATA_DTR_MAC, OPEN, 00, 00 00 00 00
+[LC] Data Out: 00 Data: 0b 02 01 88 0c
+[LC] M: LC_CO_DATA_DTR_MAC, OPEN, 00, 00 00 00 00
+[LC] Data Out: 00 Data: 08 5a 9d ac 1f
+[LC] M: LC_CO_DATA_DTR_MAC, OPEN, 00, 00 00 00 00
+[LC] Data Out: 00 Data: 32 e0 69 51 0e
+[LC] M: LC_CO_DATA_DTR_MAC, OPEN, 00, 00 00 00 00
+[LC] Data Out: 00 Data: 08 4a 32 41 3d
+[LC] M: LC_CO_DATA_DTR_MAC, OPEN, 00, 00 00 00 00
+[LC] Data Out: 00 Data: 4d f4 8f bb f0
+[LC] M: LC_CO_DATA_DTR_MAC, OPEN, 00, 00 00 00 00
+[LC] Data Out: 00 Data: f0 f0 f0 35 68
+[LC] M: LC_CO_DATA_DTR_MAC, OPEN, 00, 00 00 00 00
+[LC] M: LC_CO_DATA_IN_MAC, FREE, 00, 00 00 00 00
+[LC] Data In: 00 Data: 13 21 01 4e 7c
+[LAP] M: LAP_RR_FRAME_LC, ULI_CLASS_A_ESTABLISHED, 00, 00 00 00 00
+[LC] M: LC_CO_DATA_IN_MAC, FREE, 00, 00 00 00 00
+[LC] Data In: 00 Data: 11 20 5d 85 40
+[LC] M: LC_CO_DATA_IN_MAC, FREE, 00, 00 00 00 00
+[LC] Data In: 00 Data: 0a 03 01 48 00
+[LC] M: LC_CO_DATA_IN_MAC, FREE, 00, 00 00 00 00
+[LC] Data In: 00 Data: 0c 08 4b 87 61
+[LC] M: LC_CO_DATA_IN_MAC, FREE, 00, 00 00 00 00
+[LC] Data In: 00 Data: 92 6b 97 69 96
+[LC] M: LC_CO_DATA_IN_MAC, FREE, 00, 00 00 00 00
+[LC] Data In: 00 Data: 0d 04 e5 0c 87
+[LC] M: LC_CO_DATA_IN_MAC, FREE, 00, 00 00 00 00
+[LC] Data In: 00 Data: 45 f0 f0 6e 57
+[LAP] M: LAP_I_FRAME_LC, ULI_CLASS_A_ESTABLISHED, 00, 00 00 00 00
+[LCE] M: LCE_DL_DATA_IN_LAP, LINK_ESTABLISHED, 00, 00 00 00 00
+[LC] M: LC_CO_DATA_RQ_LAP, FREE, 00, 00 00 00 00
+[LC] Data Out: 00 Data: 11 21 01 56 76
+[MM] M: MM_AUTH_REQUEST_LCE, MM_KEY_ALLOCATION, 00, 00 00 00 00
+[LCE] M: LCE_DL_DATA_RQ, LINK_ESTABLISHED, 00, 00 00 00 00
+[MM] M: MM_KEY_ALLOCATION_CFM, MM_OBTAIN_ACCESS_RIGHTS, 00, 01 00 00 00
+[MM] DefaultCK for Modem: 1, 01, ffff, 00 00 00 00 00 00 00 00
+[APP] M: FP_PORTABLE_REGISTERED_IN_MM, 00, 01 ff 11 81
+[DectTk] <_MsgRt_ProcessStackMessage>  Hello,Message Received from Stack
+[DectTk] <_MsgRt_ProcessStackMessage>
+Message ID=  :17
+[DectTk] <_MsgRt_ProcessStackMessage>  Calling MU Process Stack Message
+[DectTk] <_MU_ProcessStackMsg> Entered IFX_DECT_MU_ProcessStackMsg
+[DectTk] <_MU_ProcessStackMsg>  FP_PORTABLE_REGISTERED_IN_MM message arrived :1
+[DectTk] <_MU_ProcessStackMsg>  FP_PORTABLE_REGISTERED_IN_MM message arrived Instance present within VcMMInfo :255
+[DectTk] <_MU_ProcessStackMsg> Handset Is  Registered
+td 01 dect  STACK CALLBACK: TD_DECT_STACK_MU_Notify
+td 01 dect  DECT STACK: TD_DECT_STACK_AddHandset
+td 01 dect  DECT STACK: DECT handset 1 uses DECT channel 0
+[DectTk] <_MsgRt_ProcessStackMessage> Returning from MsgRt ProcessStack Message
+[LAP] M: LAP_DL_DATA_RQ_LCE, ULI_CLASS_A_ESTABLISHED, 00, 00 00 00 00
+[LCE] M: LCE_DL_DATA_RQ, LINK_ESTABLISHED, 00, 00 00 00 00
+[ME] M: ME_A44_CLEAR_RQ_DIS, 00 00 00 00
+[LCE] M: LCE_DL_REL_RQ, LINK_ESTABLISHED, 00, 0e 00 00 00
+[LC] M: LC_CO_DATA_RQ_LAP, OPEN, 00, 00 00 00 00
+[LAP] M: LAP_DL_DATA_RQ_LCE, ULI_CLASS_A_ESTABLISHED, 00, 00 00 00 00
+[LC] M: LC_CO_DATA_DTR_MAC, OPEN, 00, 00 00 00 00
+[LC] Data Out: 00 Data: 13 22 21 05 41
+[LC] M: LC_CO_DATA_DTR_MAC, OPEN, 00, 00 00 00 00
+[LC] Data Out: 00 Data: 0d 04 77 89 10
+[LC] M: LC_CO_DATA_DTR_MAC, OPEN, 00, 00 00 00 00
+[LC] Data Out: 00 Data: 6e f0 f0 16 da
+[LC] M: LC_CO_DATA_DTR_MAC, OPEN, 00, 00 00 00 00
+[LC] M: LC_CO_DATA_IN_MAC, FREE, 00, 00 00 00 00
+[LC] Data In: 00 Data: 13 01 01 ae 3c
+[LAP] M: LAP_RR_FRAME_LC, ULI_CLASS_A_ESTABLISHED, 00, 00 00 00 00
+[LC] M: LC_CO_DATA_RQ_LAP, FREE, 00, 00 00 00 00
+[LC] Data Out: 00 Data: 13 20 81 85 45
+[LC] M: LC_CO_DATA_DTR_MAC, OPEN, 00, 00 00 00 00
+[LC] Data Out: 00 Data: 05 07 80 a8 01
+[LC] M: LC_CO_DATA_DTR_MAC, OPEN, 00, 00 00 00 00
+[LC] Data Out: 00 Data: 5a d7 76 d2 06
+[LC] M: LC_CO_DATA_DTR_MAC, OPEN, 00, 00 00 00 00
+[LC] Data Out: 00 Data: 07 a0 a5 00 50
+[LC] M: LC_CO_DATA_DTR_MAC, OPEN, 00, 00 00 00 00
+[LC] Data Out: 00 Data: 04 01 00 54 01
+[LC] M: LC_CO_DATA_DTR_MAC, OPEN, 00, 00 00 00 00
+[LC] Data Out: 00 Data: 05 7c 07 90 03
+[LC] M: LC_CO_DATA_DTR_MAC, OPEN, 00, 00 00 00 00
+[LC] Data Out: 00 Data: 00 01 02 00 84
+[LC] M: LC_CO_DATA_DTR_MAC, OPEN, 00, 00 00 00 00
+[LC] Data Out: 00 Data: f0 f0 f0 26 34
+[LC] M: LC_CO_DATA_DTR_MAC, OPEN, 00, 00 00 00 00
+[LC] M: LC_CO_DATA_IN_MAC, FREE, 00, 00 00 00 00
+[LC] Data In: 00 Data: 13 21 01 4e 7c
+[LAP] M: LAP_RR_FRAME_LC, ULI_CLASS_A_ESTABLISHED, 00, 00 00 00 00
+[LC] M: LC_CO_DATA_IN_MAC, FREE, 00, 00 00 00 00
+[LC] Data In: 00 Data: 11 22 c1 05 54
+[LC] M: LC_CO_DATA_IN_MAC, FREE, 00, 00 00 00 00
+[LC] Data In: 00 Data: 05 07 80 a8 01
+[LC] M: LC_CO_DATA_IN_MAC, FREE, 00, 00 00 00 00
+[LC] Data In: 00 Data: 5a d7 76 d2 06
+[LC] M: LC_CO_DATA_IN_MAC, FREE, 00, 00 00 00 00
+[LC] Data In: 00 Data: 07 81 a8 00 50
+[LC] M: LC_CO_DATA_IN_MAC, FREE, 00, 00 00 00 00
+[LC] Data In: 00 Data: 04 01 00 07 01
+[LC] M: LC_CO_DATA_IN_MAC, FREE, 00, 00 00 00 00
+[LC] Data In: 00 Data: 64 63 0e 30 35
+[LC] M: LC_CO_DATA_IN_MAC, FREE, 00, 00 00 00 00
+[LC] Data In: 00 Data: 8a 02 00 00 00
+[LC] M: LC_CO_DATA_IN_MAC, FREE, 00, 00 00 00 00
+[LC] Data In: 00 Data: 00 40 16 00 a3
+[LC] M: LC_CO_DATA_IN_MAC, FREE, 00, 00 00 00 00
+[LC] Data In: 00 Data: 80 a0 7c 07 90
+[LC] M: LC_CO_DATA_IN_MAC, FREE, 00, 00 00 00 00
+[LC] Data In: 00 Data: 03 00 01 02 00
+[LC] M: LC_CO_DATA_IN_MAC, FREE, 00, 00 00 00 00
+[LC] Data In: 00 Data: 84 f0 f0 76 91
+[LAP] M: LAP_I_FRAME_LC, ULI_CLASS_A_ESTABLISHED, 00, 00 00 00 00
+[LCE] M: LCE_DL_DATA_IN_LAP, LINK_ESTABLISHED, 00, 00 00 00 00
+[LC] M: LC_CO_DATA_RQ_LAP, FREE, 00, 00 00 00 00
+[LC] Data Out: 00 Data: 11 01 01 b6 36
+[MM] M: MM_LOCATE_REQUEST_LCE, MM_OPEN, 00, 00 00 00 00
+[MM] Locate Req
+[DectTk] <_DecodeTermCap> Getting Terminal Cap
+[DectTk] <_DecodeTermCap> Terminal Cap IE Found
+[MM] PT ULE: 00
+[MM] PT Re-keying And Early Encryption: 01
+[APP] M: FP_PROP_INFO_IN_MM, 00, 01 ff ff ff
+[DectTk] <_MsgRt_ProcessStackMessage>  Hello,Message Received from Stack
+[DectTk] <_MsgRt_ProcessStackMessage>
+Message ID=  :19
+[DectTk] <_MsgRt_ProcessStackMessage>  Calling MU Process Stack Message
+[DectTk] <_MU_ProcessStackMsg> Entered IFX_DECT_MU_ProcessStackMsg
+[DectTk] <_MU_ProcessStackMsg> FP_PROP_INFO_IN_MM: message arrived
+td 01 dect  STACK CALLBACK: TD_DECT_STACK_MU_Notify
+td 01 dect  STACK CALLBACK: MU_Notify: Unhandled event received (event 4, handset 1)
+[DectTk] <_MsgRt_ProcessStackMessage> Returning from MsgRt ProcessStack Message
+[MM] M: MM_AUTHENTICATE_PT_RQ, MM_AUTH_OF_PT, 00, 00 00 00 00
+[LCE] M: LCE_DL_DATA_RQ, LINK_ESTABLISHED, 00, 00 00 00 00
+[LAP] M: LAP_DL_DATA_RQ_LCE, ULI_CLASS_A_ESTABLISHED, 00, 00 00 00 00
+[LC] M: LC_CO_DATA_RQ_LAP, OPEN, 00, 00 00 00 00
+[LC] M: LC_CO_DATA_DTR_MAC, OPEN, 00, 00 00 00 00
+[LC] Data Out: 00 Data: 13 02 6d 05 40
+[LC] M: LC_CO_DATA_DTR_MAC, OPEN, 00, 00 00 00 00
+[LC] Data Out: 00 Data: 0a 03 01 18 18
+[LC] M: LC_CO_DATA_DTR_MAC, OPEN, 00, 00 00 00 00
+[LC] Data Out: 00 Data: 0c 08 6d 2f ce
+[LC] M: LC_CO_DATA_DTR_MAC, OPEN, 00, 00 00 00 00
+[LC] Data Out: 00 Data: 0e dd b7 7b 94
+[LC] M: LC_CO_DATA_DTR_MAC, OPEN, 00, 00 00 00 00
+[LC] Data Out: 00 Data: 0e 08 61 57 13
+[LC] M: LC_CO_DATA_DTR_MAC, OPEN, 00, 00 00 00 00
+[LC] Data Out: 00 Data: 8f 43 59 41 2a
+[LC] M: LC_CO_DATA_DTR_MAC, OPEN, 00, 00 00 00 00
+[LC] Data Out: 00 Data: f0 f0 f0 d0 a9
+[LC] M: LC_CO_DATA_DTR_MAC, OPEN, 00, 00 00 00 00
+[LC] M: LC_CO_DATA_IN_MAC, FREE, 00, 00 00 00 00
+[LC] Data In: 00 Data: 13 01 01 ae 3c
+[LAP] M: LAP_RR_FRAME_LC, ULI_CLASS_A_ESTABLISHED, 00, 00 00 00 00
+[LC] M: LC_CO_DATA_IN_MAC, FREE, 00, 00 00 00 00
+[LC] Data In: 00 Data: 11 00 2d 85 41
+[LC] M: LC_CO_DATA_IN_MAC, FREE, 00, 00 00 00 00
+[LC] Data In: 00 Data: 0d 04 d3 4f 4c
+[LC] M: LC_CO_DATA_IN_MAC, FREE, 00, 00 00 00 00
+[LC] Data In: 00 Data: 9b 54 01 05 f0
+[LC] M: LC_CO_DATA_IN_MAC, FREE, 00, 00 00 00 00
+[LC] Data In: 00 Data: f0 f0 f0 e6 d9
+[LAP] M: LAP_I_FRAME_LC, ULI_CLASS_A_ESTABLISHED, 00, 00 00 00 00
+[LCE] M: LCE_DL_DATA_IN_LAP, LINK_ESTABLISHED, 00, 00 00 00 00
+[LC] M: LC_CO_DATA_RQ_LAP, FREE, 00, 00 00 00 00
+[LC] Data Out: 00 Data: 11 21 01 56 76
+[MM] M: MM_AUTH_REPLY_LCE, MM_AUTH_OF_PT, 00, 00 00 00 00
+[MM] DCK Generated: 6a b5 68 ff aa 01 5b b5
+[MM] M: MM_AUTHENTICATE_PT_CFM, MM_LOCATION_REGISTRATION, 00, 01 00 00 00
+[MM] Locate Accept
+[LCE] M: LCE_DL_DATA_RQ, LINK_ESTABLISHED, 00, 00 00 00 00
+[LAP] M: LAP_DL_DATA_RQ_LCE, ULI_CLASS_A_ESTABLISHED, 00, 00 00 00 00
+[LC] M: LC_CO_DATA_RQ_LAP, OPEN, 00, 00 00 00 00
+[LC] M: LC_CO_DATA_DTR_MAC, OPEN, 00, 00 00 00 00
+[LC] Data Out: 00 Data: 13 20 55 85 55
+[LC] M: LC_CO_DATA_DTR_MAC, OPEN, 00, 00 00 00 00
+[LC] Data Out: 00 Data: 05 05 a0 94 00
+[LC] M: LC_CO_DATA_DTR_MAC, OPEN, 00, 00 00 00 00
+[LC] Data Out: 00 Data: 11 01 07 01 67
+[LC] M: LC_CO_DATA_DTR_MAC, OPEN, 00, 00 00 00 00
+[LC] Data Out: 00 Data: 7c 07 90 03 00
+[LC] M: LC_CO_DATA_DTR_MAC, OPEN, 00, 00 00 00 00
+[LC] Data Out: 00 Data: 01 02 00 84 f0
+[LC] M: LC_CO_DATA_DTR_MAC, OPEN, 00, 00 00 00 00
+[LC] Data Out: 00 Data: f0 f0 f0 24 55
+[LC] M: LC_CO_DATA_DTR_MAC, OPEN, 00, 00 00 00 00
+[LC] M: LC_CO_DATA_IN_MAC, FREE, 00, 00 00 00 00
+[LC] Data In: 00 Data: 13 21 01 4e 7c
+[LAP] M: LAP_RR_FRAME_LC, ULI_CLASS_A_ESTABLISHED, 00, 00 00 00 00
+[LC] M: LC_CO_DATA_IN_MAC, FREE, 00, 00 00 00 00
+[LC] Data In: 00 Data: 11 22 09 05 5d
+[LC] M: LC_CO_DATA_IN_MAC, FREE, 00, 00 00 00 00
+[LC] Data In: 00 Data: f0 f0 f0 ac e1
+[LAP] M: LAP_I_FRAME_LC, ULI_CLASS_A_ESTABLISHED, 00, 00 00 00 00
+[LCE] M: LCE_DL_DATA_IN_LAP, LINK_ESTABLISHED, 00, 00 00 00 00
+[LC] M: LC_CO_DATA_RQ_LAP, FREE, 00, 00 00 00 00
+[LC] Data Out: 00 Data: 11 01 01 b6 36
+[MM] M: MM_TEMPORARY_IDENTITY_ASSIGN_ACK_LCE, MM_LOCATION_ACK_WAIT, 00, 00 00 00 00
+[APP] M: FP_PORTABLE_ATTACHED_IN_MM, 00, 01 03 02 00
+[DectTk] <_MsgRt_ProcessStackMessage>  Hello,Message Received from Stack
+[DectTk] <_MsgRt_ProcessStackMessage>
+Message ID=  :18
+[DectTk] <_MsgRt_ProcessStackMessage>  Calling MU Process Stack Message
+[DectTk] <_MU_ProcessStackMsg> Entered IFX_DECT_MU_ProcessStackMsg
+[DectTk] <_MU_ProcessStackMsg> FP_PORTABLE_ATTACHED_IN_MM message arrived
+[DectTk] <_MU_ProcessStackMsg> This Handset Supports Wideband Calls
+[DectTk] <_MU_ProcessStackMsg> NEMO OFF??
+[DectTk] <_MU_DenyRegistration> Posting Deny Registration
+Error, IFX_TIM_TimerStop, no free node
+[DectTk] <_MsgRt_PostToStack>
+Message ID=  :51
+[DectTk] <_MsgRt_PostToStack> Posting to DECT Stack Fifo
+Error, IFX_TIM_TimerStop, no free node
+[DectTk] <_MU_ProcessStackMsg> Calling Callback pf_MU_Attached if not null
+td 01 dect  STACK CALLBACK: TD_DECT_STACK_MU_Notify
+td 01 dect  DECT STACK: TD_DECT_STACK_SendToTD (nEvent TD_DECT_EVENT_WIDEBAND_ENABLE(6), nHandset 1)
+td 01 dect  DECT: TD_DECT_EventHandle
+td 01 dect  DECT: TD_DECT_GetEventData
+td 01 event DECT: MSG received ch 0, event TD_DECT_EVENT_WIDEBAND_ENABLE(6)
+td 01 init  Phone No 3: enable wideband calls between DECT phones.
+td 01 dect  DECT: TD_DECT_EventHandle
+td 01 dect  DECT STACK: TD_DECT_STACK_SendToTD (nEvent TD_DECT_EVENT_REGISTER(5), nHandset 1)
+td 01 dect  DECT: TD_DECT_EventHandle
+td 01 dect  DECT: TD_DECT_GetEventData
+td 01 event DECT: MSG received ch 0, event TD_DECT_EVENT_REGISTER(5)
+td 01 init  Phone No 3: FXS state: S_DECT_NOT_REGISTERED FXS event: IE_DECT_REGISTER
+td 01       Phone No 3: Handling state executed, current FXS state: S_READY
+td 01 dect  DECT: TD_DECT_EventHandle
+[DectTk] <_MsgRt_ProcessStackMessage> Returning from MsgRt ProcessStack Message
+[CP] M: FP_ME_A44_CLEAR_RQ, 00, 00 00 00 00
+[LCE] M: LCE_DL_REL_RQ, LINK_ESTABLISHED, 00, 0e 00 00 00
+[ME] M: ME_A44_CLEAR_RQ_DIS, 00 00 00 00
+[LC] M: LC_CO_DATA_DTR_MAC, OPEN, 00, 00 00 00 00
+[LC] M: LC_DIS_IN_MAC, FREE, 00, 00 00 00 00
+[LAP] M: LAP_REL_IN_LC, ULI_CLASS_A_ESTABLISHED, 00, 00 00 00 00
+[LCE] M: LCE_DL_REL_IN_LAP, LINK_ESTABLISHED, 00, 00 00 00 00
+[CC] M: CC_DL_REL_IN_LCE, F00, 00, 00 00 00 00
+[MM] M: MM_DL_REL_IN_LCE, MM_OPEN, 00, 00 00 00 00
+[LCE] M: LCE_REL_ROUND_LCE, RELEASE_INDICATION, 00, 00 00 00 00
+[  342.840000] DSL[00]: ERROR - no data in the current line state!
+[  342.840000] DSL[00]: ERROR - Function is only available in the SHOWTIME!
+[  342.850000] DSL[00]: ERROR - Function is only available in the SHOWTIME!
+[  342.860000] DSL[00]: ERROR - Function is only available in the SHOWTIME!
+[  342.860000] DSL[00]: ERROR - Function is only available in the SHOWTIME!
+[  342.870000] DSL[00]: ERROR - Function is only available in the SHOWTIME!
+[  342.880000] DSL[00]: ERROR - Function is only available in the SHOWTIME!
+[  342.880000] DSL[00]: ERROR - xTU-R T1.413 Revision are not supported in current VDSL mode
+[  342.890000] DSL[00]: ERROR - xTU-R T1.413 VendorRevision are not supported in current VDSL mode
+[  342.900000] DSL[00]: ERROR - xTU-O T1.413 Revision are not supported in current VDSL mode
+[  342.910000] DSL[00]: ERROR - xTU-O T1.413 Vendor Revision are not supported in current VDSL mode
+[  342.920000] DSL[00]: ERROR - Function is only available in the SHOWTIME!
+[  342.940000] DSL[00]: ERROR - no data in the current line state!
+[  342.950000] DSL[00]: ERROR - Function is only available in the SHOWTIME!
+[  342.950000] DSL[00]: ERROR - Function is only available in the SHOWTIME!
+[  342.960000] DSL[00]: ERROR - Function is only available in the SHOWTIME!
+[  342.970000] DSL[00]: ERROR - Function is only available in the SHOWTIME!
+[  343.440000] DSL[00]: ERROR - no data in the current line state!
+[  343.440000] DSL[00]: ERROR - Function is only available in the SHOWTIME!
+[  343.450000] DSL[00]: ERROR - Function is only available in the SHOWTIME!
+[  343.450000] DSL[00]: ERROR - Function is only available in the SHOWTIME!
+[  343.460000] DSL[00]: ERROR - Function is only available in the SHOWTIME!
+root@(none):~#
+root@(none):~#
+root@(none):~#
+root@(none):~#
+root@(none):~# De
+DectCli       DevmLogLevel
+root@(none):~# DectCli
+td 01 dect  DECT: TD_DECT_STACK_HandleCliCmd
+td 01 dect  DECT:DIAG: Set Modem Mode Req Arrived
+[DectTk] <_DIAG_ModemDiagnostics>  <API IFX_DECT_DIAG_ModemDiagnostics>Entry.
+[DectTk] <_DIAG_ModemDiagnostics>  <API IFX_DECT_DIAG_ModemDiagnostics>Enable Diagnostics Mode.
+[DectTk] <_DIAG_ModemDiagnostics>   <API IFX_DECT_DIAG_ModemDiagnostics>viDiagMode  :1
+[DectTk] <_DIAG_ModemDiagnostics>  <API IFX_DECT_DIAG_ModemDiagnostics>Invoking FlushOldPackets.
+[DectTk] <Packets>  <API FlushOldPackets>Flush Old Packets.
+[DectTk] <_DIAG_ModemDiagnostics>  <API IFX_DECT_DIAG_ModemDiagnostics>Invoking SetRFPIDef1.
+[DectTk] <ef1>  <API SetRFPIDef1>Set Default RFPI Values.
+[DectTk] <_DIAG_ModemDiagnostics>  <API IFX_DECT_DIAG_ModemDiagnostics>Invoking SetGfskDef.
+[DectTk] <ef>  <API SetGfskDef>Set Default Gfsk Values.
+[DectTk] <_DIAG_ModemDiagnostics>  <API IFX_DECT_DIAG_ModemDiagnostics>Invoking SetOscDef.
+[DectTk] <f>  <API SetOscDef>Set Default Oscillator Trim Values.
+[DectTk] <_DIAG_ModemDiagnostics>  <API IFX_DECT_DIAG_ModemDiagnostics>Invoking SetBmcDef.
+[DectTk] <f>  <API SetBmcDef>Set Default BMC Parameters.
+[DectTk] <_DIAG_ModemDiagnostics>  <API IFX_DECT_DIAG_ModemDiagnostics>Invoking SetFreqDef.
+[DectTk] <ef>  <API SetFreqDef>Set Default Frequency.
+[DectTk] <_DIAG_ModemDiagnostics>  <API IFX_DECT_DIAG_ModemDiagnostics>Invoking SetTPCDef.
+[DectTk] <f>  <API SetTPCDef>Set Default TPC.
+[DectTk] <_DIAG_ModemDiagnostics>  <API IFX_DECT_DIAG_ModemDiagnostics>Invoking IFX_DECT_DIAG_ModemRestart.
+[DectTk] <_DIAG_ModemRestart> Entry
+[DectTk] <riteToHmac>  <API TestAppWriteToHmac>Entry.
+[DectTk] <riteToHmac>   <API TestAppWriteToHmac>PROCID  :1
+[DectTk] <riteToHmac>   <API TestAppWriteToHmac>MSG  :34
+[DectTk] <riteToHmac>  <API TestAppWriteToHmac>TestAppWriteToHmac wrote message to hmac.
+[DectTk] <riteToHmac>   <API TestAppWriteToHmac>ioctl returned  :0
+[DectTk] <_DIAG_TestAppSelectRead>  <API IFX_DECT_DIAG_TestAppSelectRead>Entry TestAppSelectRead.
+[DectTk] <_DIAG_TestAppSelectRead>   <API IFX_DECT_DIAG_TestAppSelectRead>dect_drv_fd :24
+/bin/sh: clear: not found
+
+
+                                    DIAGNOSTICS MENU
+                                1       Transmit Power Param
+                                2       BMC Parameters
+                                3       XRAM Parameters
+                                4       RF Mode
+                                5       OSC Trim Values
+                                6       GFSK Values
+                                7       RFPI Parameters
+                                8       Reset Modem
+                                9       Country Settings
+                                10      TBR6
+                                11      Save To Flash
+                                12      XRAM Get
+                                13      BMC Get
+                                14      TPC Get
+                                15      Exit
+                                Select an option :: [DectTk] <_DIAG_TestAppSelectRead>  <API IFX_DECT_DIAG_TestAppSelectRead>Waiting on SelectRead...
+[DectTk] <_DIAG_TestAppSelectRead>  <API IFX_DECT_DIAG_TestAppSelectRead>Read fd unblocked.
+[DectTk] <vMsg1>  <API HandleDrvMsg1>Entry.
+[DectTk] <vMsg1>   <API HandleDrvMsg1>HandleDrvMsg1 returned  :8
+[DectTk] <vMsg1>   <API HandleDrvMsg1>Packet  :1
+[DectTk] <rcMsg>  <API TestAppPrcMsg>Entry.
+[DectTk] <rcMsg>  <API TestAppPrcMsg>uiTC is TC_RESET.
+[DectTk] <rcMsg>  <API TestAppPrcMsg>Invoking TestAppInitMac.
+[DectTk] <nitMac>  <API TestAppInitMac>Entry.
+[DectTk] <nitMac>  <API TestAppInitMac>Invoking TestAppWriteToHmac with MAC_INIT_CMD Msg
+[DectTk] <riteToHmac>  <API TestAppWriteToHmac>Entry.
+[DectTk] <riteToHmac>   <API TestAppWriteToHmac>PROCID  :1
+[DectTk] <riteToHmac>   <API TestAppWriteToHmac>MSG  :33
+[DectTk] <riteToHmac>  <API TestAppWriteToHmac>TestAppWriteToHmac wrote message to hmac.
+[DectTk] <riteToHmac>   <API TestAppWriteToHmac>ioctl returned  :0
+[DectTk] <nitMac>  <API TestAppInitMac>######## Downloading COSIC Modem Parameters ########
+[DectTk] <nitMac>  <API TestAppInitMac>Invoking TestAppParamInit.
+[DectTk] <aramInit>  <API TestAppParamInit>Entry
+[DectTk] <aramInit>  <API TestAppParamInit>Invoking TestAppWriteToHmac with MAC_BOOT_RQ_ME.
+[DectTk] <riteToHmac>  <API TestAppWriteToHmac>Entry.
+[DectTk] <riteToHmac>   <API TestAppWriteToHmac>PROCID  :1
+[DectTk] <riteToHmac>   <API TestAppWriteToHmac>MSG  :24
+[DectTk] <riteToHmac>  <API TestAppWriteToHmac>TestAppWriteToHmac wrote message to hmac.
+[DectTk] <riteToHmac>   <API TestAppWriteToHmac>ioctl returned  :0
+[DectTk] <aramInit>  <API TestAppParamInit>Invoking TestAppWriteToHmac with MAC_PARAMETER_PRELOAD_RQ_ME.
+[DectTk] <riteToHmac>  <API TestAppWriteToHmac>Entry.
+[DectTk] <riteToHmac>   <API TestAppWriteToHmac>PROCID  :1
+[DectTk] <riteToHmac>   <API TestAppWriteToHmac>MSG  :25
+[DectTk] <riteToHmac>  <API TestAppWriteToHmac>TestAppWriteToHmac wrote message to hmac.
+[DectTk] <riteToHmac>   <API TestAppWriteToHmac>ioctl returned  :0
+[DectTk] <aramInit>  <API TestAppParamInit>Invoking TestAppWriteToHmac with MAC_OSC_SET_RQ_ME.
+[DectTk] <riteToHmac>  <API TestAppWriteToHmac>Entry.
+[DectTk] <riteToHmac>   <API TestAppWriteToHmac>PROCID  :1
+[DectTk] <riteToHmac>   <API TestAppWriteToHmac>MSG  :26
+[DectTk] <riteToHmac>  <API TestAppWriteToHmac>TestAppWriteToHmac wrote message to hmac.
+[DectTk] <riteToHmac>   <API TestAppWriteToHmac>ioctl returned  :0
+[DectTk] <aramInit>  <API TestAppParamInit>Invoking TestAppWriteToHmac with MAC_GFSK_SET_RQ_ME.
+[DectTk] <riteToHmac>  <API TestAppWriteToHmac>Entry.
+[DectTk] <riteToHmac>   <API TestAppWriteToHmac>PROCID  :1
+[DectTk] <riteToHmac>   <API TestAppWriteToHmac>MSG  :27
+[DectTk] <riteToHmac>  <API TestAppWriteToHmac>TestAppWriteToHmac wrote message to hmac.
+[DectTk] <riteToHmac>   <API TestAppWriteToHmac>ioctl returned  :0
+[DectTk] <aramInit>  <API TestAppParamInit>Invoking TestAppWriteToHmac with MAC_SEND_DUMMY_RQ_ME.
+[DectTk] <riteToHmac>  <API TestAppWriteToHmac>Entry.
+[DectTk] <riteToHmac>   <API TestAppWriteToHmac>PROCID  :1
+[DectTk] <riteToHmac>   <API TestAppWriteToHmac>MSG  :0
+[DectTk] <riteToHmac>  <API TestAppWriteToHmac>TestAppWriteToHmac wrote message to hmac.
+[DectTk] <riteToHmac>   <API TestAppWriteToHmac>ioctl returned  :0
+[DectTk] <aramInit>  <API TestAppParamInit>Invoking TestAppWriteDebug for address 0X1DF6.
+[DectTk] <riteDebug>  <API TestAppWriteDebug>Entry.
+[DectTk] <riteDebug>  <API TestAppWriteDebug>Invoking TestAppWriteDebugInfo.
+[DectTk] <riteDebugInfo>  <API TestAppWriteDebugInfo>Entry.
+[DectTk] <riteDebugInfo>  <API TestAppWriteDebugInfo>DbgInfoId is MEMORY_INFORMATION.
+[DectTk] <riteDebugInfo>   <API TestAppWriteDebugInfo>ioctl returned  :0
+[DectTk] <aramInit>  <API TestAppParamInit>Invoking TestAppWriteDebug for address 0X04F7.
+[DectTk] <riteDebug>  <API TestAppWriteDebug>Entry.
+[DectTk] <riteDebug>  <API TestAppWriteDebug>Invoking TestAppWriteDebugInfo.
+[DectTk] <riteDebugInfo>  <API TestAppWriteDebugInfo>Entry.
+[DectTk] <riteDebugInfo>  <API TestAppWriteDebugInfo>DbgInfoId is MEMORY_INFORMATION.
+[DectTk] <riteDebugInfo>   <API TestAppWriteDebugInfo>ioctl returned  :0
+[DectTk] <aramInit>  <API TestAppParamInit>Invoking TestAppWriteDebug for address 0X01F9.
+[DectTk] <riteDebug>  <API TestAppWriteDebug>Entry.
+[DectTk] <riteDebug>  <API TestAppWriteDebug>Invoking TestAppWriteDebugInfo.
+[DectTk] <riteDebugInfo>  <API TestAppWriteDebugInfo>Entry.
+[DectTk] <riteDebugInfo>  <API TestAppWriteDebugInfo>DbgInfoId is MEMORY_INFORMATION.
+[DectTk] <riteDebugInfo>   <API TestAppWriteDebugInfo>ioctl returned  :0
+[DectTk] <rcMsg>  <API TestAppPrcMsg>IFX_SUCCESS returned.
+[DectTk] <vMsg1>   <API HandleDrvMsg1>Packet  :2
+[DectTk] <rcMsg>  <API TestAppPrcMsg>Entry.
+[DectTk] <rcMsg>  <API TestAppPrcMsg>uiTC is TC_RESET.
+[DectTk] <rcMsg>  <API TestAppPrcMsg>Got unexpected msg.IFX_FAILURE returned.
+[DectTk] <vMsg1>  <API HandleDrvMsg1>IFX_SUCCESS returned.
+[DectTk] <_DIAG_ModemRestart> SUCCESS returned.
+[DectTk] <_DIAG_ModemDiagnostics>  <API IFX_DECT_DIAG_ModemDiagnostics>IFX_SUCCESS returned.
